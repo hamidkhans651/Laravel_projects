@@ -6,18 +6,17 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+// Home page route
+Route::get('/', function () {
+    return view('welcome');
+})->name('home');
 
-Route::get('/Dasboard', function () {
-    // return response()->file(public_path('Dashboard.html')) ;
-    return view('dasboard');
-});
+// Dashboard route
+Route::get('/dashboard', function () {
+    return view('layouts.dashboard');
+})->name('dashboard');
 
-
-
-Route::get('/ContactUS', function () {
-    return response()->file(public_path('ContactUS.html')) ;
-});
-
-Route::get('/Properties', function () {
-    return response()->file(public_path('Properties.html')) ;
-});
+// Another example page
+Route::get('/about', function () {
+    return view('layouts.about');
+})->name('about');
