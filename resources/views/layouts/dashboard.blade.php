@@ -16,12 +16,12 @@
         <nav class="sidebar">
             <h2>Real Estate Dashboard</h2>
             <ul>
-                <li><a href="#">Dashboard</a></li>
+                <li><a href="{{ route('dashboard') }}">Dashboard</a></li>
                 <li><a href="#">Properties</a></li>
                 <li><a href="#">Sales</a></li>
                 <li><a href="#">Users</a></li>
                 <li><a href="#">Reports</a></li>
-                <li><a href="#">Settings</a></li>
+                <li><a href="#">Sign IN</a></li>
             </ul>
         </nav>
 

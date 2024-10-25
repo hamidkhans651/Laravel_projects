@@ -13,7 +13,7 @@
 <body>
     <div class="about-page">
         <header>
-            <a href="about.html">
+            <a href="{{ route('about') }}">
                 <h1>About Us</h1>
 
             </a>
