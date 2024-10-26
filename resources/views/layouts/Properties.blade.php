@@ -7,7 +7,70 @@
     <title>Real Estate Properties Catalog</title>
     <link rel="stylesheet" href="css/Properties.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <style>
+        /* Basic styling for container, sidebar, and main content */
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+        }
 
+        .sidebar {
+            flex: 1 1 200px;
+            padding: 20px;
+            background-color: #f7f7f7;
+        }
+
+        .main-content {
+            flex: 3 1 600px;
+            padding: 20px;
+        }
+
+        /* Responsive card grid */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .property-card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            background-color: #fff;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .property-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .property-card h3 {
+            margin: 10px;
+            font-size: 18px;
+        }
+
+        .property-card p {
+            margin: 0 10px 10px;
+            color: #555;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                order: 2;
+            }
+
+            .main-content {
+                order: 1;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -33,94 +96,54 @@
                     style="width: 100%; padding: 10px; box-sizing: border-box;" />
             </div>
 
-            <!-- Carousel for Properties -->
-            <div class="swiper-container">
-                <div class="swiper-wrapper">
-                    <div class="carousel" id="propertyCarousel">
-                        <div class="property-card">
-                            <img src="https://via.placeholder.com/300x200" alt="Property Image">
-                            <h3>Beautiful Apartment</h3>
-                            <p>$1,200/month</p>
-                        </div>
-                    </div>
-                    <!-- Add Pagination and Navigation Controls -->
-                    <div class="swiper-pagination"></div>
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
-                </div>
-            </div>
-
-
-            <div class="property-card">
-                <img src="https://via.placeholder.com/300x200" alt="Property Image">
-                <h3>Modern House</h3>
-                <p>$3,500/month</p>
-            </div>
-            <div class="property-card">
-                <img src="https://via.placeholder.com/300x200" alt="Property Image">
-                <h3>Office Space</h3>
-                <p>$2,500/month</p>
-            </div>
-            <!-- Add more properties as needed -->
+            <!-- Property Cards Grid -->
+            <div class="card-grid" id="property-cards"></div>
         </div>
-
-        <!-- Pagination -->
-        <div class="pagination">
-            <button onclick="prevPage()">1</button>
-            <button onclick="nextPage()">2</button>
-            <button onclick="nextPage()">3</button>
-        </div>
-    </div>
     </div>
 
     <script>
-        // Example JavaScript Functions
+        // Sample data for properties
+        const properties = [
+            { id: 1, title: 'Modern Apartment ist', description: 'Located in the heart of the city.', imageUrl: 'https://via.placeholder.com/300x150' },
+            { id: 2, title: 'Luxury House', description: 'Spacious and beautiful with a large garden.', imageUrl: 'https://via.placeholder.com/300x150' },
+            { id: 3, title: 'Commercial Space', description: 'Ideal location for business.', imageUrl: 'https://via.placeholder.com/300x150' },
+            // Add more property objects here as needed
+        ];
+
+        // Function to render property cards
+        function renderPropertyCards(data) {
+            const cardGrid = document.getElementById('property-cards');
+            cardGrid.innerHTML = ''; // Clear existing cards
+
+            data.forEach(property => {
+                const card = document.createElement('div');
+                card.classList.add('property-card');
+
+                card.innerHTML = `
+                    <img src="${property.imageUrl}" alt="Property Image">
+                    <h3>${property.title}</h3>
+                    <p>${property.description}</p>
+                `;
+
+                cardGrid.appendChild(card);
+            });
+        }
+
+        // Call the function to initially render the cards
+        renderPropertyCards(properties);
+
         function filterProperties() {
-            // Implement filtering logic here
             console.log("Filter properties based on selected options.");
+            // You can add filtering logic here based on user inputs
         }
 
         function searchProperties() {
             const query = document.getElementById('search').value.toLowerCase();
-            const cards = document.querySelectorAll('.property-card');
-            cards.forEach(card => {
-                const title = card.querySelector('h3').textContent.toLowerCase();
-                if (title.includes(query)) {
-                    card.style.display = '';
-                } else {
-                    card.style.display = 'none';
-                }
-            });
+            const filteredProperties = properties.filter(property =>
+                property.title.toLowerCase().includes(query)
+            );
+            renderPropertyCards(filteredProperties);
         }
-
-        function prevPage() {
-            // Implement previous page logic here
-            console.log("Go to previous page");
-        }
-
-        function nextPage() {
-            // Implement next page logic here
-            console.log("Go to next page");
-        }
-
-        document.addEventListener("DOMContentLoaded", function () {
-            const swiper = new Swiper('.swiper-container', {
-                slidesPerView: 3,
-                spaceBetween: 20,
-                pagination: {
-                    el: '.swiper-pagination',
-                    clickable: true,
-                },
-                navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev',
-                },
-                loop: true,
-            });
-        });
-
-        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
     </script>
 </body>
 
