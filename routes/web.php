@@ -38,3 +38,7 @@ Route::get('/Properties', function () {
     return view('layouts.Properties');
 })->name('Properties');
 
+
+Route::get('/register', function () {
+    return view('auth.register');
+})->name('register');
