@@ -164,6 +164,52 @@ body {
 }
 
 /* Sidebar styling */
+
+/* Basic styling for container and list */
+.container {
+    width: 300px;
+    margin: 20px auto;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.property-list {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 10px;
+    
+}
+
+/* Property List Styling */
+.property-list {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Align items to the start */
+    padding: 0; /* Remove default padding if any */
+    margin: 0;
+}
+
+.property-list li {
+    color: #727272;
+    padding: 4px 0;
+    width: 100%; /* Ensures full width alignment */
+}
+
+/* Sidebar Title Styling */
+.sidebarcategoriestitle {
+    display: block;
+    color: #000000;
+    padding: 4px;
+    text-align: left; /* Ensure text aligns to the start */
+    margin-bottom: 10px; /* Add spacing below title if needed */
+}
+
+
+
+.property-list li:hover {
+    color: #141414;
+}
+
 .sidebar {
     flex: 1;
     background: #ffffff;
@@ -177,15 +223,6 @@ body {
     margin-bottom: 15px;
     font-size: 18px;
 }
-
-.sidebar input[type="text"], .sidebar select {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border-radius: 5px;
-    border: 1px solid #ddd;
-}
-
 .sidebar label {
     display: block;
     margin-bottom: 1px;
@@ -207,6 +244,31 @@ body {
 .sidebar button:hover {
     background-color: #45a049;
 }
+
+
+/* dropdown  */
+.container {
+    max-width: 300px;
+    margin: 20px auto;
+    font-family: Arial, sans-serif;
+}
+
+h2 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+#city-dropdown {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+}
+
+
 
 /* Main content styling */
 .main-content {
@@ -270,6 +332,14 @@ body {
     margin-bottom: 15px;
 }
 
+
+.bathroom-options {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+
 .bedroom-options label {
     font-size: 14px;
     color: #555;
@@ -278,6 +348,13 @@ body {
     gap: 5px;
 }
 
+.bathroom-options label {
+    font-size: 14px;
+    color: #555;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
 
 /* Responsive design adjustments */
 @media (max-width: 768px) {
@@ -288,4 +365,19 @@ body {
         width: 100%;
         margin: 0 auto;
     }
+}
+
+button {
+    padding: 10px 15px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    background-color: #4CAF50;
+    color: #fff;
+}
+
+button:hover {
+    background-color: #45a049;
 }

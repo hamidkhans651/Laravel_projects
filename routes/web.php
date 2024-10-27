@@ -42,3 +42,11 @@ Route::get('/Properties', function () {
 Route::get('/register', function () {
     return view('auth.register');
 })->name('register');
+
+
+// web.php
+use App\Http\Controllers\PropertyController;
+
+Route::get('/properties', [PropertyController::class, 'index'])->name('properties.index');
+Route::get('/properties/cities', [PropertyController::class, 'getCities'])->name('properties.cities');
+Route::get('/properties/categories', [PropertyController::class, 'getCategories'])->name('properties.categories');
