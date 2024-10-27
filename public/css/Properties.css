@@ -13,7 +13,7 @@ body {
 }
 
 /* Hide on screens smaller than 768px (adjust as needed) */
-@media (max-width: 768px) {
+@media (max-width: 991px) {
     .mastersidebar {
         display: none; /* Hide the container on mobile devices */
     }
@@ -22,7 +22,7 @@ body {
 
 .property-card {
     flex: 0 0 300px;
-    border: 1px solid #ac0f0f;
+    border: 1px solid #960655;
     padding: 10px;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -32,6 +32,7 @@ body {
 .property-card img {
     width: 100%;
     height: 200px;
+    color: #960655;
     object-fit: cover;
     border-radius: 5px;
 }
@@ -41,74 +42,18 @@ body {
     margin: 10px 0;
 } 
 
-.pagination {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-}
-
-pagination button {
-    padding: 10px 15px;
-    margin: 0 5px;
-    border: 1px solid #bd0000;
-    background-color: #dd0000;
-    cursor: pointer;
-}
-
-.pagination button:hover {
-    background-color: #ccc;
-}
-
-
-
     /* Basic styling for container, sidebar, and main content */
     .container {
         display: flex;
         flex-wrap: wrap;
     }
-    
-    .sidebar {
-        flex: 1 1 200px;
-        padding: 20px;
-        background-color: #f7f7f7;
-    }
-    
+
     .main-content {
         flex: 3 1 600px;
         padding: 20px;
     }
     
-    /* Responsive card grid */
-    .card-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-        gap: 20px;
-    }
-    
-    .property-card {
-        border: 1px solid #ddd;
-        border-radius: 8px;
-        overflow: hidden;
-        background-color: #fff;
-        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    }
-    
-    .property-card img {
-        width: 100%;
-        height: 150px;
-        object-fit: cover;
-    }
-    
-    .property-card h3 {
-        margin: 10px;
-        font-size: 18px;
-    }
-    
-    .property-card p {
-        margin: 0 10px 10px;
-        color: #555;
-    }
-    
+
 /* Basic styling for container, sidebar, and main content */
 * {
     box-sizing: border-box;
@@ -117,153 +62,51 @@ pagination button {
     font-family: Arial, sans-serif;
 }
 
+/* over backround properties  */
 body {
     display: flex;
     justify-content: center;
     align-items: center;
     background: #f0f2f5;
-    padding: 20px;
+    padding: 10px;
 }
 
-.container {
-    display: flex;
-    gap: 20px;
-    max-width: 1200px;
-    width: 100%;
-}
 
-/* Sidebar styling */
 
-/* Main container styling */
+/* sidebar container styling */
 .container {
     display: flex;
     width: 100%;
     padding: 20px;
-    gap: 20px;
+    gap: 15px;
 }
 
-/* Sidebar styling */
-.sidebar {
-    width: 250px;
-    background-color: #f0f0f0;
-    padding: 20px;
-    border-right: 1px solid #ccc;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    flex-shrink: 0; /* Prevent sidebar from shrinking */
-}
-
-/* Main content styling */
-.main-content {
-    flex: 1;
-    padding: 20px;
-}
-
-/* Responsive adjustments for mobile */
-@media (max-width: 768px) {
-    .container {
-        flex-direction: row; /* Horizontal on medium screens */
-    }
-
-    /* Sidebar should stack above content only on small screens */
-    @media (max-width: 600px) {
-        .container {
-            flex-direction: column;
-        }
-        .sidebar {
-            width: 100%;
-            order: -1; /* Move sidebar to the top */
-            border-right: none;
-            border-bottom: 1px solid #ccc;
-            padding-bottom: 20px;
-        }
-
-        .main-content {
-            width: 100%;
-        }
-    }
-}
-
-/* Basic styling for container and list */
-.container {
-    width: 300px;
-    margin: 20px auto;
-    text-align: center;
-    font-family: Arial, sans-serif;
-}
-
+/* sidebar properties categories styling */
 .property-list {
     list-style-type: none;
     padding: 0;
     margin-top: 10px;
-    
 }
 
 /* Property List Styling */
-.property-list {
-    display: flex;
-    flex-direction: column; /* Stack items vertically */
-    align-items: flex-start; /* Align items to the start */
-    padding: 0; /* Remove default padding if any */
-    margin: 0;
-}
-
 .property-list li {
     color: #727272;
     padding: 4px 0;
     width: 100%; /* Ensures full width alignment */
 }
 
-/* Sidebar Title Styling */
+/* Sidebar Title Styling all categories */
 .sidebarcategoriestitle {
     display: block;
-    color: #000000;
+    color: #727272;
     padding: 4px;
     text-align: left; /* Ensure text aligns to the start */
     margin-bottom: 10px; /* Add spacing below title if needed */
 }
 
-
-
 .property-list li:hover {
     color: #141414;
 }
-
-.sidebar {
-    flex: 1;
-    background: #ffffff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.sidebar h2, .sidebar h3 {
-    color: #333;
-    margin-bottom: 15px;
-    font-size: 18px;
-}
-.sidebar label {
-    display: block;
-    margin-bottom: 1px;
-    font-size: 14px;
-    color: #555;
-}
-
-.sidebar button {
-    width: 100%;
-    padding: 10px;
-    background-color: #4CAF50;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-.sidebar button:hover {
-    background-color: #45a049;
-}
-
 
 
 /* dropdown  */
@@ -290,61 +133,6 @@ h2 {
 
 
 
-/* Main content styling */
-.main-content {
-    flex: 3;
-    padding: 20px;
-    background: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Search bar styling */
-.search-bar {
-    margin-bottom: 20px;
-}
-
-.search-bar input[type="text"] {
-    width: 100%;
-    padding: 12px;
-    border-radius: 5px;
-    border: 1px solid #ddd;
-}
-
-/* Property Cards Grid */
-.card-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 20px;
-}
-
-/* Property card styling */
-.property-card {
-    background: #ffffff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-.property-card img {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
-}
-
-.property-card h3 {
-    font-size: 18px;
-    margin: 10px 0;
-    color: #333;
-}
-
-.property-card p {
-    font-size: 14px;
-    color: #555;
-    padding: 0 10px 10px;
-}
 
 .bedroom-options {
     display: flex;
@@ -401,3 +189,63 @@ button {
 button:hover {
     background-color: #45a049;
 }
+
+/* Main content  styling  where property cards shows*/
+.main-content {
+    flex: 3;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Search bar styling */
+.search-bar {
+    margin-bottom: 20px;
+}
+
+.search-bar input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+/* Property Cards Grid */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+/* Property card styling */
+.property-card {
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.property-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+
+/* title of cards */
+.property-card h3 {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #555;
+}
+
+.property-card p {
+    font-size: 14px;
+    color: #555;
+    padding: 0 10px 10px;
+}
+
+
