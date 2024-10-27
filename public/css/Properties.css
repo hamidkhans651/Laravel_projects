@@ -1,60 +1,23 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    display: flex;
-}
-
-
-
-/* Default: Show container */
-.mastersidebar {
-    display: block; /* or flex, grid, depending on your layout */
-}
-
-/* Hide on screens smaller than 768px (adjust as needed) */
-@media (max-width: 991px) {
-    .mastersidebar {
-        display: none; /* Hide the container on mobile devices */
-    }
-}
-
-
-.property-card {
-    flex: 0 0 300px;
-    border: 1px solid #960655;
-    padding: 10px;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
-}
-
-.property-card img {
-    width: 100%;
-    height: 200px;
-    color: #960655;
-    object-fit: cover;
-    border-radius: 5px;
-}
-
-.property-card h3 {
-    font-size: 16px;
-    margin: 10px 0;
-} 
-
-    /* Basic styling for container, sidebar, and main content */
-    .container {
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    .main-content {
-        flex: 3 1 600px;
-        padding: 20px;
-    }
-    
-
 /* Basic styling for container, sidebar, and main content */
+
+
+.main{
+    display: flex;
+
+}
+
+
+.container {
+    display: flex;
+    width: 100%;
+    padding: 10px;
+    gap: 15px;
+    flex-wrap: wrap;
+    /* border: 2px solid black; */
+    margin-top: -100px;
+}
+
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -64,44 +27,37 @@ body {
 
 /* over backround properties  */
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+
     background: #f0f2f5;
-    padding: 10px;
-}
+    padding: 8px;
 
-
-
-/* sidebar container styling */
-.container {
-    display: flex;
-    width: 100%;
-    padding: 20px;
-    gap: 15px;
 }
 
 /* sidebar properties categories styling */
 .property-list {
     list-style-type: none;
     padding: 0;
-    margin-top: 10px;
+    
 }
 
 /* Property List Styling */
 .property-list li {
     color: #727272;
     padding: 4px 0;
-    width: 100%; /* Ensures full width alignment */
+    width: 100%;
+    /* Ensures full width alignment */
 }
 
 /* Sidebar Title Styling all categories */
 .sidebarcategoriestitle {
     display: block;
     color: #727272;
-    padding: 4px;
-    text-align: left; /* Ensure text aligns to the start */
-    margin-bottom: 10px; /* Add spacing below title if needed */
+    padding: 0;
+    text-align: left;
+    /* Ensure text aligns to the start */
+    /* margin-bottom: 5px; */
+    /* Add spacing below title if needed */
 }
 
 .property-list li:hover {
@@ -137,14 +93,13 @@ h2 {
 .bedroom-options {
     display: flex;
     gap: 10px;
-    margin-bottom: 15px;
+
 }
 
 
 .bathroom-options {
     display: flex;
     gap: 10px;
-    margin-bottom: 15px;
 }
 
 
@@ -164,16 +119,6 @@ h2 {
     gap: 5px;
 }
 
-/* Responsive design adjustments */
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-    }
-    .sidebar, .main-content {
-        width: 100%;
-        margin: 0 auto;
-    }
-}
 
 button {
     padding: 10px 15px;
@@ -190,7 +135,52 @@ button:hover {
     background-color: #45a049;
 }
 
+/* Default: Show container */
+/* Sidebar positioning */
+.mastersidebar {
+    width: 250px; /* Fixed width for desktop */
+}
+
+/* Hide on screens smaller than 768px (adjust as needed) */
+@media (max-width: 991px) {
+    .mastersidebar {
+        display: none;
+        /* Hide the container on mobile devices */
+    }
+}
+
+/* Adjustments for smaller devices */
+@media (max-width: 768px) {
+    .mastersidebar {
+        display: none; /* Hide sidebar on smaller devices */
+    }
+}
+
 /* Main content  styling  where property cards shows*/
+
+
+.property-card {
+    flex: 0 0 300px;
+    border: 1px solid #960655;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+.property-card img {
+    width: 100%;
+    height: 200px;
+    color: #960655;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.property-card h3 {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
 .main-content {
     flex: 3;
     padding: 20px;
@@ -247,5 +237,3 @@ button:hover {
     color: #555;
     padding: 0 10px 10px;
 }
-
-

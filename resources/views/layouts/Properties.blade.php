@@ -6,23 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Real Estate Properties Catalog</title>
     <link rel="stylesheet" href="css/Properties.css">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 </head>
 
 <body>
+    <div>
+        @include('layouts.nav')
+    </div>
 
-    <!-- sidebar -->
+
+
+    <main class="main">
+
+
     <div class="mastersidebar">
 
         <div class="container">
-
-
-
             <!-- Category Title -->
             <h2 id="property-title" class=" ">Properties for Sale</h2>
             <button onclick="togglePropertyType()">Switch to Rent</button>
 
-            <ul class="sidebarcategoriestitle">All Categories
+            <ul class="sidebarcategoriestitle">
                 <ul id="property-list" class="property-list">
                     <!-- Items will be populated dynamically -->
                 </ul>
@@ -67,15 +70,19 @@
     <!-- Main Content -->
     <div class="main-content">
         <div class="search-bar">
-            <input type="text" id="search" placeholder="Address, Neighborhood, City, Zip code" oninput="searchProperties()"
-                style="width: 100%; padding: 10px; box-sizing: border-box;" />
+            <input type="text" id="search" placeholder="Address, Neighborhood, City, Zip code" oninput="searchProperties()" />
 
         </div>
 
         <!-- Property Cards Grid -->
-        <div class="card-grid" id="property-cards"></div>
+        <div class="card-grid" id="property-cards">
+
+        </div>
     </div>
     </div>
+
+    </main>
+
 
     <script>
         // Sample data for properties
@@ -104,20 +111,6 @@
                 bathrooms: 1
             },
             {
-                id: 4,
-                title: 'Suburban Family Home',
-                description: 'Perfect for families.',
-                imageUrl: 'https://via.placeholder.com/300x150',
-                bedrooms: 4,
-                bathrooms: 3
-            }, {
-                id: 4,
-                title: 'Suburban Family Home',
-                description: 'Perfect for families.',
-                imageUrl: 'https://via.placeholder.com/300x150',
-                bedrooms: 4,
-                bathrooms: 3
-            }, {
                 id: 4,
                 title: 'Suburban Family Home',
                 description: 'Perfect for families.',
