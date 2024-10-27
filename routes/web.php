@@ -6,10 +6,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-// Home page route
-Route::get('/', function () {
-    return view('welcome');
-})->name('home');
+
 
 // Dashboard route
 Route::get('/dashboard', function () {

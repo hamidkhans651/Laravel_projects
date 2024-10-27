@@ -11,67 +11,71 @@
 
 <body>
 
-    <div class="container">
-        <!-- Category Title -->
-        <h2 id="property-title" class="font-bold">Properties for Sale</h2>
-        <button onclick="togglePropertyType()">Switch to Rent</button>
+    <!-- sidebar -->
+    <div class="mastersidebar">
 
-        <ul class="sidebarcategoriestitle">All Categories
-            <ul id="property-list" class="property-list">
-                <!-- Items will be populated dynamically -->
+        <div class="container">
+
+
+
+            <!-- Category Title -->
+            <h2 id="property-title" class=" ">Properties for Sale</h2>
+            <button onclick="togglePropertyType()">Switch to Rent</button>
+
+            <ul class="sidebarcategoriestitle">All Categories
+                <ul id="property-list" class="property-list">
+                    <!-- Items will be populated dynamically -->
+                </ul>
             </ul>
-        </ul>
+            <!-- Price Filter -->
+
+            <input type="text" id="min-price" placeholder="Min Price" />
+            <input type="text" id="max-price" placeholder="Max Price" />
+
+            <h3>Number of Bedrooms</h3>
+            <div class="bedroom-options">
+
+                <label><input type="checkbox" class="bathroom-filter" value="1"> 1 Bath</label><br>
+                <label><input type="checkbox" class="bathroom-filter" value="2"> 2 Baths</label><br>
+                <label><input type="checkbox" class="bathroom-filter" value="3"> 3+ Baths</label><br>
+            </div>
+
+            <!-- Bathrooms Filter -->
+            <h3>Number of Bathrooms</h3>
+            <div class="bathroom-options">
+                <label><input type="checkbox" class="bathroom-filter" value="1"> 1 Bath</label><br>
+                <label><input type="checkbox" class="bathroom-filter" value="2"> 2 Baths</label><br>
+                <label><input type="checkbox" class="bathroom-filter" value="3"> 3+ Baths</label><br>
+            </div>
+
+            <h2>Select City for Property</h2>
+            <select id="city-dropdown">
+                <option value="" disabled selected>Pakistan</option>
+            </select>
 
 
 
-        <!-- Price Filter -->
+            <!-- Apply Filter Button -->
+            <button onclick="applyFilters()">Apply Filters</button>
 
-        <input type="text" id="min-price" placeholder="Min Price" />
-        <input type="text" id="max-price" placeholder="Max Price" />
 
-        <h3>Number of Bedrooms</h3>
-        <div class="bedroom-options">
-
-            <label><input type="checkbox" class="bathroom-filter" value="1"> 1 Bath</label><br>
-            <label><input type="checkbox" class="bathroom-filter" value="2"> 2 Baths</label><br>
-            <label><input type="checkbox" class="bathroom-filter" value="3"> 3+ Baths</label><br>
         </div>
-
-        <!-- Bathrooms Filter -->
-        <h3>Number of Bathrooms</h3>
-        <div class="bathroom-options">
-            <label><input type="checkbox" class="bathroom-filter" value="1"> 1 Bath</label><br>
-            <label><input type="checkbox" class="bathroom-filter" value="2"> 2 Baths</label><br>
-            <label><input type="checkbox" class="bathroom-filter" value="3"> 3+ Baths</label><br>
-        </div>
-
-        <h2>Select City for Property</h2>
-        <select id="city-dropdown">
-            <option value="" disabled selected>Pakistan</option>
-        </select>
-
-
-
-        <!-- Apply Filter Button -->
-        <button onclick="applyFilters()">Apply Filters</button>
-
-
     </div>
     </div>
+
 
     <!-- Main Content -->
     <div class="main-content">
         <div class="search-bar">
             <input type="text" id="search" placeholder="Address, Neighborhood, City, Zip code" oninput="searchProperties()"
                 style="width: 100%; padding: 10px; box-sizing: border-box;" />
+
         </div>
 
         <!-- Property Cards Grid -->
         <div class="card-grid" id="property-cards"></div>
     </div>
     </div>
-
-
 
     <script>
         // Sample data for properties

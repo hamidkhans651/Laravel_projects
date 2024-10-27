@@ -30,7 +30,9 @@
             <header>
                 <h1>Welcome, Admin</h1>
                 <div class="header-actions">
-                    <a href="index.html">
+                <a 
+                href="/"
+                >
                         <button>Log Out</button>
 
                     </a>

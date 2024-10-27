@@ -1,7 +1,3 @@
-/* 
-/* Basic styling */
-
-
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -9,47 +5,20 @@ body {
     display: flex;
 }
 
-.container {
-    display: flex;
-    width: 100%;
-    padding: 20px;
-} 
 
-/* Sidebar styling */
-.sidebar {
-    width: 250px;
-    background-color: #f0f0f0;
-    padding: 20px;
-    border-right: 1px solid #ccc;
+
+/* Default: Show container */
+.mastersidebar {
+    display: block; /* or flex, grid, depending on your layout */
 }
 
-.sidebar h2 {
-    font-size: 18px;
-    margin-bottom: 10px;
+/* Hide on screens smaller than 768px (adjust as needed) */
+@media (max-width: 768px) {
+    .mastersidebar {
+        display: none; /* Hide the container on mobile devices */
+    }
 }
 
-.sidebar input, .sidebar select {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 10px;
-    box-sizing: border-box;
-}
-
-/* Main content styling */
-.main-content {
-    flex: 1;
-    padding: 20px;
-}
-
-.search-bar {
-    margin-bottom: 20px;
-}
-
-.carousel {
-    display: flex;
-    overflow-x: scroll;
-    gap: 20px;
-}
 
 .property-card {
     flex: 0 0 300px;
@@ -165,6 +134,56 @@ body {
 
 /* Sidebar styling */
 
+/* Main container styling */
+.container {
+    display: flex;
+    width: 100%;
+    padding: 20px;
+    gap: 20px;
+}
+
+/* Sidebar styling */
+.sidebar {
+    width: 250px;
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-right: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0; /* Prevent sidebar from shrinking */
+}
+
+/* Main content styling */
+.main-content {
+    flex: 1;
+    padding: 20px;
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: row; /* Horizontal on medium screens */
+    }
+
+    /* Sidebar should stack above content only on small screens */
+    @media (max-width: 600px) {
+        .container {
+            flex-direction: column;
+        }
+        .sidebar {
+            width: 100%;
+            order: -1; /* Move sidebar to the top */
+            border-right: none;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 20px;
+        }
+
+        .main-content {
+            width: 100%;
+        }
+    }
+}
+
 /* Basic styling for container and list */
 .container {
     width: 300px;
@@ -246,10 +265,11 @@ body {
 }
 
 
+
 /* dropdown  */
 .container {
     max-width: 300px;
-    margin: 20px auto;
+    margin: 10px auto;
     font-family: Arial, sans-serif;
 }
 
