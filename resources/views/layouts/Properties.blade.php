@@ -9,77 +9,80 @@
 </head>
 
 <body>
-    <div>
+    <nav>
+
         @include('layouts.nav')
-    </div>
+    </nav>
+
+
 
 
 
     <main class="main">
 
 
-    <div class="mastersidebar">
+        <div class="mastersidebar">
 
-        <div class="container">
-            <!-- Category Title -->
-            <h2 id="property-title" class=" ">Properties for Sale</h2>
-            <button onclick="togglePropertyType()">Switch to Rent</button>
+            <div class="container">
+                <!-- Category Title -->
+                <h2 id="property-title" class=" ">Properties for Sale</h2>
+                <button onclick="togglePropertyType()">Switch to Rent</button>
 
-            <ul class="sidebarcategoriestitle">
-                <ul id="property-list" class="property-list">
-                    <!-- Items will be populated dynamically -->
+                <ul class="sidebarcategoriestitle">
+                    <ul id="property-list" class="property-list">
+                        <!-- Items will be populated dynamically -->
+                    </ul>
                 </ul>
-            </ul>
-            <!-- Price Filter -->
+                <!-- Price Filter -->
 
-            <input type="text" id="min-price" placeholder="Min Price" />
-            <input type="text" id="max-price" placeholder="Max Price" />
+                <input type="text" id="min-price" placeholder="Min Price" />
+                <input type="text" id="max-price" placeholder="Max Price" />
 
-            <h3>Number of Bedrooms</h3>
-            <div class="bedroom-options">
+                <h3>Number of Bedrooms</h3>
+                <div class="bedroom-options">
 
-                <label><input type="checkbox" class="bathroom-filter" value="1"> 1 Bath</label><br>
-                <label><input type="checkbox" class="bathroom-filter" value="2"> 2 Baths</label><br>
-                <label><input type="checkbox" class="bathroom-filter" value="3"> 3+ Baths</label><br>
+                    <label><input type="checkbox" class="bathroom-filter" value="1"> 1 Bath</label><br>
+                    <label><input type="checkbox" class="bathroom-filter" value="2"> 2 Baths</label><br>
+                    <label><input type="checkbox" class="bathroom-filter" value="3"> 3+ Baths</label><br>
+                </div>
+
+                <!-- Bathrooms Filter -->
+                <h3>Number of Bathrooms</h3>
+                <div class="bathroom-options">
+                    <label><input type="checkbox" class="bathroom-filter" value="1"> 1 Bath</label><br>
+                    <label><input type="checkbox" class="bathroom-filter" value="2"> 2 Baths</label><br>
+                    <label><input type="checkbox" class="bathroom-filter" value="3"> 3+ Baths</label><br>
+                </div>
+
+                <h2>Select City for Property</h2>
+                <select id="city-dropdown">
+                    <option value="" disabled selected>Pakistan</option>
+                </select>
+
+
+
+                <!-- Apply Filter Button -->
+                <button onclick="applyFilters()">Apply Filters</button>
+
+
+            </div>
+        </div>
+        </div>
+
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <div class="search-bar">
+                <input type="text" id="search" placeholder="Address, Neighborhood, City, Zip code" oninput="searchProperties()" />
+
             </div>
 
-            <!-- Bathrooms Filter -->
-            <h3>Number of Bathrooms</h3>
-            <div class="bathroom-options">
-                <label><input type="checkbox" class="bathroom-filter" value="1"> 1 Bath</label><br>
-                <label><input type="checkbox" class="bathroom-filter" value="2"> 2 Baths</label><br>
-                <label><input type="checkbox" class="bathroom-filter" value="3"> 3+ Baths</label><br>
+            <!-- Property Cards Grid -->
+            <div class="card-grid" id="property-cards">
+
             </div>
-
-            <h2>Select City for Property</h2>
-            <select id="city-dropdown">
-                <option value="" disabled selected>Pakistan</option>
-            </select>
-
-
-
-            <!-- Apply Filter Button -->
-            <button onclick="applyFilters()">Apply Filters</button>
-
-
         </div>
-    </div>
-    </div>
-
-
-    <!-- Main Content -->
-    <div class="main-content">
-        <div class="search-bar">
-            <input type="text" id="search" placeholder="Address, Neighborhood, City, Zip code" oninput="searchProperties()" />
-
         </div>
-
-        <!-- Property Cards Grid -->
-        <div class="card-grid" id="property-cards">
-
-        </div>
-    </div>
-    </div>
 
     </main>
 

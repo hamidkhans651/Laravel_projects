@@ -6,11 +6,7 @@
     font-family: 'Poppins', sans-serif;
 }
 
-body {
-    display: flex;
-    height: 100vh;
-    background-color: #f4f4f4;
-}
+
 
 /* Sidebar */
 .sidebar {
@@ -21,8 +17,9 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 100vh;
-    position: fixed;
+    height: 100%;
+
+ 
 }
 
 .sidebar h2 {
@@ -59,14 +56,16 @@ body {
     flex-direction: column;
 }
 
-header {
+
+
+.header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
-header h1 {
+.header h1 {
     font-size: 2em;
 }
 

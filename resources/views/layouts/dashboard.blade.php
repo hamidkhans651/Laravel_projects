@@ -11,6 +11,11 @@
 </head>
 
 <body>
+    <nav class="nav">
+        @include('layouts.nav')
+    </nav>
+
+    <main class="header">
     <div class="dashboard">
         <!-- Sidebar -->
         <nav class="sidebar">
@@ -30,9 +35,8 @@
             <header>
                 <h1>Welcome, Admin</h1>
                 <div class="header-actions">
-                <a 
-                href="/"
-                >
+                    <a
+                        href="/">
                         <button>Log Out</button>
 
                     </a>
@@ -96,7 +100,7 @@
             </section>
         </div>
     </div>
-
+    </main>
 </body>
 
 </html>

@@ -11,8 +11,14 @@
 </head>
 
 <body>
+
+    <nav>
+        @include('layouts.nav')
+    </nav>
     <div class="about-page">
+
         <header>
+
             <a href="{{ route('about') }}">
                 <h1>About Us</h1>
 

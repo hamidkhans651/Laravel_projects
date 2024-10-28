@@ -8,8 +8,6 @@
 </head>
 
 <body>
-
-
     <nav>
         <input type="checkbox" id="check" />
         <label for="check" class="menu">
@@ -20,13 +18,13 @@
             </svg>
         </label>
         <div class="logo">
-            <h2>HA </h2>
+            <h3>HA real estate </h3>
         </div>
         <div class="nav-items">
             <ul class="overview">
                 <h3>Overview</h3>
                 <li>
-                    <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    <a href="/"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                             class="bi bi-house-fill" viewBox="0 0 16 16">
                             <path fill-rule="evenodd"
                                 d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6zm5-.793V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z" />
@@ -132,16 +130,15 @@
             display: none;
         }
 
-        .logo h2 {
-            font-style: italic;
-
+        .logo h3 {
             cursor: pointer;
-            margin: 0 0.5rem;
+            margin: 0 2px;
+            margin-right: 10vw;
         }
 
         .nav-items {
             display: flex;
-            justify-content: space-between;
+    
         }
 
         .overview,
@@ -150,7 +147,7 @@
         }
 
         .overview {
-            margin-right: 4rem;
+            margin-right: 17vw;
         }
 
         .nav-items h3 {
@@ -258,6 +255,22 @@
         .logo {
             font-size: 1.5rem;
             font-weight: bold;
+            
+
+        }
+
+        .logo h3 {
+            cursor: pointer;
+            margin: 0 2px;
+            margin-right: 2vw;
+        }
+
+        @media (max-width: 568px) {
+            .logo h3{
+                margin-left: -10vw;
+                color: blueviolet;
+            }
+               
         }
 
         /* Responsive styles */

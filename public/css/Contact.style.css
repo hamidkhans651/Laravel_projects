@@ -6,7 +6,8 @@
     font-family: 'Poppins', sans-serif;
 }
 
-body {
+
+main {
     background-color: #f4f4f4;
     color: #333;
     display: flex;
@@ -25,17 +26,17 @@ body {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-header {
+.header {
     text-align: center;
     margin-bottom: 20px;
 }
 
-header h1 {
+.header h1 {
     font-size: 2.5em;
     margin-bottom: 10px;
 }
 
-header p {
+.header p {
     font-size: 1em;
     color: #555;
 }
