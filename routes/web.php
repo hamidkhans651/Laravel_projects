@@ -41,6 +41,13 @@ Route::get('/register', function () {
 })->name('register');
 
 
+
+
+Route::get('/sell', function () {
+    return view('layouts.sell');
+})->name('sell');
+
+
 // web.php
 use App\Http\Controllers\PropertyController;
 

@@ -1079,7 +1079,6 @@
 
 </header>
 
-
 <!-- Hero Section with Search Bar -->
 <section class="hero">
     <div class="hero-content">
@@ -1111,14 +1110,12 @@
         </a>
 
         <div class="nav-card">
-            <a href="{{ route('Properties') }}">
+            <a href="{{ route('sell') }}">
                 <img height="200vh"
                     src="https://www.zillowstatic.com/bedrock/app/uploads/sites/5/2024/04/homepage-spot-sell-lg-1.webp"
                     alt="Property Image">
                 <h4>Sell a home</h4>
                 <p>No matter what path you take to sell your home, we can help you navigate a successful sale.
-
-
                 </p>
                 <p>4 beds, 3 baths, 2000 sqft</p>
         </div>
@@ -1137,7 +1134,6 @@
         </div>
         </a>
     </div>
-
 </section>
 
 
