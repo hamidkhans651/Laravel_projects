@@ -9,11 +9,7 @@
 </head>
 
 <body>
-    <nav>
-
-        @include('layouts.nav')
-    </nav>
-
+  
 
 
 

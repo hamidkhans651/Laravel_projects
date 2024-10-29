@@ -37,3 +37,9 @@ Verify that the APP_KEY in .env is populated.
 Clear config cache if needed with php artisan config:cache.
 Restart the server.
 Let me know if this resolves the issue or if you encounter further errors!
+
+
+<!-- 
+    <nav>
+        @include('layouts.nav')
+    </nav> -->
