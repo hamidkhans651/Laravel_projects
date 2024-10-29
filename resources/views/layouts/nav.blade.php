@@ -5,11 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Real Estate Properties Catalog</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik&display=swap">
 </head>
 
 <body>
     <nav>
+        <!-- Toggle Menu Checkbox -->
         <input type="checkbox" id="check" />
+        <!-- Menu Label with SVG Icon -->
         <label for="check" class="menu">
             <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-list"
                 viewBox="0 0 16 16">
@@ -17,177 +20,120 @@
                     d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
             </svg>
         </label>
+        
         <div class="logo">
-            <h3>HA real estate </h3>
+            <h3>Real Estate</h3>
         </div>
+
+        <!-- Navigation Menu -->
         <div class="nav-items">
             <ul class="overview">
-                <h3>Overview</h3>
-                <li>
-                    <a href="/"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                            class="bi bi-house-fill" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd"
-                                d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6zm5-.793V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z" />
-                            <path fill-rule="evenodd"
-                                d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z" />
-                        </svg>
-                        Home</a>
-                </li>
-                <li>
-                    <a href="{{ route('dashboard') }}">
-
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                            class="bi bi-speedometer" viewBox="0 0 16 16">
-                            <path
-                                d="M8 2a.5.5 0 0 1 .5.5V4a.5.5 0 0 1-1 0V2.5A.5.5 0 0 1 8 2zM3.732 3.732a.5.5 0 0 1 .707 0l.915.914a.5.5 0 1 1-.708.708l-.914-.915a.5.5 0 0 1 0-.707zM2 8a.5.5 0 0 1 .5-.5h1.586a.5.5 0 0 1 0 1H2.5A.5.5 0 0 1 2 8zm9.5 0a.5.5 0 0 1 .5-.5h1.5a.5.5 0 0 1 0 1H12a.5.5 0 0 1-.5-.5zm.754-4.246a.389.389 0 0 0-.527-.02L7.547 7.31A.91.91 0 1 0 8.85 8.569l3.434-4.297a.389.389 0 0 0-.029-.518z" />
-                            <path fill-rule="evenodd"
-                                d="M6.664 15.889A8 8 0 1 1 9.336.11a8 8 0 0 1-2.672 15.78zm-4.665-4.283A11.945 11.945 0 0 1 8 10c2.186 0 4.236.585 6.001 1.606a7 7 0 1 0-12.002 0z" />
-                        </svg>
-
-
-                        Dashboard</a>
-                </li>
-                <li>
-                    <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                            class="bi bi-bar-chart-fill" viewBox="0 0 16 16">
-                            <path
-                                d="M1 11a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1v-3zm5-4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V7zm5-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1V2z" />
-                        </svg>
-                        Rates</a>
-                </li>
-                <li>
-                    <a href="{{ route('contact') }}">
-
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                            class="bi bi-envelope-fill" viewBox="0 0 16 16">
-                            <path
-                                d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555zM0 4.697v7.104l5.803-3.558L0 4.697zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757zm3.436-.586L16 11.801V4.697l-5.803 3.546z" />
-                        </svg>
-                        Contact</a>
-                </li>
+                <li><a href="/">Home</a></li>
+                <li><a href="{{ route('dashboard') }}">Dashboard</a></li>
+                <li><a href="#">Rates</a></li>
+                <li><a href="{{ route('contact') }}">Contact</a></li>
             </ul>
             <ul class="account">
-                <h3>Account</h3>
-                <li>
-                    <a href="{{ route('register') }}"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                            class="bi bi-bell-fill" viewBox="0 0 16 16">
-                            <path
-                                d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zm.995-14.901a1 1 0 1 0-1.99 0A5.002 5.002 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901z" />
-                        </svg>
-                        Sign IN</a>
-                </li>
-                <li>
-                    <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                            class="bi bi-gear-fill" viewBox="0 0 16 16">
-                            <path
-                                d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z" />
-                        </svg>
-                        Real Estate Agents</a>
-                    <a href=""></a>
-                </li>
+                <li><a href="{{ route('register') }}">Sign In</a></li>
+                <li><a href="#">Agents</a></li>
             </ul>
         </div>
     </nav>
     <style>
         /* General Styles */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Rubik', sans-serif;
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-        }
-
-        /* Header Styles */
-        header {
-            background-color: #333;
-            color: white;
-            padding: 10px 20px;
         }
 
         /* Navbar styles */
-        @import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: "Rubik", sans-serif;
-        }
-
         nav {
-            height: 70px;
             background: #333;
             color: rgb(220, 220, 220);
-            padding: 0 2rem;
-            display: flex;
-            justify-content: space-between;
+            padding: 1rem;
+            display: grid;
+            grid-template-columns: auto 1fr auto;
             align-items: center;
             position: sticky;
             top: 0;
-        }
-
-        nav svg {
-            display: none;
+            z-index: 100;
         }
 
         .logo h3 {
+            color: white;
+            font-size: 1.5rem;
             cursor: pointer;
-            margin: 0 2px;
-            margin-right: 10vw;
         }
 
         .nav-items {
             display: flex;
-    
-        }
-
-        .overview,
-        .account {
-            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
         }
 
         .overview {
-            margin-right: 17vw;
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            flex: 1;
         }
 
-        .nav-items h3 {
-            display: none;
-        }
-
-        nav li {
-            list-style: none;
-            margin: 0 0.5rem;
+        .account {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: flex-end;
         }
 
         nav a {
             text-decoration: none;
             color: rgb(220, 220, 220);
+            position: relative;
         }
 
         nav a:hover {
             color: #a0ebfd;
         }
 
+        /* Hover underline effect */
         nav a::after {
             content: "";
             display: block;
-            height: 3px;
+            height: 2px;
             background: #a0ebfd;
             width: 0%;
-            transition: all ease-in-out 300ms;
+            transition: width 0.3s ease-in-out;
+            position: absolute;
+            left: 0;
+            bottom: -5px;
         }
 
         nav a:hover::after {
             width: 100%;
         }
 
-        #check,
+        /* Responsive Toggle and Hamburger Menu */
+        #check {
+            display: none;
+        }
+
         .menu {
             display: none;
         }
 
-        /* Responsive */
-        @media (max-width: 750px) {
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            nav {
+                grid-template-columns: auto auto;
+                padding: 1rem 2rem;
+            }
+
+            .logo {
+                margin-right: auto;
+            }
+
             .nav-items {
                 position: fixed;
                 top: 0;
@@ -195,129 +141,35 @@
                 height: 100vh;
                 width: 250px;
                 flex-direction: column;
-                justify-content: space-evenly;
-                background: #333333;
-                padding: 2rem;
-                right: -250px;
-                transition: all ease-in-out 500ms;
+                justify-content: center;
+                background: #333;
+                transform: translateX(100%);
+                transition: transform 0.3s ease-in-out;
+                z-index: 99;
+            }
+
+            #check:checked ~ .nav-items {
+                transform: translateX(0);
             }
 
             .overview,
             .account {
                 flex-direction: column;
-                width: auto;
-            }
-
-            .overview {
-                margin: 0;
-            }
-
-            .nav-items h3 {
-                display: inline-block;
-                font-weight: 400;
-                text-transform: uppercase;
-                font-size: 13px;
-                margin-bottom: 1rem;
-            }
-
-            nav svg {
-                display: inline-block;
-                cursor: pointer;
-                vertical-align: top;
-            }
-
-            nav li {
-                margin: 1rem 0;
-            }
-
-            nav a {
-                display: inline-block;
-            }
-
-            nav a:hover {
-                margin-left: 2px;
-                transition: all ease-in-out 300ms;
+                gap: 1.5rem;
+                width: 100%;
+                text-align: center;
             }
 
             .menu {
                 display: inline-block;
-                position: fixed;
-                right: 2.5rem;
-                z-index: 99;
-            }
-
-            #check:checked~.nav-items {
-                right: 0;
-            }
-        }
-
-        /* Logo styling */
-        .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            
-
-        }
-
-        .logo h3 {
-            cursor: pointer;
-            margin: 0 2px;
-            margin-right: 2vw;
-        }
-
-        @media (max-width: 568px) {
-            .logo h3{
-                margin-left: -10vw;
-                color: blueviolet;
-            }
-               
-        }
-
-        /* Responsive styles */
-        @media (max-width: 768px) {
-            nav {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
-            nav ul {
-                flex-direction: column;
-                align-items: flex-start;
-                display: none;
-                /* Hide initially for mobile view */
-                width: 100%;
-                padding: 0;
-                background-color: #333;
-            }
-
-            nav ul li {
-                width: 100%;
-                padding: 10px;
-            }
-
-            /* Hamburger menu button */
-            .menu-toggle {
-                display: block;
                 cursor: pointer;
-                background-color: #444;
-                padding: 10px;
                 color: white;
-                border: none;
-                margin-left: auto;
-            }
-
-            .menu-toggle.open+ul {
-                display: flex;
-                /* Show menu when toggle is active */
-            }
-        }
-
-        @media (min-width: 769px) {
-            .menu-toggle {
-                display: none;
-                /* Hide the toggle button on larger screens */
+                font-size: 1.8rem;
+                position: relative;
+                z-index: 100;
             }
         }
     </style>
-
 </body>
+
+</html>

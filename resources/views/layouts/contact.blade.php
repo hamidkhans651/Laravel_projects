@@ -6,14 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - Real Estate Website</title>
     <link rel="stylesheet" href="css/Contact.style.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
 </head>
 
 <body>
 
-    <nav>
-        @include('layouts.nav')
-    </nav>
 
     <main>
 
@@ -22,7 +20,8 @@
         <div class="contact-page">
             <div class="header">
                 <h1 class="h1">Contact Us</h1>
-                <p>We would love to hear from you! Please fill out the form below or reach us through the following details.</p>
+                <p>We would love to hear from you! Please fill out the form below or reach us through the following
+                    details.</p>
 
             </div>
 

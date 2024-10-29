@@ -12,9 +12,6 @@
 
 <body>
 
-    <nav>
-        @include('layouts.nav')
-    </nav>
     <div class="about-page">
 
         <header>
