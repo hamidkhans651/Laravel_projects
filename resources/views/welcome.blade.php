@@ -1,32 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
+<head>
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-    <title>Villa Agency - Real Estate HTML5 Template</title>
+  <title>Villa Agency - Real Estate HTML5 Template</title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
 
-    <!-- Additional CSS Files -->
-    <link rel="stylesheet" href="assets/css/fontawesome.css">
-    <link rel="stylesheet" href="assets/css/templatemo-villa-agency.css">
-    <link rel="stylesheet" href="assets/css/owl.css">
-    <link rel="stylesheet" href="assets/css/animate.css">
-    <link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
-<!--
+  <!-- Additional CSS Files -->
+  <link rel="stylesheet" href="assets/css/fontawesome.css">
+  <link rel="stylesheet" href="assets/css/templatemo-villa-agency.css">
+  <link rel="stylesheet" href="assets/css/owl.css">
+  <link rel="stylesheet" href="assets/css/animate.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+  <!--
 
 TemplateMo 591 villa agency
 
 https://templatemo.com/tm-591-villa-agency
 
 -->
-  </head>
+</head>
+<style>
+  .auth {
+    padding-left: 5vw;
+    color: black;
+  }
+</style>
 
 <body>
 
@@ -49,7 +55,7 @@ https://templatemo.com/tm-591-villa-agency
         <div class="col-lg-8 col-md-8">
           <ul class="info">
             <li><i class="fa fa-envelope"></i> info@company.com</li>
-            <li><i class="fa fa-map"></i> Sunny Isles Beach, FL 33160</li>
+            <li><i class="fa fa-map"></i> Sunny Isles Beach, FL 33160 <a class="auth" href="{{ route('register') }}">SIGN UP / LOGIN</a></li>
           </ul>
         </div>
         <div class="col-lg-4 col-md-4">
@@ -67,29 +73,29 @@ https://templatemo.com/tm-591-villa-agency
   <!-- ***** Header Area Start ***** -->
   <header class="header-area header-sticky">
     <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <nav class="main-nav">
-                    <!-- ***** Logo Start ***** -->
-                    <a href="index.html" class="logo">
-                        <h1>Villa</h1>
-                    </a>
-                    <!-- ***** Logo End ***** -->
-                    <!-- ***** Menu Start ***** -->
-                    <ul class="nav">
-                      <li><a href="/" class="active">Home</a></li>
-                      <li><a href="{{ route('properties') }}">Properties</a></li>
-                      <li><a href="{{ route('property-details') }}">Property Details</a></li>
-                      <li><a href="{{ route('contact') }}">Contact Us</a></li>
-                      <li><a href="#"><i class="fa fa-calendar"></i> Schedule a visit</a></li>
-                  </ul>   
-                    <a class='menu-trigger'>
-                        <span>Menu</span>
-                    </a>
-                    <!-- ***** Menu End ***** -->
-                </nav>
-            </div>
+      <div class="row">
+        <div class="col-12">
+          <nav class="main-nav">
+            <!-- ***** Logo Start ***** -->
+            <a href="/" class="logo">
+              <h1>Villa</h1>
+            </a>
+            <!-- ***** Logo End ***** -->
+            <!-- ***** Menu Start ***** -->
+            <ul class="nav">
+              <li><a href="/" class="active">Home</a></li>
+              <li><a href="{{ route('properties') }}">Properties</a></li>
+              <li><a href="{{ route('property-details') }}">Property Details</a></li>
+              <li><a href="{{ route('contact') }}">Contact Us</a></li>
+              <li><a href="#"><i class="fa fa-calendar"></i> Schedule a visit</a></li>
+            </ul>
+            <a class='menu-trigger'>
+              <span>Menu</span>
+            </a>
+            <!-- ***** Menu End ***** -->
+          </nav>
         </div>
+      </div>
     </div>
   </header>
   <!-- ***** Header Area End ***** -->
@@ -98,19 +104,19 @@ https://templatemo.com/tm-591-villa-agency
     <div class="owl-carousel owl-banner">
       <div class="item item-1">
         <div class="header-text">
-          <span class="category">Toronto, <em>Canada</em></span>
+          <span class="category">Karachi, <em>Pakistan</em></span>
           <h2>Hurry!<br>Get the Best Villa for you</h2>
         </div>
       </div>
       <div class="item item-2">
         <div class="header-text">
-          <span class="category">Melbourne, <em>Australia</em></span>
+          <span class="category">islamabad, <em>Pakistan</em></span>
           <h2>Be Quick!<br>Get the best villa in town</h2>
         </div>
       </div>
       <div class="item item-3">
         <div class="header-text">
-          <span class="category">Miami, <em>South Florida</em></span>
+          <span class="category">Lahore, <em>Pakistan</em></span>
           <h2>Act Now!<br>Get the highest level penthouse</h2>
         </div>
       </div>
@@ -140,7 +146,7 @@ https://templatemo.com/tm-591-villa-agency
               </h2>
               <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
-                Get <strong>the best villa</strong> website template in HTML CSS and Bootstrap for your business. TemplateMo provides you the <a href="https://www.google.com/search?q=best+free+css+templates" target="_blank">best free CSS templates</a> in the world. Please tell your friends about it.</div>
+                  Get <strong>the best villa</strong> website template in HTML CSS and Bootstrap for your business. TemplateMo provides you the <a href="https://www.google.com/search?q=best+free+css+templates" target="_blank">best free CSS templates</a> in the world. Please tell your friends about it.</div>
               </div>
             </div>
             <div class="accordion-item">
@@ -230,7 +236,7 @@ https://templatemo.com/tm-591-villa-agency
               <div class="col-lg-4">
                 <div class="counter">
                   <h2 class="timer count-title count-number" data-to="34" data-speed="1000"></h2>
-                   <p class="count-text ">Buildings<br>Finished Now</p>
+                  <p class="count-text ">Buildings<br>Finished Now</p>
                 </div>
               </div>
               <div class="col-lg-4">
@@ -276,7 +282,7 @@ https://templatemo.com/tm-591-villa-agency
                     <button class="nav-link" id="penthouse-tab" data-bs-toggle="tab" data-bs-target="#penthouse" type="button" role="tab" aria-controls="penthouse" aria-selected="false">Penthouse</button>
                   </li>
                 </ul>
-              </div>              
+              </div>
               <div class="tab-content" id="myTabContent">
                 <div class="tab-pane fade show active" id="appartment" role="tabpanel" aria-labelledby="appartment-tab">
                   <div class="row">
@@ -296,8 +302,9 @@ https://templatemo.com/tm-591-villa-agency
                     </div>
                     <div class="col-lg-3">
                       <h4>Extra Info About Property</h4>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, do eiusmod tempor pack incididunt ut labore et dolore magna aliqua quised ipsum suspendisse. 
-                      <br><br>When you need free CSS templates, you can simply type TemplateMo in any search engine website. In addition, you can type TemplateMo Portfolio, TemplateMo One Page Layouts, etc.</p>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, do eiusmod tempor pack incididunt ut labore et dolore magna aliqua quised ipsum suspendisse.
+                        <br><br>When you need free CSS templates, you can simply type TemplateMo in any search engine website. In addition, you can type TemplateMo Portfolio, TemplateMo One Page Layouts, etc.
+                      </p>
                       <div class="icon-button">
                         <a href="{{route('property-details') }}"><i class="fa fa-calendar"></i> Schedule a visit</a>
                       </div>
@@ -349,7 +356,7 @@ https://templatemo.com/tm-591-villa-agency
                       <h4>Extra Info About Penthouse</h4>
                       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, do eiusmod tempor pack incididunt ut labore et dolore magna aliqua quised ipsum suspendisse. <br><br>Swag fanny pack lyft blog twee. JOMO ethical copper mug, succulents typewriter shaman DIY kitsch twee taiyaki fixie hella venmo after messenger poutine next level humblebrag swag franzen.</p>
                       <div class="icon-button">
-                        <a href="{{ route('property-details') }}""><i class="fa fa-calendar"></i> Schedule a visit</a>
+                        <a href="{{ route('property-details') }}""><i class=" fa fa-calendar"></i> Schedule a visit</a>
                       </div>
                     </div>
                   </div>
@@ -538,7 +545,7 @@ https://templatemo.com/tm-591-villa-agency
               <div class="col-lg-12">
                 <fieldset>
                   <label for="subject">Subject</label>
-                  <input type="subject" name="subject" id="subject" placeholder="Subject..." autocomplete="on" >
+                  <input type="subject" name="subject" id="subject" placeholder="Subject..." autocomplete="on">
                 </fieldset>
               </div>
               <div class="col-lg-12">
@@ -562,9 +569,9 @@ https://templatemo.com/tm-591-villa-agency
   <footer>
     <div class="container">
       <div class="col-lg-8">
-        <p>Copyright © 2048 Villa Agency Co., Ltd. All rights reserved. 
-        
-        Design: <a rel="nofollow" href="https://templatemo.com" target="_blank">TemplateMo</a> Distribution: <a href="https://themewagon.com">ThemeWagon</a></p>
+        <p>Copyright © 2048 Villa Agency Co., Ltd. All rights reserved.
+
+          Design: <a rel="nofollow" href="https://templatemo.com" target="_blank">TemplateMo</a> Distribution: <a href="https://themewagon.com">ThemeWagon</a></p>
       </div>
     </div>
   </footer>
@@ -578,5 +585,6 @@ https://templatemo.com/tm-591-villa-agency
   <script src="assets/js/counter.js"></script>
   <script src="assets/js/custom.js"></script>
 
-  </body>
+</body>
+
 </html>

@@ -36,9 +36,7 @@ Route::get('/', function () {
 // })->name('Properties');
 
 
-// Route::get('/register', function () {
-//     return view('auth.register');
-// })->name('register');
+
 
 
 // Route::get('/menu', function () {
@@ -67,5 +65,9 @@ Route::get('/properties', function () {
 })->name('properties');
 
 Route::get('/property-details', function () {
-    return view('property-details');  // Maps to property-details.blade.php
+    return view('property-details');  // Maps to properties==-details.blade.php
 })->name('property-details');
+
+Route::get('/register', function () {
+    return view('auth.register');
+})->name('register');
