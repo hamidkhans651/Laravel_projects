@@ -50,7 +50,7 @@ Route::get('/', function () {
 // })->name('sell');
 
 // Route::get('/navbar', function () {
-//     return view('layouts.navbar');
+//     return view('navbar');
 // })->name('navbar');
 
 
@@ -60,12 +60,12 @@ Route::get('/', function () {
 
 Route::get('/contact', function () {
     return view('contact');  // Maps to contact.blade.php
-});
+})->name('contact');
 
 Route::get('/properties', function () {
-    return view('properties');  // Maps to properties.blade.php
-});
+    return view('properties');  // This will load `properties.blade.php`
+})->name('properties');
 
-Route::get('/properties-details', function () {
-    return view('properties-details');  // Maps to properties-details.blade.php
-});
+Route::get('/property-details', function () {
+    return view('property-details');  // Maps to property-details.blade.php
+})->name('property-details');
