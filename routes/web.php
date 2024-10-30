@@ -47,6 +47,11 @@ Route::get('/sell', function () {
     return view('layouts.sell');
 })->name('sell');
 
+Route::get('/navbar', function () {
+    return view('layouts.navbar');
+})->name('navbar');
+
+
 
 // web.php
 use App\Http\Controllers\PropertyController;

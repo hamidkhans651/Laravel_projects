@@ -1,7 +1,15 @@
-
-
-h1{
+.h1 {
     font-weight: 300;
-    color: rgb(2, 3, 3);
+    font-size: 10vh;
+    color: rgb(12, 179, 179);
+    text-align: center;
+
+    
 }
 
+
+
+
+.himself-sellin-section {
+    background-color: #F2FAFF;
+}
