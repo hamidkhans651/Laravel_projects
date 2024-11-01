@@ -1,13 +1,13 @@
 /* Basic styling for container, sidebar, and main content */
 
 
-.main{
+.mainProperties{
     display: flex;
 
 }
 
 
-.container {
+.containerproperties {
     display: flex;
     width: 100%;
     padding: 10px;
@@ -79,8 +79,9 @@ h2 {
 }
 
 #city-dropdown {
-    width: 100%;
+    width: 21vw;
     padding: 10px;
+    margin-bottom: 20px;
     font-size: 16px;
     border-radius: 5px;
     border: 1px solid #ddd;

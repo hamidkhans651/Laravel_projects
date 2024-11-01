@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-
+  <link rel="stylesheet" href="css/Properties.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
     rel="stylesheet">
 
@@ -32,6 +32,19 @@ https://templatemo.com/tm-591-villa-agency
 </head>
 
 <body>
+  <style>
+    /* Search bar styling */
+    .search-bar {
+      margin-bottom: 20px;
+    }
+
+    .search-bar input[type="text"] {
+      width: 100%;
+      padding: 12px;
+      border-radius: 5px;
+      border: 1px solid #ddd;
+    }
+  </style>
 
   <!-- ***** Preloader Start ***** -->
   <div id="js-preloader" class="js-preloader">
@@ -91,9 +104,9 @@ https://templatemo.com/tm-591-villa-agency
             </ul>
             <a class='menu-trigger'>
 
-                <span>Menu</span>
-              </a>
-              <!-- ***** Menu End ***** -->
+              <span>Menu</span>
+            </a>
+            <!-- ***** Menu End ***** -->
           </nav>
         </div>
       </div>
@@ -106,95 +119,269 @@ https://templatemo.com/tm-591-villa-agency
       <div class="row">
         <div class="col-lg-12">
           <span class="breadcrumb"><a href="#">Home</a> / Properties</span>
-          <h3>Properties</h3>
+          <h3>Properties for Sale</h3>
         </div>
       </div>
     </div>
   </div>
 
+
+
   <div class="section properties">
     <div class="container">
-      <ul class="properties-filter">
-        <li>
-          <a class="is_active" href="#!" data-filter="*">Show All</a>
-        </li>
-        <li>
-          <a href="#!" data-filter=".adv">Apartment</a>
-        </li>
-        <li>
-          <a href="#!" data-filter=".str">Villa House</a>
-        </li>
-        <li>
-          <a href="#!" data-filter=".rac">Penthouse</a>
-        </li>
-      </ul>
-
-
-      <!-- property cards -->
-
-
-      <!-- Properties Section -->
-      <div class="container mt-5">
-        <h3>Properties</h3>
-        <div class="row" id="property-cards">
-          <!-- Dynamic property cards will be injected here -->
-        </div>
+      <div class="containerproperties">
       </div>
 
-      <script>
-        // Sample data for properties
-        const properties = [{
-            id: 1,
-            title: 'Modern Apartment',
-            description: 'Located in the heart of the city.',
-            imageUrl: 'assets/images/property-01.jpg',
-            price: '$1,200,000',
-            address: '18 Old Street Miami, OR 97219',
-            bedrooms: 1,
-            bathrooms: 1,
-            area: '120m2',
-            floor: 5,
-            parking: '1 spot'
-          },
-          {
-            id: 2,
-            title: 'Luxury Villa',
-            description: 'Spacious and beautiful with a large garden.',
-            imageUrl: 'assets/images/property-02.jpg',
-            price: '$2,500,000',
-            address: '26 Old Street Miami, OR 12870',
-            bedrooms: 4,
-            bathrooms: 3,
-            area: '450m2',
-            floor: 3,
-            parking: '2 spots'
-          },
-          {
-            id: 3,
-            title: 'Penthouse',
-            description: 'Ideal for luxury living.',
-            imageUrl: 'assets/images/property-03.jpg',
-            price: '$3,000,000',
-            address: '54 New Street Florida, OR 27001',
-            bedrooms: 5,
-            bathrooms: 4,
-            area: '300m2',
-            floor: 8,
-            parking: '3 spots'
-          },
-          // Add more properties as needed
-        ];
+      <!-- <input type="text" id="min-price" placeholder="Min Price" />
+                <input type="text" id="max-price" placeholder="Max Price" /> -->
 
-        // Function to render property cards
-        function renderPropertyCards(data) {
-          const cardGrid = document.getElementById('property-cards');
-          cardGrid.innerHTML = ''; // Clear existing cards
+      <select id="city-dropdown">
 
-          data.forEach(property => {
-            const card = document.createElement('div');
-            card.classList.add('col-lg-4', 'col-md-6', 'align-self-center', 'mb-30');
+        <option value="" disabled selected>Select City for Property</option>
+      </select>
 
-            card.innerHTML = `
+
+
+      <div class="search-bar">
+        <input type="text" id="search" placeholder="Address, Neighborhood, City, Zip code" oninput="searchProperties()" />
+
+
+        <ul class="properties-filter">
+          <li>
+            <a class="is_active" href="#!" data-filter="*">Show All</a>
+          </li>
+          <li>
+            <a href="#!" data-filter=".adv">Apartment</a>
+          </li>
+          <li>
+            <a href="#!" data-filter=".str">Villa House</a>
+          </li>
+          <li>
+            <a href="#!" data-filter=".rac">Penthouse</a>
+          </li>
+          <li>
+            <a id="toogleonclick" href="#!" data-filter=".rac">Switch to Rent</a>
+          </li>
+          <li>
+            <a id="applyFilters" href="#!" data-filter=".rac">Apply Filters</a>
+          </li>
+        </ul>
+
+
+        <script>
+          function applyFilters() {
+            const selectedBedrooms = Array.from(document.querySelectorAll('.bedroom-filter:checked')).map(el => parseInt(el.value));
+            const selectedBathrooms = Array.from(document.querySelectorAll('.bathroom-filter:checked')).map(el => parseInt(el.value));
+            const minPrice = document.getElementById('min-price').value;
+            const maxPrice = document.getElementById('max-price').value;
+
+            // Filter properties based on selected bedrooms, bathrooms, and price range
+            const filteredProperties = properties.filter(property => {
+              const matchesBedrooms = selectedBedrooms.length === 0 || selectedBedrooms.includes(property.bedrooms) || (property.bedrooms >= 4 && selectedBedrooms.includes(4));
+              const matchesBathrooms = selectedBathrooms.length === 0 || selectedBathrooms.includes(property.bathrooms) || (property.bathrooms >= 3 && selectedBathrooms.includes(3));
+              const matchesPrice = (!minPrice || property.price >= minPrice) && (!maxPrice || property.price <= maxPrice);
+              return matchesBedrooms && matchesBathrooms && matchesPrice;
+            });
+
+            renderPropertyCards(filteredProperties);
+          }
+
+
+          document.getElementById('applyFilters').onclick = "applyFilters()"
+          document.getElementById('toogleonclick').onclick = "togglePropertyType()"
+
+
+          // Search properties based on the title or description
+          function searchProperties() {
+            const query = document.getElementById('search').value.toLowerCase();
+            const filteredProperties = properties.filter(property =>
+              property.address.toLowerCase().includes(query) ||
+              property.description.toLowerCase().includes(query)
+            );
+            renderPropertyCards(filteredProperties);
+          }
+
+          // Function to toggle between Sale and Rent lists
+          function togglePropertyType() {
+            isForSale = !isForSale;
+            renderPropertyList();
+
+            // Update button text
+            const toggleButton = document.querySelector('button');
+            toggleButton.textContent = isForSale ? "Switch to Rent" : "Switch to Sale";
+          }
+
+          // Initial render of the property list
+          renderPropertyList();
+        </script>
+
+
+        <!-- property cards -->
+
+
+        <!-- Properties Section -->
+        <div class="container mt-5">
+          <h3>Properties</h3>
+          <div class="row" id="property-cards">
+            <!-- Dynamic property cards will be injected here -->
+          </div>
+        </div>
+
+        <script>
+          // Sample data for Buy and Rent properties
+
+          const propertiesForSale = [, "House", "Apartment", "Land Plot", "Commercial Space", "Townhouse"];
+          const propertiesForRent = ["ALL categories", "House", "Apartment", "Office Space", "Studio Apartment", "Retail Space"];
+
+          // Track current property type (default to 'sale')
+          let isForSale = true;
+
+          // location dropdown menu
+          // Sample mock data for cities
+          const mockCities = [{
+              name: 'Karachi'
+            },
+            {
+              name: 'Lahore'
+            },
+            {
+              name: 'Islamabad'
+            },
+            {
+              name: 'Faisalabad'
+            },
+            {
+              name: 'Rawalpindi'
+            },
+            {
+              name: 'Multan'
+            },
+            {
+              name: 'Quetta'
+            },
+            {
+              name: 'Peshawar'
+            },
+            {
+              name: 'Sialkot'
+            }
+          ];
+
+          // Sample mock data for categories
+          const mockCategories = [{
+              name: 'House'
+            },
+            {
+              name: 'Apartment'
+            },
+            {
+              name: 'Commercial Space'
+            },
+            {
+              name: 'Office Space'
+            },
+            {
+              name: 'Retail Space'
+            },
+            {
+              name: 'Land Plot'
+            },
+            {
+              name: 'Townhouse'
+            }
+          ];
+
+          // Fetch and populate cities in the dropdown
+          async function populateCitiesDropdown() {
+            try {
+              const cityDropdown = document.getElementById('city-dropdown');
+              // Using mock data instead of API call
+              mockCities.forEach(city => {
+                const option = document.createElement('option');
+                option.value = city.name;
+                option.textContent = city.name;
+                cityDropdown.appendChild(option);
+              });
+            } catch (error) {
+              console.error('Error fetching cities:', error);
+            }
+          }
+
+          // Fetch and populate property categories in the list
+          async function populatePropertyList() {
+            try {
+              const propertyList = document.getElementById('property-list');
+              propertyList.innerHTML = ''; // Clear existing items
+              // Using mock data instead of API call
+              mockCategories.forEach(category => {
+                const li = document.createElement('li');
+                li.textContent = category.name;
+                propertyList.appendChild(li);
+              });
+            } catch (error) {
+              console.error('Error fetching categories:', error);
+            }
+          }
+
+          // Initialize dropdown and property list on page load
+          document.addEventListener('DOMContentLoaded', () => {
+            populateCitiesDropdown();
+            populatePropertyList();
+          });
+
+          // Sample data for properties
+          const properties = [{
+              id: 1,
+              title: 'Modern Apartment',
+              description: 'Located in the heart of the city.',
+              imageUrl: 'assets/images/property-01.jpg',
+              price: '$1,200,000',
+              address: '18 Old Street Miami, OR 97219',
+              bedrooms: 1,
+              bathrooms: 1,
+              area: '120m2',
+              floor: 5,
+              parking: '1 spot'
+            },
+            {
+              id: 2,
+              title: 'Luxury Villa',
+              description: 'Spacious and beautiful with a large garden.',
+              imageUrl: 'assets/images/property-02.jpg',
+              price: '$2,500,000',
+              address: '26 Old Street Miami, OR 12870',
+              bedrooms: 4,
+              bathrooms: 3,
+              area: '450m2',
+              floor: 3,
+              parking: '2 spots'
+            },
+            {
+              id: 3,
+              title: 'Penthouse',
+              description: 'Ideal for luxury living.',
+              imageUrl: 'assets/images/property-03.jpg',
+              price: '$3,000,000',
+              address: '54 New Street Florida, OR 27001',
+              bedrooms: 5,
+              bathrooms: 4,
+              area: '300m2',
+              floor: 8,
+              parking: '3 spots'
+            },
+            // Add more properties as needed
+          ];
+
+          // Function to render property cards
+          function renderPropertyCards(data) {
+            const cardGrid = document.getElementById('property-cards');
+            cardGrid.innerHTML = ''; // Clear existing cards
+
+            data.forEach(property => {
+              const card = document.createElement('div');
+              card.classList.add('col-lg-4', 'col-md-6', 'align-self-center', 'mb-30');
+
+              card.innerHTML = `
           <div class="item">
             <a href="property-details.html?id=${property.id}"><img src="${property.imageUrl}" alt="${property.title}"></a>
             <span class="category">${property.title}</span>
@@ -213,35 +400,35 @@ https://templatemo.com/tm-591-villa-agency
           </div>
         `;
 
-            cardGrid.appendChild(card);
-          });
-        }
+              cardGrid.appendChild(card);
+            });
+          }
 
-        // Call the function to initially render all property cards
-        renderPropertyCards(properties);
-      </script>
-
-
+          // Call the function to initially render all property cards
+          renderPropertyCards(properties);
+        </script>
 
 
-      <footer>
-        <div class="container">
-          <div class="col-lg-12">
-            <p>Copyright © 2048 Villa Agency Co., Ltd. All rights reserved.
 
-              Design: <a rel="nofollow" href="https://templatemo.com" target="_blank">TemplateMo</a> Distribution: <a href="https://themewagon.com">ThemeWagon</a></p>
+
+        <footer>
+          <div class="container">
+            <div class="col-lg-12">
+              <p>Copyright © 2048 Villa Agency Co., Ltd. All rights reserved.
+
+                Design: <a rel="nofollow" href="https://templatemo.com" target="_blank">TemplateMo</a> Distribution: <a href="https://themewagon.com">ThemeWagon</a></p>
+            </div>
           </div>
-        </div>
-      </footer>
+        </footer>
 
-      <!-- Scripts -->
-      <!-- Bootstrap core JavaScript -->
-      <script src="vendor/jquery/jquery.min.js"></script>
-      <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-      <script src="assets/js/isotope.min.js"></script>
-      <script src="assets/js/owl-carousel.js"></script>
-      <script src="assets/js/counter.js"></script>
-      <script src="assets/js/custom.js"></script>
+        <!-- Scripts -->
+        <!-- Bootstrap core JavaScript -->
+        <script src="vendor/jquery/jquery.min.js"></script>
+        <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+        <script src="assets/js/isotope.min.js"></script>
+        <script src="assets/js/owl-carousel.js"></script>
+        <script src="assets/js/counter.js"></script>
+        <script src="assets/js/custom.js"></script>
 
 </body>
 

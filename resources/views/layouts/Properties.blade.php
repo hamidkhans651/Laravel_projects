@@ -9,12 +9,12 @@
 </head>
 
 <body>
-      <main class="main">
+      <main class="mainProperties">
 
 
         <div class="mastersidebar">
 
-            <div class="container">
+            <div class="containerproperties">
                 <!-- Category Title -->
                 <h2 id="property-title" class=" ">Properties for Sale</h2>
                 <button onclick="togglePropertyType()">Switch to Rent</button>
@@ -45,8 +45,10 @@
                     <label><input type="checkbox" class="bathroom-filter" value="3"> 3+ Baths</label><br>
                 </div>
 
-                <h2>Select City for Property</h2>
+                
                 <select id="city-dropdown">
+                <h2>Select City for Property</h2>
+
                     <option value="" disabled selected>Pakistan</option>
                 </select>
 
@@ -69,7 +71,7 @@
             </div>
 
             <!-- Property Cards Grid -->
-            <div class="card-grid" id="property-cards">
+            <div class="card-grid" id="property-card1">
 
             </div>
         </div>
@@ -79,99 +81,6 @@
 
 
     <script>
-        // Sample data for properties
-        const properties = [{
-                id: 1,
-                title: 'Modern Apartment',
-                description: 'Located in the heart of the city.',
-                imageUrl: 'https://via.placeholder.com/300x150',
-                bedrooms: 1,
-                bathrooms: 1
-            },
-            {
-                id: 2,
-                title: 'Luxury House',
-                description: 'Spacious and beautiful with a large garden.',
-                imageUrl: 'https://via.placeholder.com/300x150',
-                bedrooms: 3,
-                bathrooms: 2
-            },
-            {
-                id: 3,
-                title: 'Commercial Space',
-                description: 'Ideal location for business.',
-                imageUrl: 'https://via.placeholder.com/300x150',
-                bedrooms: 0,
-                bathrooms: 1
-            },
-            {
-                id: 4,
-                title: 'Suburban Family Home',
-                description: 'Perfect for families.',
-                imageUrl: 'https://via.placeholder.com/300x150',
-                bedrooms: 4,
-                bathrooms: 3
-            }, {
-                id: 4,
-                title: 'Suburban Family Home',
-                description: 'Perfect for families.',
-                imageUrl: 'https://via.placeholder.com/300x150',
-                bedrooms: 4,
-                bathrooms: 3
-            }, {
-                id: 4,
-                title: 'Suburban Family Home',
-                description: 'Perfect for families.',
-                imageUrl: 'https://via.placeholder.com/300x150',
-                bedrooms: 4,
-                bathrooms: 3
-            }, {
-                id: 4,
-                title: 'Suburban Family Home',
-                description: 'Perfect for families.',
-                imageUrl: 'https://via.placeholder.com/300x150',
-                bedrooms: 4,
-                bathrooms: 3
-            }, {
-                id: 4,
-                title: 'Suburban Family Home',
-                description: 'Perfect for families.',
-                imageUrl: 'https://via.placeholder.com/300x150',
-                bedrooms: 4,
-                bathrooms: 3
-            }, {
-                id: 4,
-                title: 'Suburban Family Home',
-                description: 'Perfect for families.',
-                imageUrl: 'https://via.placeholder.com/300x150',
-                bedrooms: 4,
-                bathrooms: 3
-            },
-            // Add more properties here
-        ];
-
-
-
-
-        // Function to render property cards
-        function renderPropertyCards(data) {
-            const cardGrid = document.getElementById('property-cards');
-            cardGrid.innerHTML = ''; // Clear existing cards
-
-            data.forEach(property => {
-                const card = document.createElement('div');
-                card.classList.add('property-card');
-
-                card.innerHTML = `
-                    <img src="${property.imageUrl}" alt="Property Image">
-                    <h3>${property.title}</h3>
-                    <p>${property.description}</p>
-                    <p>${property.bedrooms} Bed(s), ${property.bathrooms} Bath(s)</p>
-                `;
-
-                cardGrid.appendChild(card);
-            });
-        }
 
         // Call the function to initially render all property cards
         renderPropertyCards(properties);
@@ -198,7 +107,7 @@
         function searchProperties() {
             const query = document.getElementById('search').value.toLowerCase();
             const filteredProperties = properties.filter(property =>
-                property.title.toLowerCase().includes(query) ||
+                property.address.toLowerCase().includes(query) ||
                 property.description.toLowerCase().includes(query)
             );
             renderPropertyCards(filteredProperties);
