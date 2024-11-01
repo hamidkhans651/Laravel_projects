@@ -5,12 +5,11 @@
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<<<<<<< HEAD
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-=======
+
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
     rel="stylesheet">
->>>>>>> 95d85c1e6721ad0bc49af516c8c185f222a3e875
+
 
   <title>Villa Agency - Property Listing by TemplateMo</title>
 
@@ -85,22 +84,16 @@ https://templatemo.com/tm-591-villa-agency
               <li><a class="active" href="{{ route('properties') }}">Properties</a></li>
               <li><a href="{{ route('property-details') }}">Property Details</a></li>
               <li><a href="{{ route('contact') }}">Contact Us</a></li>
-<<<<<<< HEAD
+
               <li><a href="{{ route('contact') }}">Profile</a></li>
               <li><a href="#"><i class="fa fa-calendar"></i> Schedule a visit</a></li>
 
             </ul>
             <a class='menu-trigger'>
 
-
-=======
-              <li><a href="#"><i class="fa fa-calendar"></i> Schedule a visit</a></li>
-            </ul>
-            <a class='menu-trigger'>
->>>>>>> 95d85c1e6721ad0bc49af516c8c185f222a3e875
-              <span>Menu</span>
-            </a>
-            <!-- ***** Menu End ***** -->
+                <span>Menu</span>
+              </a>
+              <!-- ***** Menu End ***** -->
           </nav>
         </div>
       </div>
@@ -150,8 +143,7 @@ https://templatemo.com/tm-591-villa-agency
 
       <script>
         // Sample data for properties
-        const properties = [
-          {
+        const properties = [{
             id: 1,
             title: 'Modern Apartment',
             description: 'Located in the heart of the city.',
@@ -230,28 +222,18 @@ https://templatemo.com/tm-591-villa-agency
       </script>
 
 
+
+
       <footer>
         <div class="container">
           <div class="col-lg-12">
             <p>Copyright © 2048 Villa Agency Co., Ltd. All rights reserved.
 
-              Design: <a rel="nofollow" href="https://templatemo.com" target="_blank">TemplateMo</a> Distribution: <a
-                href="https://themewagon.com">ThemeWagon</a></p>
+              Design: <a rel="nofollow" href="https://templatemo.com" target="_blank">TemplateMo</a> Distribution: <a href="https://themewagon.com">ThemeWagon</a></p>
           </div>
         </div>
       </footer>
 
-<<<<<<< HEAD
-  <footer>
-    <div class="container">
-      <div class="col-lg-12">
-        <p>Copyright © 2048 Villa Agency Co., Ltd. All rights reserved.
-
-          Design: <a rel="nofollow" href="https://templatemo.com" target="_blank">TemplateMo</a> Distribution: <a href="https://themewagon.com">ThemeWagon</a></p>
-      </div>
-    </div>
-  </footer>
-=======
       <!-- Scripts -->
       <!-- Bootstrap core JavaScript -->
       <script src="vendor/jquery/jquery.min.js"></script>
@@ -260,13 +242,9 @@ https://templatemo.com/tm-591-villa-agency
       <script src="assets/js/owl-carousel.js"></script>
       <script src="assets/js/counter.js"></script>
       <script src="assets/js/custom.js"></script>
->>>>>>> 95d85c1e6721ad0bc49af516c8c185f222a3e875
 
 </body>
 
-<<<<<<< HEAD
 </body>
 
-=======
->>>>>>> 95d85c1e6721ad0bc49af516c8c185f222a3e875
 </html>
