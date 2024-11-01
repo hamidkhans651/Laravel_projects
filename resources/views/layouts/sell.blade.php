@@ -43,6 +43,7 @@
 
             <paragraph>
                 <h1>Why sell traditionally</h1>
+<<<<<<< Updated upstream
                 <ul>Potential for bidding wars
                 </ul>
                 <ul>Access to local market expertise
@@ -52,6 +53,9 @@
                 <ul>Navigate a stressful process with a dedicated guide
                 </ul>
                 <h1>How to sell traditionally</h1>
+=======
+             <li></li>
+>>>>>>> Stashed changes
 
                 <p>Learn more about the process of selling your house with a listing agent. If this is the best route for you, interview agents and select a professional who will meet your expectations. Your agent will then guide you through the steps of selling your home.</p>
 

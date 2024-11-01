@@ -5,7 +5,12 @@
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<<<<<<< HEAD
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+=======
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+>>>>>>> 95d85c1e6721ad0bc49af516c8c185f222a3e875
 
   <title>Villa Agency - Property Listing by TemplateMo</title>
 
@@ -80,6 +85,7 @@ https://templatemo.com/tm-591-villa-agency
               <li><a class="active" href="{{ route('properties') }}">Properties</a></li>
               <li><a href="{{ route('property-details') }}">Property Details</a></li>
               <li><a href="{{ route('contact') }}">Contact Us</a></li>
+<<<<<<< HEAD
               <li><a href="{{ route('contact') }}">Profile</a></li>
               <li><a href="#"><i class="fa fa-calendar"></i> Schedule a visit</a></li>
 
@@ -87,6 +93,11 @@ https://templatemo.com/tm-591-villa-agency
             <a class='menu-trigger'>
 
 
+=======
+              <li><a href="#"><i class="fa fa-calendar"></i> Schedule a visit</a></li>
+            </ul>
+            <a class='menu-trigger'>
+>>>>>>> 95d85c1e6721ad0bc49af516c8c185f222a3e875
               <span>Menu</span>
             </a>
             <!-- ***** Menu End ***** -->
@@ -124,183 +135,113 @@ https://templatemo.com/tm-591-villa-agency
           <a href="#!" data-filter=".rac">Penthouse</a>
         </li>
       </ul>
-      <div class="row properties-box">
-        <div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 adv">
-          <div class="item">
-            <a href="{{ route('property-details') }}"><img src="assets/images/property-01.jpg" alt=""></a>
-            <span class="category">Luxury Villa</span>
-            <h6>$2.264.000</h6>
-            <h4><a href="{{ route('property-details') }}">18 Old Street Miami, OR 97219</a></h4>
-            <ul>
-              <li>Bedrooms: <span>8</span></li>
-              <li>Bathrooms: <span>8</span></li>
-              <li>Area: <span>545m2</span></li>
-              <li>Floor: <span>3</span></li>
-              <li>Parking: <span>6 spots</span></li>
-            </ul>
-            <div class="main-button">
-              <a href="property-details.html">Schedule a visit</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 str">
-          <div class="item">
-            <a href="property-details.html"><img src="assets/images/property-02.jpg" alt=""></a>
-            <span class="category">Luxury Villa</span>
-            <h6>$1.180.000</h6>
-            <h4><a href="property-details.html">54 New Street Florida, OR 27001</a></h4>
-            <ul>
-              <li>Bedrooms: <span>6</span></li>
-              <li>Bathrooms: <span>5</span></li>
-              <li>Area: <span>450m2</span></li>
-              <li>Floor: <span>3</span></li>
-              <li>Parking: <span>8 spots</span></li>
-            </ul>
-            <div class="main-button">
-              <a href="property-details.html">Schedule a visit</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 adv rac">
-          <div class="item">
-            <a href="property-details.html"><img src="assets/images/property-03.jpg" alt=""></a>
-            <span class="category">Luxury Villa</span>
-            <h6>$1.460.000</h6>
-            <h4><a href="property-details.html">26 Mid Street Portland, OR 38540</a></h4>
-            <ul>
-              <li>Bedrooms: <span>5</span></li>
-              <li>Bathrooms: <span>4</span></li>
-              <li>Area: <span>225m2</span></li>
-              <li>Floor: <span>3</span></li>
-              <li>Parking: <span>10 spots</span></li>
-            </ul>
-            <div class="main-button">
-              <a href="property-details.html">Schedule a visit</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 str">
-          <div class="item">
-            <a href="property-details.html"><img src="assets/images/property-04.jpg" alt=""></a>
-            <span class="category">Apartment</span>
-            <h6>$584.500</h6>
-            <h4><a href="property-details.html">12 Hope Street Portland, OR 12650</a></h4>
-            <ul>
-              <li>Bedrooms: <span>4</span></li>
-              <li>Bathrooms: <span>3</span></li>
-              <li>Area: <span>125m2</span></li>
-              <li>Floor: <span>25th</span></li>
-              <li>Parking: <span>2 cars</span></li>
-            </ul>
-            <div class="main-button">
-              <a href="property-details.html">Schedule a visit</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 rac str">
-          <div class="item">
-            <a href="property-details.html"><img src="assets/images/property-05.jpg" alt=""></a>
-            <span class="category">Penthouse</span>
-            <h6>$925.600</h6>
-            <h4><a href="property-details.html">34 Hope Street Portland, OR 42680</a></h4>
-            <ul>
-              <li>Bedrooms: <span>4</span></li>
-              <li>Bathrooms: <span>4</span></li>
-              <li>Area: <span>180m2</span></li>
-              <li>Floor: <span>38th</span></li>
-              <li>Parking: <span>2 cars</span></li>
-            </ul>
-            <div class="main-button">
-              <a href="property-details.html">Schedule a visit</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 rac adv">
-          <div class="item">
-            <a href="property-details.html"><img src="assets/images/property-06.jpg" alt=""></a>
-            <span class="category">Modern Condo</span>
-            <h6>$450.000</h6>
-            <h4><a href="property-details.html">22 Hope Street Portland, OR 16540</a></h4>
-            <ul>
-              <li>Bedrooms: <span>3</span></li>
-              <li>Bathrooms: <span>2</span></li>
-              <li>Area: <span>165m2</span></li>
-              <li>Floor: <span>26th</span></li>
-              <li>Parking: <span>3 cars</span></li>
-            </ul>
-            <div class="main-button">
-              <a href="property-details.html">Schedule a visit</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 rac str">
-          <div class="item">
-            <a href="property-details.html"><img src="assets/images/property-03.jpg" alt=""></a>
-            <span class="category">Luxury Villa</span>
-            <h6>$980.000</h6>
-            <h4><a href="property-details.html">14 Mid Street Miami, OR 36450</a></h4>
-            <ul>
-              <li>Bedrooms: <span>8</span></li>
-              <li>Bathrooms: <span>8</span></li>
-              <li>Area: <span>550m2</span></li>
-              <li>Floor: <span>3</span></li>
-              <li>Parking: <span>12 spots</span></li>
-            </ul>
-            <div class="main-button">
-              <a href="property-details.html">Schedule a visit</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 rac adv">
-          <div class="item">
-            <a href="property-details.html"><img src="assets/images/property-02.jpg" alt=""></a>
-            <span class="category">Luxury Villa</span>
-            <h6>$1.520.000</h6>
-            <h4><a href="property-details.html">26 Old Street Miami, OR 12870</a></h4>
-            <ul>
-              <li>Bedrooms: <span>12</span></li>
-              <li>Bathrooms: <span>15</span></li>
-              <li>Area: <span>380m2</span></li>
-              <li>Floor: <span>3</span></li>
-              <li>Parking: <span>14 spots</span></li>
-            </ul>
-            <div class="main-button">
-              <a href="property-details.html">Schedule a visit</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 align-self-center mb-30 properties-items col-md-6 rac adv">
-          <div class="item">
-            <a href="property-details.html"><img src="assets/images/property-01.jpg" alt=""></a>
-            <span class="category">Luxury Villa</span>
-            <h6>$3.145.000</h6>
-            <h4><a href="property-details.html">34 New Street Miami, OR 24650</a></h4>
-            <ul>
-              <li>Bedrooms: <span>10</span></li>
-              <li>Bathrooms: <span>12</span></li>
-              <li>Area: <span>860m2</span></li>
-              <li>Floor: <span>3</span></li>
-              <li>Parking: <span>10 spots</span></li>
-            </ul>
-            <div class="main-button">
-              <a href="property-details.html">Schedule a visit</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-12">
-          <ul class="pagination">
-            <li><a href="#">1</a></li>
-            <li><a class="is_active" href="#">2</a></li>
-            <li><a href="#">3</a></li>
-            <li><a href="#">>></a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
 
+
+      <!-- property cards -->
+
+
+      <!-- Properties Section -->
+      <div class="container mt-5">
+        <h3>Properties</h3>
+        <div class="row" id="property-cards">
+          <!-- Dynamic property cards will be injected here -->
+        </div>
+      </div>
+
+      <script>
+        // Sample data for properties
+        const properties = [
+          {
+            id: 1,
+            title: 'Modern Apartment',
+            description: 'Located in the heart of the city.',
+            imageUrl: 'assets/images/property-01.jpg',
+            price: '$1,200,000',
+            address: '18 Old Street Miami, OR 97219',
+            bedrooms: 1,
+            bathrooms: 1,
+            area: '120m2',
+            floor: 5,
+            parking: '1 spot'
+          },
+          {
+            id: 2,
+            title: 'Luxury Villa',
+            description: 'Spacious and beautiful with a large garden.',
+            imageUrl: 'assets/images/property-02.jpg',
+            price: '$2,500,000',
+            address: '26 Old Street Miami, OR 12870',
+            bedrooms: 4,
+            bathrooms: 3,
+            area: '450m2',
+            floor: 3,
+            parking: '2 spots'
+          },
+          {
+            id: 3,
+            title: 'Penthouse',
+            description: 'Ideal for luxury living.',
+            imageUrl: 'assets/images/property-03.jpg',
+            price: '$3,000,000',
+            address: '54 New Street Florida, OR 27001',
+            bedrooms: 5,
+            bathrooms: 4,
+            area: '300m2',
+            floor: 8,
+            parking: '3 spots'
+          },
+          // Add more properties as needed
+        ];
+
+        // Function to render property cards
+        function renderPropertyCards(data) {
+          const cardGrid = document.getElementById('property-cards');
+          cardGrid.innerHTML = ''; // Clear existing cards
+
+          data.forEach(property => {
+            const card = document.createElement('div');
+            card.classList.add('col-lg-4', 'col-md-6', 'align-self-center', 'mb-30');
+
+            card.innerHTML = `
+          <div class="item">
+            <a href="property-details.html?id=${property.id}"><img src="${property.imageUrl}" alt="${property.title}"></a>
+            <span class="category">${property.title}</span>
+            <h6>${property.price}</h6>
+            <h4><a href="property-details.html?id=${property.id}">${property.address}</a></h4>
+            <ul>
+              <li>Bedrooms: <span>${property.bedrooms}</span></li>
+              <li>Bathrooms: <span>${property.bathrooms}</span></li>
+              <li>Area: <span>${property.area}</span></li>
+              <li>Floor: <span>${property.floor}</span></li>
+              <li>Parking: <span>${property.parking}</span></li>
+            </ul>
+            <div class="main-button">
+              <a href="property-details.html?id=${property.id}">Schedule a visit</a>
+            </div>
+          </div>
+        `;
+
+            cardGrid.appendChild(card);
+          });
+        }
+
+        // Call the function to initially render all property cards
+        renderPropertyCards(properties);
+      </script>
+
+
+      <footer>
+        <div class="container">
+          <div class="col-lg-12">
+            <p>Copyright © 2048 Villa Agency Co., Ltd. All rights reserved.
+
+              Design: <a rel="nofollow" href="https://templatemo.com" target="_blank">TemplateMo</a> Distribution: <a
+                href="https://themewagon.com">ThemeWagon</a></p>
+          </div>
+        </div>
+      </footer>
+
+<<<<<<< HEAD
   <footer>
     <div class="container">
       <div class="col-lg-12">
@@ -310,16 +251,22 @@ https://templatemo.com/tm-591-villa-agency
       </div>
     </div>
   </footer>
-
-  <!-- Scripts -->
-  <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-  <script src="assets/js/isotope.min.js"></script>
-  <script src="assets/js/owl-carousel.js"></script>
-  <script src="assets/js/counter.js"></script>
-  <script src="assets/js/custom.js"></script>
+=======
+      <!-- Scripts -->
+      <!-- Bootstrap core JavaScript -->
+      <script src="vendor/jquery/jquery.min.js"></script>
+      <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+      <script src="assets/js/isotope.min.js"></script>
+      <script src="assets/js/owl-carousel.js"></script>
+      <script src="assets/js/counter.js"></script>
+      <script src="assets/js/custom.js"></script>
+>>>>>>> 95d85c1e6721ad0bc49af516c8c185f222a3e875
 
 </body>
 
+<<<<<<< HEAD
+</body>
+
+=======
+>>>>>>> 95d85c1e6721ad0bc49af516c8c185f222a3e875
 </html>
