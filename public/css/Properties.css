@@ -25,6 +25,62 @@
     font-family: Arial, sans-serif;
 }
 
+.nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center; /* Ensures vertical alignment */
+  }
+  
+  .nav-item {
+    position: relative;
+    padding: 0 15px; /* Adjust padding to align with other items */
+  }
+  
+  .nav-link {
+    display: inline-block;
+    padding: 10px 15px; /* Consistent padding */
+    text-decoration: none;
+    color: #333; /* Adjust as needed */
+    font-size: 16px;
+  }
+  
+  .nav-item .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%; /* Ensures it drops below the parent */
+    left: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    min-width: 200px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    padding: 0; /* Remove padding to align items */
+  }
+  
+  .nav-item:hover .dropdown-menu {
+    display: block;
+  }
+  
+  .dropdown-item {
+    padding: 10px 15px; /* Align padding with the nav-link */
+    white-space: nowrap; /* Prevent text wrapping */
+    cursor: pointer;
+  }
+  
+  .dropdown-item:hover {
+    background-color: #f1f1f1;
+  }
+
+  
+  .nav-link{
+  
+    padding-bottom: 2vh;
+    padding: 200px;
+    margin-bottom: 2vh;
+    border: solid black 2px;
+  }
+
+
 /* over backround properties  */
 body {
 
