@@ -1,7 +1,7 @@
 /* Basic styling for container, sidebar, and main content */
 
 
-.mainProperties{
+.mainProperties {
     display: flex;
 
 }
@@ -34,11 +34,71 @@ body {
 
 }
 
+
+/* property price fixin slider starts form here  */
+
+.slider-container {
+    width: 300px;
+    margin: 20px auto;
+}
+
+.range-slider {
+    position: relative;
+    width: 100%;
+}
+
+.slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 5px;
+    background: #ddd;
+    outline: none;
+    opacity: 0.8;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    background: #4CAF50;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.value-display {
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* price slider end */
+
+.price-fixing {
+    display: flex;
+}
+
+/* Search bar styling */
+.search-bar {
+    margin-bottom: 20px;
+}
+
+.search-bar input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+
+
 /* sidebar properties categories styling */
 .property-list {
     list-style-type: none;
     padding: 0;
-    
+
 }
 
 /* Property List Styling */
@@ -80,14 +140,26 @@ h2 {
 
 #city-dropdown {
     width: 21vw;
+    height: fit-content;
     padding: 10px;
-    margin-bottom: 20px;
+    margin: 1vw;
     font-size: 16px;
     border-radius: 5px;
     border: 1px solid #ddd;
     cursor: pointer;
 }
 
+
+#property-types-dropdown {
+    width: 21vw;
+    height: fit-content;
+    padding: 10px;
+    margin: 1vw;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+}
 
 
 
@@ -139,7 +211,8 @@ button:hover {
 /* Default: Show container */
 /* Sidebar positioning */
 .mastersidebar {
-    width: 250px; /* Fixed width for desktop */
+    width: 250px;
+    /* Fixed width for desktop */
 }
 
 /* Hide on screens smaller than 768px (adjust as needed) */
@@ -153,7 +226,8 @@ button:hover {
 /* Adjustments for smaller devices */
 @media (max-width: 768px) {
     .mastersidebar {
-        display: none; /* Hide sidebar on smaller devices */
+        display: none;
+        /* Hide sidebar on smaller devices */
     }
 }
 
