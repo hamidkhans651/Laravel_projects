@@ -78,6 +78,7 @@ https://templatemo.com/tm-591-villa-agency
               <h1>Villa</h1>
             </a>
             <!-- ***** Logo End ***** -->
+             
             <!-- ***** Menu Start ***** -->
             <ul class="nav">
               <li><a href="/">Home</a></li>
@@ -85,7 +86,7 @@ https://templatemo.com/tm-591-villa-agency
               <li><a href="{{ route('property-details') }}">Property Details</a></li>
               <li><a href="{{ route('contact') }}">Contact Us</a></li>
 
-              <li><a href="{{ route('contact') }}">Profile</a></li>
+              <li><a href="{{ route('dashboard') }}">Profile</a></li>
               <li><a href="#"><i class="fa fa-calendar"></i> Schedule a visit</a></li>
 
             </ul>
