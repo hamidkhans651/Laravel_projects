@@ -7,12 +7,29 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
   <link rel="stylesheet" href="/public/css/Dashboard.css">
 
+
 </head>
 
 <body>
 
   <style>
     @import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+
+    body.light-mode {
+      --c-gray-900: #f1f1f1;
+      --c-gray-800: #ffffff;
+      --c-gray-700: #e0e0e0;
+      --c-gray-600: #d4d4d4;
+      --c-gray-500: #555;
+      --c-gray-400: #444;
+      --c-gray-300: #333;
+      --c-gray-200: #222;
+      --c-gray-100: #1a1a1a;
+      --c-text-primary: #000;
+      --c-text-secondary: #333;
+      --c-text-tertiary: #555;
+    }
 
     :root {
       --c-gray-900: #1F1F1F;
@@ -31,6 +48,18 @@
       --c-text-secondary: var(--c-gray-200);
       --c-text-tertiary: var(--c-gray-500);
     }
+
+    .dark-mode-toggle button svg {
+      fill: var(--c-text-primary);
+      /* Adjust color as needed */
+      transition: fill 0.25s ease;
+    }
+
+    .dark-mode-toggle button:hover svg {
+      fill: var(--c-gray-500);
+      /* Change on hover */
+    }
+
 
 
     body {
@@ -984,6 +1013,19 @@
           <button class="icon-button large">
             <i class="ph-bell"></i>
           </button>
+          <div class="dark-mode-toggle">
+  <button id="darkModeToggle" class="icon-button large">
+    <svg id="lightModeIcon" width="24" height="24" viewBox="0 0 24 24" fill="black" xmlns="http://www.w3.org/2000/svg" style="display: none;">
+      <path d="M11.875 4.375a.625.625 0 1 0 1.25 0c.001-.69.56-1.249 1.25-1.25a.625.625 0 1 0 0-1.25 1.252 1.252 0 0 1-1.25-1.25.625.625 0 1 0-1.25 0 1.252 1.252 0 0 1-1.25 1.25.625.625 0 1 0 0 1.25c.69.001 1.249.56 1.25 1.25Z" />
+    </svg>
+    <svg id="darkModeIcon" width="24" height="24" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="display: block;">
+      <path d="M7.019 1.985a1.55 1.55 0 0 0-.483-1.36 1.44 1.44 0 0 0-1.53-.277C2.056 1.553 0 4.5 0 7.9 0 12.352 3.648 16 8.1 16c3.407 0 6.246-2.058 7.51-4.963a1.446 1.446 0 0 0-.25-1.55 1.554 1.554 0 0 0-1.372-.502c-4.01.552-7.539-2.987-6.97-7ZM2 7.9C2 5.64 3.193 3.664 4.961 2.6 4.82 7.245 8.72 11.158 13.36 11.04 12.265 12.822 10.341 14 8.1 14 4.752 14 2 11.248 2 7.9Z" />
+    </svg>
+  </button>
+</div>
+
+
+
         </div>
       </div>
       <div class="app-header-mobile">
@@ -998,7 +1040,7 @@
         <nav class="navigation">
           <a href="/">
             <i class="ph-browsers"></i>
-            <span>Home</span>
+            <span>home</span>
           </a>
           <a href="#">
             <i class="ph-check-square"></i>
@@ -1229,6 +1271,36 @@
   <!-- partial -->
   <script src='https://unpkg.com/phosphor-icons'></script>
   <script src="./script.js"></script>
+  <script>
+  const darkModeToggle = document.getElementById('darkModeToggle');
+  const body = document.body;
+  const lightModeIcon = document.getElementById('lightModeIcon');
+  const darkModeIcon = document.getElementById('darkModeIcon');
+
+  // Check for saved user preference
+  if (localStorage.getItem('theme') === 'light') {
+    body.classList.add('light-mode');
+    lightModeIcon.style.display = 'block';
+    darkModeIcon.style.display = 'none';
+  }
+
+  darkModeToggle.addEventListener('click', () => {
+    body.classList.toggle('light-mode');
+
+    // Toggle SVG icons and colors
+    if (body.classList.contains('light-mode')) {
+      lightModeIcon.style.display = 'block';
+      darkModeIcon.style.display = 'none';
+      lightModeIcon.setAttribute('fill', 'black'); // Ensure it's black in light mode
+      localStorage.setItem('theme', 'light');
+    } else {
+      lightModeIcon.style.display = 'none';
+      darkModeIcon.style.display = 'block';
+      localStorage.setItem('theme', 'dark');
+    }
+  });
+</script>
+
 
 </body>
 

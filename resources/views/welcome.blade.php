@@ -29,8 +29,23 @@ https://templatemo.com/tm-591-villa-agency
 </head>
 <style>
   .auth {
-    padding-left: 50vw;
-    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1px 3px;
+    /* Adjust padding as needed */
+    background-color: #333;
+    /* Change to your desired button color */
+    color: white;
+    /* Text color */
+    border-radius: 90px;
+    /* Rounded corners */
+    text-decoration: none;
+    /* Remove underline */
+    font-size: 1rem;
+    /* Adjust font size as needed */
+    font-weight: bold;
+    /* Optional for emphasis */
   }
 </style>
 
@@ -88,7 +103,9 @@ https://templatemo.com/tm-591-villa-agency
               <li><a href="{{ route('property-details') }}">Property Details</a></li>
               <li><a href="{{ route('contact') }}">Contact Us</a></li>
               <li><a href="{{ route('dashboard') }}">Profile</a></li>
-              <li><a class="auth" href="{{ route('register') }}">SIGN UP / LOGIN</a></li>
+              <li><a href="{{ route('register') }}"><i class="fa fa-calendar"></i>SIGN UP / LOGIN</a></li>
+
+
             </ul>
             <a class='menu-trigger'>
               <span>Menu</span>
