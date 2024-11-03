@@ -29,7 +29,7 @@ https://templatemo.com/tm-591-villa-agency
 </head>
 <style>
   .auth {
-    padding-left: 5vw;
+    padding-left: 50vw;
     color: black;
   }
 </style>
@@ -55,7 +55,7 @@ https://templatemo.com/tm-591-villa-agency
         <div class="col-lg-8 col-md-8">
           <ul class="info">
             <li><i class="fa fa-envelope"></i> info@company.com</li>
-            <li><i class="fa fa-map"></i> Sunny Isles Beach, FL 33160 <a class="auth" href="{{ route('register') }}">SIGN UP / LOGIN</a></li>
+            <li><i class="fa fa-map"></i> Sunny Isles Beach, FL 33160 </li>
           </ul>
         </div>
         <div class="col-lg-4 col-md-4">
@@ -87,7 +87,8 @@ https://templatemo.com/tm-591-villa-agency
               <li><a href="{{ route('properties') }}">Properties</a></li>
               <li><a href="{{ route('property-details') }}">Property Details</a></li>
               <li><a href="{{ route('contact') }}">Contact Us</a></li>
-              <li><a href="#"><i class="fa fa-calendar"></i> Schedule a visit</a></li>
+              <li><a href="{{ route('dashboard') }}">Profile</a></li>
+              <li><a class="auth" href="{{ route('register') }}">SIGN UP / LOGIN</a></li>
             </ul>
             <a class='menu-trigger'>
               <span>Menu</span>

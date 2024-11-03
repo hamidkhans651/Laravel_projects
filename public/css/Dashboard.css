@@ -703,22 +703,24 @@ a {
   }
 }
 
-.transfer+* {
+.transfers {
   margin-top: 2rem;
+  cursor: pointer;
 }
 
 .transfer-logo {
   background-color: var(--c-gray-200);
   border-radius: 4px;
-  width: 42px;
-  height: 42px;
+  width: 100%;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .transfer-logo img {
-  width: 45%;
+  width: 100%;
+  height: 100%;
 }
 
 .transfer-details {
@@ -897,7 +899,7 @@ a {
   background-color: transparent;
   border: 0;
   padding: 0;
-  margin-left: 1.5rem;
+  /* margin-left: 1.5rem; */
   cursor: pointer;
   transition: 0.25s ease;
 }

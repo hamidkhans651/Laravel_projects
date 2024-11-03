@@ -1,0 +1,43 @@
+export const properties = [
+    {
+      id: 1,
+      title: 'Modern Apartment',
+      description: 'Located in the heart of the city.',
+      imageUrl: 'assets/images/property-01.jpg',
+      price: '$1,200,000',
+      address: '18 Old Street Miami, OR 97219',
+      bedrooms: 1,
+      bathrooms: 1,
+      area: '120m2',
+      floor: 5,
+      parking: '1 spot',
+    },
+    {
+      id: 2,
+      title: 'Luxury Villa',
+      description: 'Spacious and beautiful with a large garden.',
+      imageUrl: 'assets/images/property-02.jpg',
+      price: '$2,500,000',
+      address: '26 Old Street Miami, OR 12870',
+      bedrooms: 4,
+      bathrooms: 3,
+      area: '450m2',
+      floor: 3,
+      parking: '2 spots',
+    },
+    {
+      id: 3,
+      title: 'Penthouse',
+      description: 'Ideal for luxury living.',
+      imageUrl: 'assets/images/property-03.jpg',
+      price: '$3,000,000',
+      address: '54 New Street Florida, OR 27001',
+      bedrooms: 5,
+      bathrooms: 4,
+      area: '300m2',
+      floor: 8,
+      parking: '3 spots',
+    },
+    // Add more properties as needed
+  ];
+  
