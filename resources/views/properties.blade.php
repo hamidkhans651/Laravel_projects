@@ -52,16 +52,16 @@ https://templatemo.com/tm-591-villa-agency
       <div class="row">
         <div class="col-lg-8 col-md-8">
           <ul class="info">
-            <li><i class="fa fa-envelope"></i> info@company.com</li>
-            <li><i class="fa fa-map"></i> Sunny Isles Beach, FL 33160</li>
+            <li><i class="fa fa-envelope"></i> muhammadhamid.jj.7@gmail.com</li>
+            <li><i class="fa fa-map"></i> Gulshan-e-maymer,taiser town karchi</li>
           </ul>
         </div>
         <div class="col-lg-4 col-md-4">
           <ul class="social-links">
             <li><a href="#"><i class="fab fa-facebook"></i></a></li>
             <li><a href="https://x.com/minthu" target="_blank"><i class="fab fa-twitter"></i></a></li>
-            <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
-            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/muhammad-hamid-a0426a1b5/"><i class="fab fa-linkedin"></i></a></li>
+            <li><a href="https://www.instagram.com/m.hamid788788/"><i class="fab fa-instagram"></i></a></li>
           </ul>
         </div>
       </div>
@@ -527,6 +527,10 @@ https://templatemo.com/tm-591-villa-agency
             // Call the function to initially render all property cards
             renderPropertyCards(properties);
           </script>
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
           <footer>
             <div class="container">
               <div class="col-lg-12">

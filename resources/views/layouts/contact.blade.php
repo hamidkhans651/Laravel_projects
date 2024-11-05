@@ -57,8 +57,8 @@
                     <div class="social-links">
                         <a href="#">Facebook</a>
                         <a href="#">Twitter</a>
-                        <a href="#">LinkedIn</a>
-                        <a href="#">Instagram</a>
+                        <a href="https://www.linkedin.com/in/muhammad-hamid-a0426a1b5/">LinkedIn</a>
+                        <a href="https://www.instagram.com/m.hamid788788/">Instagram</a>
                     </div>
                 </div>
             </div>

@@ -48,16 +48,16 @@ https://templatemo.com/tm-591-villa-agency
       <div class="row">
         <div class="col-lg-8 col-md-8">
           <ul class="info">
-            <li><i class="fa fa-envelope"></i> info@company.com</li>
-            <li><i class="fa fa-map"></i> Sunny Isles Beach, FL 33160</li>
+            <li><i class="fa fa-envelope"></i> muhammadhamid.jj.7@gmail.com</li>
+            <li><i class="fa fa-map"></i> Gulshan-e-maymer,taiser town karchi</li>
           </ul>
         </div>
         <div class="col-lg-4 col-md-4">
           <ul class="social-links">
-            <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+            <li><a href=""><i class="fab fa-facebook"></i></a></li>
             <li><a href="https://x.com/minthu" target="_blank"><i class="fab fa-twitter"></i></a></li>
-            <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
-            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/muhammad-hamid-a0426a1b5/"><i class="fab fa-linkedin"></i></a></li>
+            <li><a href="https://www.instagram.com/m.hamid788788/"><i class="fab fa-instagram"></i></a></li>
           </ul>
         </div>
       </div>
@@ -118,13 +118,13 @@ https://templatemo.com/tm-591-villa-agency
             <div class="col-lg-12">
               <div class="item phone">
                 <img src="assets/images/phone-icon.png" alt="" style="max-width: 52px;">
-                <h6>010-020-0340<br><span>Phone Number</span></h6>
+                <h6>0324-8061046<br><span>Phone Number</span></h6>
               </div>
             </div>
             <div class="col-lg-12">
               <div class="item email">
-                <img src="assets/images/email-icon.png" alt="" style="max-width: 52px;">
-                <h6>info@villa.co<br><span>Business Email</span></h6>
+                <img src="assets/images/email-icon.png" alt="" style="max-width: 90px;">
+                <h6>muhammadhamid.jj.7<br><span>Business Email</span></h6>
               </div>
             </div>
           </div>
@@ -134,7 +134,7 @@ https://templatemo.com/tm-591-villa-agency
             <div class="row">
               <div class="col-lg-12">
                 <fieldset>
-                  <label for="name">Full Name</label>
+                  <label for="name">Full Names</label>
                   <input type="name" name="name" id="name" placeholder="Your Name..." autocomplete="on" required>
                 </fieldset>
               </div>
