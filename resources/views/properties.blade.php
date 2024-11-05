@@ -5,7 +5,8 @@
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="css/Properties.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
     rel="stylesheet">
@@ -78,7 +79,7 @@ https://templatemo.com/tm-591-villa-agency
               <h1>Villa</h1>
             </a>
             <!-- ***** Logo End ***** -->
-             
+
             <!-- ***** Menu Start ***** -->
             <ul class="nav">
               <li><a href="/">Home</a></li>
@@ -186,7 +187,8 @@ https://templatemo.com/tm-591-villa-agency
 
 
         <div class="search-bar">
-          <input type="text" id="search" placeholder="Address, Neighborhood, City, Zip code" oninput="searchProperties()" />
+          <input type="text" id="search" placeholder="Address, Neighborhood, City, Zip code"
+            oninput="searchProperties()" />
 
 
           <ul class="properties-filter">
@@ -282,56 +284,56 @@ https://templatemo.com/tm-591-villa-agency
             // location dropdown menu
             // Sample mock data for cities
             const mockCities = [{
-                name: 'Karachi'
-              },
-              {
-                name: 'Lahore'
-              },
-              {
-                name: 'Islamabad'
-              },
-              {
-                name: 'Faisalabad'
-              },
-              {
-                name: 'Rawalpindi'
-              },
-              {
-                name: 'Multan'
-              },
-              {
-                name: 'Quetta'
-              },
-              {
-                name: 'Peshawar'
-              },
-              {
-                name: 'Sialkot'
-              }
+              name: 'Karachi'
+            },
+            {
+              name: 'Lahore'
+            },
+            {
+              name: 'Islamabad'
+            },
+            {
+              name: 'Faisalabad'
+            },
+            {
+              name: 'Rawalpindi'
+            },
+            {
+              name: 'Multan'
+            },
+            {
+              name: 'Quetta'
+            },
+            {
+              name: 'Peshawar'
+            },
+            {
+              name: 'Sialkot'
+            }
             ];
 
             // Sample mock data for categories
             const mockCategories = [{
-                name: 'House'
-              },
-              {
-                name: 'Apartment'
-              },
-              {
-                name: 'Commercial Space'
-              },
-              {
-                name: 'Office Space'
-              },
-              {
-                name: 'Retail Space'
-              },
-              {
-                name: 'Land Plot'
-              },
-              {
-                name: 'Townhouse'
-              }
+              name: 'House'
+            },
+            {
+              name: 'Apartment'
+            },
+            {
+              name: 'Commercial Space'
+            },
+            {
+              name: 'Office Space'
+            },
+            {
+              name: 'Retail Space'
+            },
+            {
+              name: 'Land Plot'
+            },
+            {
+              name: 'Townhouse'
+            }
             ];
 
             // Function to populate cities in the dropdown
@@ -410,44 +412,44 @@ https://templatemo.com/tm-591-villa-agency
 
             // Sample data for properties
             const properties = [{
-                id: 1,
-                title: 'Modern Apartment',
-                description: 'Located in the heart of the city.',
-                imageUrl: 'assets/images/property-01.jpg',
-                price: '$1,200,000',
-                address: '18 Old Street Miami, OR 97219',
-                bedrooms: 1,
-                bathrooms: 1,
-                area: '120m2',
-                floor: 5,
-                parking: '1 spot'
-              },
-              {
-                id: 2,
-                title: 'Luxury Villa',
-                description: 'Spacious and beautiful with a large garden.',
-                imageUrl: 'assets/images/property-02.jpg',
-                price: '$2,500,000',
-                address: '26 Old Street Miami, OR 12870',
-                bedrooms: 4,
-                bathrooms: 3,
-                area: '450m2',
-                floor: 3,
-                parking: '2 spots'
-              },
-              {
-                id: 3,
-                title: 'Penthouse',
-                description: 'Ideal for luxury living.',
-                imageUrl: 'assets/images/property-03.jpg',
-                price: '$3,000,000',
-                address: '54 New Street Florida, OR 27001',
-                bedrooms: 5,
-                bathrooms: 4,
-                area: '300m2',
-                floor: 8,
-                parking: '3 spots'
-              },
+              id: 1,
+              title: 'Modern Apartment',
+              description: 'Located in the heart of the city.',
+              imageUrl: 'assets/images/property-01.jpg',
+              price: '$1,200,000',
+              address: '18 Old Street Miami, OR 97219',
+              bedrooms: 1,
+              bathrooms: 1,
+              area: '120m2',
+              floor: 5,
+              parking: '1 spot'
+            },
+            {
+              id: 2,
+              title: 'Luxury Villa',
+              description: 'Spacious and beautiful with a large garden.',
+              imageUrl: 'assets/images/property-02.jpg',
+              price: '$2,500,000',
+              address: '26 Old Street Miami, OR 12870',
+              bedrooms: 4,
+              bathrooms: 3,
+              area: '450m2',
+              floor: 3,
+              parking: '2 spots'
+            },
+            {
+              id: 3,
+              title: 'Penthouse',
+              description: 'Ideal for luxury living.',
+              imageUrl: 'assets/images/property-03.jpg',
+              price: '$3,000,000',
+              address: '54 New Street Florida, OR 27001',
+              bedrooms: 5,
+              bathrooms: 4,
+              area: '300m2',
+              floor: 8,
+              parking: '3 spots'
+            },
               // Add more properties as needed
             ];
 
@@ -486,19 +488,19 @@ https://templatemo.com/tm-591-villa-agency
             // Call the function to initially render all property cards
             renderPropertyCards(properties);
           </script>
-
-
-
-
           <footer>
             <div class="container">
               <div class="col-lg-12">
-                <p>Copyright © 2048 Villa Agency Co., Ltd. All rights reserved.
+                <p>Copyright © 2048 real Estate., Ltd. All rights reserved.
 
-                  Design: <a rel="nofollow" href="https://templatemo.com" target="_blank">TemplateMo</a> Distribution: <a href="https://themewagon.com">ThemeWagon</a></p>
+                  Design: <a rel="nofollow" href="https://templatemo.com" target="_blank">TemplateMo</a> Distribution:
+                  <a href="/">made by hamid</a></p>
               </div>
             </div>
           </footer>
+
+
+
 
           <!-- Scripts -->
           <!-- Bootstrap core JavaScript -->
