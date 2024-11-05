@@ -450,6 +450,45 @@ https://templatemo.com/tm-591-villa-agency
               floor: 8,
               parking: '3 spots'
             },
+            {
+              id: 3,
+              title: 'Penthouse',
+              description: 'Ideal for luxury living.',
+              imageUrl: 'assets/images/property-03.jpg',
+              price: '$3,000,000',
+              address: '54 New Street Florida, OR 27001',
+              bedrooms: 5,
+              bathrooms: 4,
+              area: '300m2',
+              floor: 8,
+              parking: '3 spots'
+            },
+            {
+              id: 3,
+              title: 'Penthouse',
+              description: 'Ideal for luxury living.',
+              imageUrl: 'assets/images/property-03.jpg',
+              price: '$3,000,000',
+              address: '54 New Street Florida, OR 27001',
+              bedrooms: 5,
+              bathrooms: 4,
+              area: '300m2',
+              floor: 8,
+              parking: '3 spots'
+            },
+            {
+              id: 3,
+              title: 'Penthouse',
+              description: 'Ideal for luxury living.',
+              imageUrl: 'assets/images/property-03.jpg',
+              price: '$3,000,000',
+              address: '54 New Street Florida, OR 27001',
+              bedrooms: 5,
+              bathrooms: 4,
+              area: '300m2',
+              floor: 8,
+              parking: '3 spots'
+            },
               // Add more properties as needed
             ];
 

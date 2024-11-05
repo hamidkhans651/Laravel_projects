@@ -1,31 +1,23 @@
 <?php
 
-
 namespace App\Http\Controllers;
 
+use App\Models\Property;
 use Illuminate\Http\Request;
-use App\Models\City;
-use App\Models\Category;
 
 class PropertyController extends Controller
 {
+    // Method to show all properties
     public function index()
     {
-        // Load the main view for properties, could be 'properties.index' Blade view
-        return view('properties.index');
+        $properties = Property::all(); // Fetch all properties
+        return view('properties', compact('properties'));
     }
 
-    public function getCities()
+    // Method to show a single property by ID
+    public function show($id)
     {
-        // Fetch all cities from the database
-        $cities = City::all();
-        return response()->json($cities);
-    }
-
-    public function getCategories()
-    {
-        // Fetch all categories from the database
-        $categories = Category::all();
-        return response()->json($categories);
+        $property = Property::findOrFail($id); // Fetch property by ID
+        return view('property-details', compact('property'));
     }
 }

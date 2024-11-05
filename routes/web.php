@@ -2,7 +2,7 @@
 use Inertia\Inertia;
 
 use Illuminate\Support\Facades\Route;
-
+use APP\Http\Controllers\PropertyController;
 Route::get('/', function () {
     return view('welcome');
 });
@@ -37,9 +37,6 @@ Route::get('/', function () {
 // })->name('Properties');
 
 
-
-
-
 // Route::get('/menu', function () {
 //     return view('layouts.menu');
 // })->name('menu');
@@ -54,6 +51,11 @@ Route::get('/', function () {
 
 
 
+// Display all properties
+Route::get('/properties', [PropertyController::class, 'index'])->name('properties');
+
+// Display a single property by ID
+Route::get('/property-details/{id}', [PropertyController::class, 'show'])->name('property-details');
 
 
 
@@ -74,8 +76,11 @@ Route::get('/register', function () {
 })->name('register');
 
 
-
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
 
+
+Route::get('/form', function () {
+    return view('form');
+})->name('form');
