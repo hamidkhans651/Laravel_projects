@@ -1,8 +1,10 @@
 <?php
-use Inertia\Inertia;
 
 use Illuminate\Support\Facades\Route;
-use APP\Http\Controllers\PropertyController;
+
+use App\Http\Controllers\PropertyController;
+
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -84,3 +86,21 @@ Route::get('/dashboard', function () {
 Route::get('/form', function () {
     return view('form');
 })->name('form');
+
+Route::get('Property',[PropertyController::class,'Property']);
+
+// Route::get('search',[PropertyController::class,'search' ]);
+
+Route::get('/search', [PropertyController::class, 'search'])->name('search');
+
+
+Route::get('/search-results', function () {
+    return view('search-results');
+})->name('search-results');
+
+
+// routes/web.php
+
+
+
+Route::get('/properties', [PropertyController::class, 'index'])->name('properties');

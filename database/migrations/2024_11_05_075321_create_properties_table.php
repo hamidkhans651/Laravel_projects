@@ -10,22 +10,16 @@ class CreatePropertiesTable extends Migration
     {
         Schema::create('properties', function (Blueprint $table) {
             $table->id();
-            $table->string('property_name');
-            $table->string('property_type');
-            $table->string('property_status');
-            $table->decimal('price', 15, 2);
+            $table->string('title'); // Renamed from property_name
             $table->text('description')->nullable();
+            $table->string('image_url')->nullable(); // Added for image URL
+            $table->decimal('price', 15, 2); // No need to store $ symbol; format on display
             $table->string('address')->nullable();
-            $table->string('city')->nullable();
-            $table->string('state')->nullable();
-            $table->string('zip')->nullable();
-            $table->string('country')->nullable();
             $table->integer('bedrooms')->nullable();
             $table->integer('bathrooms')->nullable();
-            $table->integer('area')->nullable();
-            $table->boolean('garage')->default(false);
-            $table->boolean('garden')->default(false);
-            $table->boolean('swimming_pool')->default(false);
+            $table->string('area')->nullable(); // Changed to string for '120m2' format
+            $table->integer('floor')->nullable(); // Added floor
+            $table->string('parking')->nullable(); // Changed to string for '1 spot' format
             $table->timestamps();
         });
     }

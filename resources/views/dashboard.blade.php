@@ -1015,7 +1015,7 @@
           </button>
           <div class="dark-mode-toggle">
             <button id="darkModeToggle" class="icon-button large">
-<<<<<<< Updated upstream
+
               <svg id="lightModeIcon" width="24" height="24" viewBox="0 0 24 24" fill="black"
                 xmlns="http://www.w3.org/2000/svg" style="display: none;">
                 <path
@@ -1028,18 +1028,6 @@
               </svg>
             </button>
           </div>
-
-=======
-              <svg id="lightModeIcon" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="display: none;">
-                <path d="M11.875 4.375a.625.625 0 1 0 1.25 0c.001-.69.56-1.249 1.25-1.25a.625.625 0 1 0 0-1.25 1.252 1.252 0 0 1-1.25-1.25.625.625 0 1 0-1.25 0 1.252 1.252 0 0 1-1.25 1.25.625.625 0 1 0 0 1.25c.69.001 1.249.56 1.25 1.25Z" />
-              </svg>
-              <svg id="darkModeIcon" width="24" height="24" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg" style="display: block;">
-                <path d="M7.019 1.985a1.55 1.55 0 0 0-.483-1.36 1.44 1.44 0 0 0-1.53-.277C2.056 1.553 0 4.5 0 7.9 0 12.352 3.648 16 8.1 16c3.407 0 6.246-2.058 7.51-4.963a1.446 1.446 0 0 0-.25-1.55 1.554 1.554 0 0 0-1.372-.502c-4.01.552-7.539-2.987-6.97-7ZM2 7.9C2 5.64 3.193 3.664 4.961 2.6 4.82 7.245 8.72 11.158 13.36 11.04 12.265 12.822 10.341 14 8.1 14 4.752 14 2 11.248 2 7.9Z" />
-              </svg>
-            </button>
-          </div>
->>>>>>> Stashed changes
-
 
         </div>
       </div>
@@ -1071,7 +1059,7 @@
           </a>
           <a href="{{ route('form') }}">
             <i class="ph-file-text"></i>
-            <span>Properties</span>
+            <span> Add Properties</span>
           </a>
           <a href="/">
             <i class="ph-clipboard-text"></i>
@@ -1195,44 +1183,44 @@
       <script>
         // Sample data for properties
         const properties = [{
-          id: 1,
-          title: 'Modern Apartment',
-          description: 'Located in the heart of the city.',
-          imageUrl: 'assets/images/property-01.jpg',
-          price: '$1,200,000',
-          address: '18 Old Street Miami, OR 97219',
-          bedrooms: 1,
-          bathrooms: 1,
-          area: '120m2',
-          floor: 5,
-          parking: '1 spot'
-        },
-        {
-          id: 2,
-          title: 'Luxury Villa',
-          description: 'Spacious and beautiful with a large garden.',
-          imageUrl: 'assets/images/property-02.jpg',
-          price: '$2,500,000',
-          address: '26 Old Street Miami, OR 12870',
-          bedrooms: 4,
-          bathrooms: 3,
-          area: '450m2',
-          floor: 3,
-          parking: '2 spots'
-        },
-        {
-          id: 3,
-          title: 'Penthouse',
-          description: 'Ideal for luxury living.',
-          imageUrl: 'assets/images/property-03.jpg',
-          price: '$3,000,000',
-          address: '54 New Street Florida, OR 27001',
-          bedrooms: 5,
-          bathrooms: 4,
-          area: '300m2',
-          floor: 8,
-          parking: '3 spots'
-        },
+            id: 1,
+            title: 'Modern Apartment',
+            description: 'Located in the heart of the city.',
+            imageUrl: 'assets/images/property-01.jpg',
+            price: '$1,200,000',
+            address: '18 Old Street Miami, OR 97219',
+            bedrooms: 1,
+            bathrooms: 1,
+            area: '120m2',
+            floor: 5,
+            parking: '1 spot'
+          },
+          {
+            id: 2,
+            title: 'Luxury Villa',
+            description: 'Spacious and beautiful with a large garden.',
+            imageUrl: 'assets/images/property-02.jpg',
+            price: '$2,500,000',
+            address: '26 Old Street Miami, OR 12870',
+            bedrooms: 4,
+            bathrooms: 3,
+            area: '450m2',
+            floor: 3,
+            parking: '2 spots'
+          },
+          {
+            id: 3,
+            title: 'Penthouse',
+            description: 'Ideal for luxury living.',
+            imageUrl: 'assets/images/property-03.jpg',
+            price: '$3,000,000',
+            address: '54 New Street Florida, OR 27001',
+            bedrooms: 5,
+            bathrooms: 4,
+            area: '300m2',
+            floor: 8,
+            parking: '3 spots'
+          },
           // Add more properties as needed
         ];
 
@@ -1288,35 +1276,6 @@
     const body = document.body;
     const lightModeIcon = document.getElementById('lightModeIcon');
     const darkModeIcon = document.getElementById('darkModeIcon');
-
-<<<<<<< Updated upstream
-    // Check for saved user preference
-    if (localStorage.getItem('theme') === 'light') {
-      body.classList.add('light-mode');
-      lightModeIcon.style.display = 'block';
-      darkModeIcon.style.display = 'none';
-=======
-  // Check for saved user preference
-  if (localStorage.getItem('theme') === 'light') {
-    body.classList.add('light-mode');
-    lightModeIcon.style.display = 'block';
-    darkModeIcon.style.display = 'none';
-  }
-
-  darkModeToggle.addEventListener('click', () => {
-    body.classList.toggle('light-mode');
-
-    // Toggle SVG icons
-    if (body.classList.contains('light-mode')) {
-      lightModeIcon.style.display = 'block';
-      darkModeIcon.style.display = 'none';
-      localStorage.setItem('theme', 'light');
-    } else {
-      lightModeIcon.style.display = 'none';
-      darkModeIcon.style.display = 'block';
-      localStorage.setItem('theme', 'dark');
->>>>>>> Stashed changes
-    }
 
     darkModeToggle.addEventListener('click', () => {
       body.classList.toggle('light-mode');

@@ -23,13 +23,7 @@
   <link rel="stylesheet" href="assets/css/owl.css">
   <link rel="stylesheet" href="assets/css/animate.css">
   <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
-  <!--
 
-TemplateMo 591 villa agency
-
-https://templatemo.com/tm-591-villa-agency
-
--->
 </head>
 
 <body>
@@ -187,8 +181,12 @@ https://templatemo.com/tm-591-villa-agency
 
 
         <div class="search-bar">
-          <input type="text" id="search" placeholder="Address, Neighborhood, City, Zip code"
-            oninput="searchProperties()" />
+          <form action="{{ route('search') }}" method="GET">
+            <input type="text" id="search" placeholder="Address, Neighborhood, City, Zip code "
+              oninput="searchProperties()" />
+            <button>search</button>
+
+          </form>
 
 
           <ul class="properties-filter">
@@ -208,6 +206,8 @@ https://templatemo.com/tm-591-villa-agency
               <a id="toogleonclick" href="#!" data-filter=".rac">Switch to Rent</a>
             </li>
             <li>
+
+
               <a id="applyFilters" href="#!" data-filter=".rac">Apply Filters</a>
             </li>
           </ul>
@@ -265,12 +265,37 @@ https://templatemo.com/tm-591-villa-agency
 
 
           <!-- Properties Section -->
+          @extends('layouts.app')
+
+          @section('content')
           <div class="container mt-5">
             <h3>Properties</h3>
             <div class="row" id="property-cards">
-              <!-- Dynamic property cards will be injected here -->
+              @foreach($properties as $property)
+              <div class="col-lg-4 col-md-6 align-self-center mb-30">
+                <div class="item">
+                  <a href="{{ route('property-details', ['id' => $property->id]) }}">
+                    <img src="{{ asset($property->image_url) }}" alt="{{ $property->title }}">
+                  </a>
+                  <span class="category">{{ $property->title }}</span>
+                  <h6>${{ number_format($property->price, 2) }}</h6>
+                  <h4><a href="{{ route('property-details', ['id' => $property->id]) }}">{{ $property->address }}</a></h4>
+                  <ul>
+                    <li>Bedrooms: <span>{{ $property->bedrooms }}</span></li>
+                    <li>Bathrooms: <span>{{ $property->bathrooms }}</span></li>
+                    <li>Area: <span>{{ $property->area }}</span></li>
+                    <li>Floor: <span>{{ $property->floor }}</span></li>
+                    <li>Parking: <span>{{ $property->parking }}</span></li>
+                  </ul>
+                  <div class="main-button">
+                    <a href="{{ route('property-details', ['id' => $property->id]) }}">Schedule a visit</a>
+                  </div>
+                </div>
+              </div>
+              @endforeach
             </div>
           </div>
+          @endsection
 
           <script>
             // Sample data for Buy and Rent properties
@@ -284,59 +309,59 @@ https://templatemo.com/tm-591-villa-agency
             // location dropdown menu
             // Sample mock data for cities
             const mockCities = [{
-              name: 'Karachi'
-            },
-            {
-              name: 'Lahore'
-            },
-            {
-              name: 'Islamabad'
-            },
-            {
-              name: 'Faisalabad'
-            },
-            {
-              name: 'Rawalpindi'
-            },
-            {
-              name: 'Multan'
-            },
-            {
-              name: 'Quetta'
-            },
-            {
-              name: 'Peshawar'
-            },
-            {
-              name: 'Sialkot'
-            }
+                name: 'Karachi'
+              },
+              {
+                name: 'Lahore'
+              },
+              {
+                name: 'Islamabad'
+              },
+              {
+                name: 'Faisalabad'
+              },
+              {
+                name: 'Rawalpindi'
+              },
+              {
+                name: 'Multan'
+              },
+              {
+                name: 'Quetta'
+              },
+              {
+                name: 'Peshawar'
+              },
+              {
+                name: 'Sialkot'
+              }
             ];
 
             // Sample mock data for categories
             const mockCategories = [{
-              name: 'House'
-            },
-            {
-              name: 'Apartment'
-            },
-            {
-              name: 'Commercial Space'
-            },
-            {
-              name: 'Office Space'
-            },
-            {
-              name: 'Retail Space'
-            },
-            {
-              name: 'Land Plot'
-            },
-            {
-              name: 'Townhouse'
-            }
+                name: 'House'
+              },
+              {
+                name: 'Apartment'
+              },
+              {
+                name: 'Commercial Space'
+              },
+              {
+                name: 'Office Space'
+              },
+              {
+                name: 'Retail Space'
+              },
+              {
+                name: 'Land Plot'
+              },
+              {
+                name: 'Townhouse'
+              }
             ];
 
-            // Function to populate cities in the dropdown
+
             // Function to populate cities in the dropdown
             async function populateCitiesDropdown() {
               try {
@@ -410,134 +435,17 @@ https://templatemo.com/tm-591-villa-agency
               populatePropertyList();
             });
 
-            // Sample data for properties
-            const properties = [{
-              id: 1,
-              title: 'Modern Apartment',
-              description: 'Located in the heart of the city.',
-              imageUrl: 'assets/images/property-01.jpg',
-              price: '$1,200,000',
-              address: '18 Old Street Miami, OR 97219',
-              bedrooms: 1,
-              bathrooms: 1,
-              area: '120m2',
-              floor: 5,
-              parking: '1 spot'
-            },
-            {
-              id: 2,
-              title: 'Luxury Villa',
-              description: 'Spacious and beautiful with a large garden.',
-              imageUrl: 'assets/images/property-02.jpg',
-              price: '$2,500,000',
-              address: '26 Old Street Miami, OR 12870',
-              bedrooms: 4,
-              bathrooms: 3,
-              area: '450m2',
-              floor: 3,
-              parking: '2 spots'
-            },
-            {
-              id: 3,
-              title: 'Penthouse',
-              description: 'Ideal for luxury living.',
-              imageUrl: 'assets/images/property-03.jpg',
-              price: '$3,000,000',
-              address: '54 New Street Florida, OR 27001',
-              bedrooms: 5,
-              bathrooms: 4,
-              area: '300m2',
-              floor: 8,
-              parking: '3 spots'
-            },
-            {
-              id: 3,
-              title: 'Penthouse',
-              description: 'Ideal for luxury living.',
-              imageUrl: 'assets/images/property-03.jpg',
-              price: '$3,000,000',
-              address: '54 New Street Florida, OR 27001',
-              bedrooms: 5,
-              bathrooms: 4,
-              area: '300m2',
-              floor: 8,
-              parking: '3 spots'
-            },
-            {
-              id: 3,
-              title: 'Penthouse',
-              description: 'Ideal for luxury living.',
-              imageUrl: 'assets/images/property-03.jpg',
-              price: '$3,000,000',
-              address: '54 New Street Florida, OR 27001',
-              bedrooms: 5,
-              bathrooms: 4,
-              area: '300m2',
-              floor: 8,
-              parking: '3 spots'
-            },
-            {
-              id: 3,
-              title: 'Penthouse',
-              description: 'Ideal for luxury living.',
-              imageUrl: 'assets/images/property-03.jpg',
-              price: '$3,000,000',
-              address: '54 New Street Florida, OR 27001',
-              bedrooms: 5,
-              bathrooms: 4,
-              area: '300m2',
-              floor: 8,
-              parking: '3 spots'
-            },
-              // Add more properties as needed
-            ];
-
-            // Function to render property cards
-            function renderPropertyCards(data) {
-              const cardGrid = document.getElementById('property-cards');
-              cardGrid.innerHTML = ''; // Clear existing cards
-
-              data.forEach(property => {
-                const card = document.createElement('div');
-                card.classList.add('col-lg-4', 'col-md-6', 'align-self-center', 'mb-30');
-
-                card.innerHTML = `
-          <div class="item">
-            <a href="property-details.html?id=${property.id}"><img src="${property.imageUrl}" alt="${property.title}"></a>
-            <span class="category">${property.title}</span>
-            <h6>${property.price}</h6>
-            <h4><a href="property-details.html?id=${property.id}">${property.address}</a></h4>
-            <ul>
-              <li>Bedrooms: <span>${property.bedrooms}</span></li>
-              <li>Bathrooms: <span>${property.bathrooms}</span></li>
-              <li>Area: <span>${property.area}</span></li>
-              <li>Floor: <span>${property.floor}</span></li>
-              <li>Parking: <span>${property.parking}</span></li>
-            </ul>
-            <div class="main-button">
-              <a href="property-details.html?id=${property.id}">Schedule a visit</a>
-            </div>
-          </div>
-        `;
-
-                cardGrid.appendChild(card);
-              });
-            }
-
-            // Call the function to initially render all property cards
-            renderPropertyCards(properties);
+         
           </script>
-<<<<<<< Updated upstream
-=======
 
->>>>>>> Stashed changes
           <footer>
             <div class="container">
               <div class="col-lg-12">
                 <p>Copyright © 2048 real Estate., Ltd. All rights reserved.
 
                   Design: <a rel="nofollow" href="https://templatemo.com" target="_blank">TemplateMo</a> Distribution:
-                  <a href="/">made by hamid</a></p>
+                  <a href="/">made by hamid</a>
+                </p>
               </div>
             </div>
           </footer>
