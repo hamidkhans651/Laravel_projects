@@ -15,82 +15,7 @@
 <body>
 
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f9;
-            margin: 0;
-            padding: 2px;
-        }
-
-        .form-container {
-            background: #fff;
-            padding: 30px;
-            margin: auto;
-            width: 100%;
-            border-radius: 10px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-        }
-
-        h2 {
-            margin-bottom: 20px;
-            color: #333;
-        }
-
-        .form-group {
-            margin-bottom: 15px;
-        }
-
-        label {
-            display: block;
-            margin-bottom: 5px;
-            color: #555;
-        }
-
-        input,
-        select,
-        textarea {
-            width: 100%;
-            padding: 10px;
-            margin-top: 5px;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-            box-sizing: border-box;
-        }
-
-        button {
-            padding: 12px 20px;
-            background-color: #5cb85c;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        button:hover {
-            background-color: #4cae4c;
-        }
-
-
-
-        @import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-
-
-        body.light-mode {
-            --c-gray-900: #f1f1f1;
-            --c-gray-800: #ffffff;
-            --c-gray-700: #e0e0e0;
-            --c-gray-600: #d4d4d4;
-            --c-gray-500: #555;
-            --c-gray-400: #444;
-            --c-gray-300: #333;
-            --c-gray-200: #222;
-            --c-gray-100: #1a1a1a;
-            --c-text-primary: #000;
-            --c-text-secondary: #333;
-            --c-text-tertiary: #555;
-        }
-
-    /* form end  */
+        /* form end  */
 
         :root {
             --c-gray-900: #1F1F1F;
@@ -197,7 +122,7 @@
                 align-items: center;
                 justify-content: space-between;
                 border-bottom: 1px solid var(--c-gray-600);
-                
+
             }
         }
 
@@ -244,7 +169,7 @@
             display: grid;
             grid-template-columns: minmax(-webkit-min-content, 175px) minmax(-webkit-max-content, 1fr) minmax(-webkit-min-content, 400px);
             grid-template-columns: minmax(min-content, 175px) minmax(max-content, 1fr) minmax(min-content, 40px);
-        
+
             padding-top: 2.5rem;
             border: solid black 2px;
 
@@ -1124,9 +1049,9 @@
                         <i class="ph-file-text"></i>
                         <span>Property Owners</span>
                     </a>
-                    <a href="{{ route('form') }}">
+                    <a href="{{ route('dashboard') }}">
                         <i class="ph-file-text"></i>
-                        <span> Add Properties</span>
+                        <span>Dashboard</span>
                     </a>
                     <a href="/">
                         <i class="ph-clipboard-text"></i>
@@ -1181,124 +1106,35 @@
 
 
                         <!-- form starts here -->
-                        <div class="form-container">
-                            <h2>Add New Property</h2>
-                            <form id="addPropertyForm" action="/submit-property" method="POST">
 
-                                <!-- Property Name -->
-                                <div class="form-group">
-                                    <label for="propertyName">Property Name:</label>
-                                    <input type="text" id="propertyName" name="propertyName" required>
-                                </div>
-
-                                <!-- Property Type -->
-                                <div class="form-group">
-                                    <label for="propertyType">Property Type:</label>
-                                    <select id="propertyType" name="propertyType" required>
-                                        <option value="apartment">Apartment</option>
-                                        <option value="house">House</option>
-                                        <option value="commercial">Commercial</option>
-                                        <option value="land">Land</option>
-                                    </select>
-                                </div>
-
-                                <!-- Address -->
-                                <div class="form-group">
-                                    <label for="address">Address:</label>
-                                    <textarea id="address" name="address" rows="3" required></textarea>
-                                </div>
-
-                                <!-- City -->
-                                <div class="form-group">
-                                    <label for="city">City:</label>
-                                    <input type="text" id="city" name="city" required>
-                                </div>
-
-                                <!-- State -->
-                                <div class="form-group">
-                                    <label for="state">State:</label>
-                                    <input type="text" id="state" name="state" required>
-                                </div>
-
-                                <!-- Zip Code -->
-                                <div class="form-group">
-                                    <label for="zipCode">Zip Code:</label>
-                                    <input type="text" id="zipCode" name="zipCode" required>
-                                </div>
-
-                                <!-- Price -->
-                                <div class="form-group">
-                                    <label for="price">Price ($):</label>
-                                    <input type="number" id="price" name="price" required>
-                                </div>
-
-                                <!-- Bedrooms -->
-                                <div class="form-group">
-                                    <label for="bedrooms">Bedrooms:</label>
-                                    <input type="number" id="bedrooms" name="bedrooms" min="0" required>
-                                </div>
-
-                                <!-- Bathrooms -->
-                                <div class="form-group">
-                                    <label for="bathrooms">Bathrooms:</label>
-                                    <input type="number" id="bathrooms" name="bathrooms" min="0" required>
-                                </div>
-
-                                <!-- Square Footage -->
-                                <div class="form-group">
-                                    <label for="squareFootage">Square Footage (sq ft):</label>
-                                    <input type="number" id="squareFootage" name="squareFootage" required>
-                                </div>
-
-                                <!-- Description -->
-                                <div class="form-group">
-                                    <label for="description">Description:</label>
-                                    <textarea id="description" name="description" rows="5"></textarea>
-                                </div>
-
-                                <!-- Image Upload -->
-                                <div class="form-group">
-                                    <label for="imageUpload">Upload Image:</label>
-                                    <input type="file" id="imageUpload" name="imageUpload" accept="image/*" required>
-                                </div>
-
-                                <!-- Submit Button -->
-                                <div class="form-group">
-                                    <button type="submit" id="submitBtn">Add Property</button>
-                                </div>
-                            </form>
-                        </div>
-            </div>
-        </div>
-    </div>
-    <!-- partial -->
-    <script src='https://unpkg.com/phosphor-icons'></script>
-    <script src="./script.js"></script>
+                        <!-- partial -->
+                        <script src='https://unpkg.com/phosphor-icons'></script>
+                        <script src="./script.js"></script>
 
 
 
-    <script>
-        const darkModeToggle = document.getElementById('darkModeToggle');
-        const body = document.body;
-        const lightModeIcon = document.getElementById('lightModeIcon');
-        const darkModeIcon = document.getElementById('darkModeIcon');
+                        <script>
+                            const darkModeToggle = document.getElementById('darkModeToggle');
+                            const body = document.body;
+                            const lightModeIcon = document.getElementById('lightModeIcon');
+                            const darkModeIcon = document.getElementById('darkModeIcon');
 
-        darkModeToggle.addEventListener('click', () => {
-            body.classList.toggle('light-mode');
+                            darkModeToggle.addEventListener('click', () => {
+                                body.classList.toggle('light-mode');
 
-            // Toggle SVG icons and colors
-            if (body.classList.contains('light-mode')) {
-                lightModeIcon.style.display = 'block';
-                darkModeIcon.style.display = 'none';
-                lightModeIcon.setAttribute('fill', 'black'); // Ensure it's black in light mode
-                localStorage.setItem('theme', 'light');
-            } else {
-                lightModeIcon.style.display = 'none';
-                darkModeIcon.style.display = 'block';
-                localStorage.setItem('theme', 'dark');
-            }
-        });
-    </script>
+                                // Toggle SVG icons and colors
+                                if (body.classList.contains('light-mode')) {
+                                    lightModeIcon.style.display = 'block';
+                                    darkModeIcon.style.display = 'none';
+                                    lightModeIcon.setAttribute('fill', 'black'); // Ensure it's black in light mode
+                                    localStorage.setItem('theme', 'light');
+                                } else {
+                                    lightModeIcon.style.display = 'none';
+                                    darkModeIcon.style.display = 'block';
+                                    localStorage.setItem('theme', 'dark');
+                                }
+                            });
+                        </script>
 
 
 

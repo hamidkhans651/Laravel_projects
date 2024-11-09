@@ -1057,7 +1057,7 @@
             <i class="ph-file-text"></i>
             <span>Property Owners</span>
           </a>
-          <a href="{{ route('form') }}">
+          <a href="{{ route('Addproperties') }}">
             <i class="ph-file-text"></i>
             <span> Add Properties</span>
           </a>
