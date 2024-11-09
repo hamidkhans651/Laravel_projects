@@ -111,5 +111,4 @@ Route::get('/properties', [PropertyController::class, 'index'])->name('propertie
 // use form for adding properties 
 
 
-
 Route::get('/', [WelcomePropertiesController::class, 'index'])->name('welcome');

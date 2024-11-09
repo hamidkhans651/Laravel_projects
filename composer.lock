@@ -1168,7 +1168,7 @@
                 "nesbot/carbon": "^2.72.2|^3.0",
                 "nunomaduro/termwind": "^2.0",
                 "php": "^8.2",
-                "psr/container": "^1.1.1|^2.0.1",
+                "psr/": "^1.1.1|^2.0.1",
                 "psr/log": "^1.0|^2.0|^3.0",
                 "psr/simple-cache": "^1.0|^2.0|^3.0",
                 "ramsey/uuid": "^4.7",
@@ -1193,7 +1193,7 @@
                 "tightenco/collect": "<5.5.33"
             },
             "provide": {
-                "psr/container-implementation": "1.1|2.0",
+                "psr/-implementation": "1.1|2.0",
                 "psr/log-implementation": "1.0|2.0|3.0",
                 "psr/simple-cache-implementation": "1.0|2.0|3.0"
             },
@@ -1207,7 +1207,7 @@
                 "illuminate/conditionable": "self.version",
                 "illuminate/config": "self.version",
                 "illuminate/console": "self.version",
-                "illuminate/container": "self.version",
+                "illuminate/": "self.version",
                 "illuminate/contracts": "self.version",
                 "illuminate/cookie": "self.version",
                 "illuminate/database": "self.version",
@@ -2525,16 +2525,16 @@
             "time": "2022-11-25T14:36:26+00:00"
         },
         {
-            "name": "psr/container",
+            "name": "psr/",
             "version": "2.0.2",
             "source": {
                 "type": "git",
-                "url": "https://github.com/php-fig/container.git",
+                "url": "https://github.com/php-fig/.git",
                 "reference": "c71ecc56dfe541dbd90c5360474fbc405f8d5963"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/container/zipball/c71ecc56dfe541dbd90c5360474fbc405f8d5963",
+                "url": "https://api.github.com/repos/php-fig//zipball/c71ecc56dfe541dbd90c5360474fbc405f8d5963",
                 "reference": "c71ecc56dfe541dbd90c5360474fbc405f8d5963",
                 "shasum": ""
             },
@@ -2549,7 +2549,7 @@
             },
             "autoload": {
                 "psr-4": {
-                    "Psr\\Container\\": "src/"
+                    "Psr\\\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -2562,18 +2562,18 @@
                     "homepage": "https://www.php-fig.org/"
                 }
             ],
-            "description": "Common Container Interface (PHP FIG PSR-11)",
-            "homepage": "https://github.com/php-fig/container",
+            "description": "Common  Interface (PHP FIG PSR-11)",
+            "homepage": "https://github.com/php-fig/",
             "keywords": [
                 "PSR-11",
-                "container",
-                "container-interface",
-                "container-interop",
+                "",
+                "-interface",
+                "-interop",
                 "psr"
             ],
             "support": {
-                "issues": "https://github.com/php-fig/container/issues",
-                "source": "https://github.com/php-fig/container/tree/2.0.2"
+                "issues": "https://github.com/php-fig//issues",
+                "source": "https://github.com/php-fig//tree/2.0.2"
             },
             "time": "2021-11-05T16:47:00+00:00"
         },
@@ -4935,7 +4935,7 @@
             },
             "require": {
                 "php": ">=8.1",
-                "psr/container": "^1.1|^2.0",
+                "psr/": "^1.1|^2.0",
                 "symfony/deprecation-contracts": "^2.5|^3"
             },
             "conflict": {
@@ -5705,7 +5705,7 @@
             },
             "require": {
                 "php": "^7.4 || ^8.0",
-                "psr/container": "^1.0 || ^2.0",
+                "psr/": "^1.0 || ^2.0",
                 "symfony/deprecation-contracts": "^2.2 || ^3.0"
             },
             "conflict": {

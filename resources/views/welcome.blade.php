@@ -374,7 +374,7 @@ https://templatemo.com/tm-591-villa-agency
                       <h4>Extra Info About Penthouse</h4>
                       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, do eiusmod tempor pack incididunt ut labore et dolore magna aliqua quised ipsum suspendisse. <br><br>Swag fanny pack lyft blog twee. JOMO ethical copper mug, succulents typewriter shaman DIY kitsch twee taiyaki fixie hella venmo after messenger poutine next level humblebrag swag franzen.</p>
                       <div class="icon-button">
-                        <a href="{{ route('property-details') }}""><i class=" fa fa-calendar"></i> Schedule a visit</a>
+                        <a href="{{ route('property-details') }}"><i class=" fa fa-calendar"></i> Schedule a visit</a>
                       </div>
                     </div>
                   </div>
@@ -387,37 +387,29 @@ https://templatemo.com/tm-591-villa-agency
     </div>
   </div>
 
-
   <!-- properties section start from here -->
-
   <div class="properties section">
     <div class="container">
       <div class="row">
         <div class="col-lg-4 offset-lg-4">
           <div class="section-heading text-center">
-            <h6>| Properties</h6>
-            <h2>We Provide The Best Property You Like</h2>
           </div>
         </div>
       </div>
 
-      <!-- !-- Properties Section -->
-      <div class="container mt-5">
-        <h3>Properties</h3>
-        <div class="row" id="property-cards">
-          <!-- Dynamic property cards will be injected here -->
+      @extends('layouts.app')
+      @section('content')
+      <div class="container" style="margin-top: 100px;">
+        <div class="row">
+          <div class="col-lg-4 offset-lg-4">
+            <div class="section-heading text-center">
+              <h6 class="properties-cards">| Properties</h6>
+              <h2>We Provide The Best Property You Like</h2>
+            </div>
+          </div>
         </div>
       </div>
 
-      <!-- property cards -->
-      <!-- Properties Section -->
-      <!-- resources/views/welcome.blade.php -->
-      <!-- resources/views/welcome.blade.php -->
-      <!-- resources/views/welcome.blade.php -->
-
-      @extends('layouts.app')
-
-      @section('content')
       <div class="container mt-5">
         <h3>Properties</h3>
         <div class="row" id="property-cards">
@@ -447,132 +439,8 @@ https://templatemo.com/tm-591-villa-agency
       </div>
       @endsection
 
-
-
-
-      <script>
-        //       // Sample data for properties
-        //       const properties = [{
-        //           id: 1,
-        //           title: 'Modern Apartment hamid',
-        //           description: 'Located in the heart of the city.',
-        //           imageUrl: 'assets/images/property-01.jpg',
-        //           price: '$1,200,000',
-        //           address: '18 Old Street Miami, OR 97219',
-        //           bedrooms: 1,
-        //           bathrooms: 1,
-        //           area: '120m2',
-        //           floor: 5,
-        //           parking: '1 spot'
-        //         },
-        //         {
-        //           id: 2,
-        //           title: 'Luxury Villa',
-        //           description: 'Spacious and beautiful with a large garden.',
-        //           imageUrl: 'assets/images/property-02.jpg',
-        //           price: '$2,500,000',
-        //           address: '26 Old Street Miami, OR 12870',
-        //           bedrooms: 4,
-        //           bathrooms: 3,
-        //           area: '450m2',
-        //           floor: 3,
-        //           parking: '2 spots'
-        //         },
-        //         {
-        //           id: 3,
-        //           title: 'Penthouse',
-        //           description: 'Ideal for luxury living.',
-        //           imageUrl: 'assets/images/property-03.jpg',
-        //           price: '$3,000,000',
-        //           address: '54 New Street Florida, OR 27001',
-        //           bedrooms: 5,
-        //           bathrooms: 4,
-        //           area: '300m2',
-        //           floor: 8,
-        //           parking: '3 spots'
-        //         },                {
-        //           id: 4,
-        //           title: 'Penthouse',
-        //           description: 'Ideal for luxury living.',
-        //           imageUrl: 'assets/images/property-03.jpg',
-        //           price: '$3,000,000',
-        //           address: '54 New Street Florida, OR 27001',
-        //           bedrooms: 5,
-        //           bathrooms: 4,
-        //           area: '300m2',
-        //           floor: 8,
-        //           parking: '3 spots'
-        //         },
-        //         {
-        //           id: 5,
-        //           title: 'Penthouse',
-        //           description: 'Ideal for luxury living.',
-        //           imageUrl: 'assets/images/property-03.jpg',
-        //           price: '$3,000,000',
-        //           address: '54 New Street Florida, OR 27001',
-        //           bedrooms: 5,
-        //           bathrooms: 4,
-        //           area: '300m2',
-        //           floor: 8,
-        //           parking: '3 spots'
-        //         },
-        //         {
-        //           id: 6,
-        //           title: 'Penthouse',
-        //           description: 'Ideal for luxury living.',
-        //           imageUrl: 'assets/images/property-03.jpg',
-        //           price: '$3,000,000',
-        //           address: '54 New Street Florida, OR 27001',
-        //           bedrooms: 5,
-        //           bathrooms: 4,
-        //           area: '300m2',
-        //           floor: 8,
-        //           parking: '3 spots'
-        //         },
-        //         // Add more properties as needed
-        //       ];
-
-        //       // Function to render property cards
-        //       function renderPropertyCards(data) {
-        //         const cardGrid = document.getElementById('property-cards');
-        //         cardGrid.innerHTML = ''; // Clear existing cards
-
-        //         data.forEach(property => {
-        //           const card = document.createElement('div');
-        //           card.classList.add('col-lg-4', 'col-md-6', 'align-self-center', 'mb-30');
-
-        //           card.innerHTML = `
-        //   <div class="item">
-        //     <a href="property-details.html?id=${property.id}"><img src="${property.imageUrl}" alt="${property.title}"></a>
-        //     <span class="category">${property.title}</span>
-        //     <h6>${property.price}</h6>
-        //     <h4><a href="property-details.html?id=${property.id}">${property.address}</a></h4>
-        //     <ul>
-        //       <li>Bedrooms: <span>${property.bedrooms}</span></li>
-        //       <li>Bathrooms: <span>${property.bathrooms}</span></li>
-        //       <li>Area: <span>${property.area}</span></li>
-        //       <li>Floor: <span>${property.floor}</span></li>
-        //       <li>Parking: <span>${property.parking}</span></li>
-        //     </ul>
-        //     <div class="main-button">
-        //       <a href="property-details.html?id=${property.id}">Schedule a visit</a>
-        //     </div>
-        //   </div>
-        // `;
-
-        //           cardGrid.appendChild(card);
-        //         });
-        //       }
-
-        // Call the function to initially render all property cards
-        renderPropertyCards(properties);
-      </script>
-
-
-      </script>
-
-      <div class="contact section">
-        <div class="container">
+      <div class="contact section" style="margin-top: -150px;">
+        <div class="container " >
           <div class="row">
             <div class="col-lg-4 offset-lg-4">
               <div class="section-heading text-center">
@@ -645,15 +513,7 @@ https://templatemo.com/tm-591-villa-agency
         </div>
       </div>
 
-      <footer>
-        <div class="container">
-          <div class="col-lg-8">
-            <p>Copyright © 2048 Villa Agency Co., Ltd. All rights reserved.
 
-              Design: <a rel="nofollow" href="https://templatemo.com" target="_blank">TemplateMo</a> Distribution: <a href="https://themewagon.com">ThemeWagon</a></p>
-          </div>
-        </div>
-      </footer>
 
       <!-- Scripts -->
       <!-- Bootstrap core JavaScript -->

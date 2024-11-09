@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,14 +11,15 @@
 </head>
 
 <body>
-
-
     <header>
         <!-- Add your header content here -->
     </header>
 
     <main>
-        @yield('content') <!-- This is where the page-specific content will go -->
+
+            @yield('content')
+
+            <!-- This is where the page-specific content will go -->
     </main>
 
     <footer class="footer-no-gap">
