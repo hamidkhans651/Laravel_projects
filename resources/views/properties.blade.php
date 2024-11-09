@@ -96,7 +96,6 @@
     </div>
   </header>
   <!-- ***** Header Area End ***** -->
-
   <div class="page-heading header-text">
     <div class="container">
       <div class="row">
@@ -107,15 +106,8 @@
       </div>
     </div>
   </div>
-
-
   </head>
-
   <body>
-
-
-
-
     <div class="section properties">
       <div class="container">
         <div class="containerproperties">
@@ -262,8 +254,6 @@
 
 
           <!-- property cards -->
-
-
           <!-- Properties Section -->
           @extends('layouts.app')
 
@@ -438,17 +428,7 @@
          
           </script>
 
-          <footer>
-            <div class="container">
-              <div class="col-lg-12">
-                <p>Copyright © 2048 real Estate., Ltd. All rights reserved.
-
-                  Design: <a rel="nofollow" href="https://templatemo.com" target="_blank">TemplateMo</a> Distribution:
-                  <a href="/">made by hamid</a>
-                </p>
-              </div>
-            </div>
-          </footer>
+      
 
 
 

@@ -400,228 +400,176 @@ https://templatemo.com/tm-591-villa-agency
           </div>
         </div>
       </div>
-      
-            <!-- !-- Properties Section --> 
-            <div class="container mt-5">
-              <h3>Properties</h3>
-              <div class="row" id="property-cards">
-                <!-- Dynamic property cards will be injected here -->
-              </div>
-            </div>
 
-            <script>
-              // Sample data for properties
-              const properties = [{
-                  id: 1,
-                  title: 'Modern Apartment hamid',
-                  description: 'Located in the heart of the city.',
-                  imageUrl: 'assets/images/property-01.jpg',
-                  price: '$1,200,000',
-                  address: '18 Old Street Miami, OR 97219',
-                  bedrooms: 1,
-                  bathrooms: 1,
-                  area: '120m2',
-                  floor: 5,
-                  parking: '1 spot'
-                },
-                {
-                  id: 2,
-                  title: 'Luxury Villa',
-                  description: 'Spacious and beautiful with a large garden.',
-                  imageUrl: 'assets/images/property-02.jpg',
-                  price: '$2,500,000',
-                  address: '26 Old Street Miami, OR 12870',
-                  bedrooms: 4,
-                  bathrooms: 3,
-                  area: '450m2',
-                  floor: 3,
-                  parking: '2 spots'
-                },
-                {
-                  id: 3,
-                  title: 'Penthouse',
-                  description: 'Ideal for luxury living.',
-                  imageUrl: 'assets/images/property-03.jpg',
-                  price: '$3,000,000',
-                  address: '54 New Street Florida, OR 27001',
-                  bedrooms: 5,
-                  bathrooms: 4,
-                  area: '300m2',
-                  floor: 8,
-                  parking: '3 spots'
-                },                {
-                  id: 4,
-                  title: 'Penthouse',
-                  description: 'Ideal for luxury living.',
-                  imageUrl: 'assets/images/property-03.jpg',
-                  price: '$3,000,000',
-                  address: '54 New Street Florida, OR 27001',
-                  bedrooms: 5,
-                  bathrooms: 4,
-                  area: '300m2',
-                  floor: 8,
-                  parking: '3 spots'
-                },
-                {
-                  id: 5,
-                  title: 'Penthouse',
-                  description: 'Ideal for luxury living.',
-                  imageUrl: 'assets/images/property-03.jpg',
-                  price: '$3,000,000',
-                  address: '54 New Street Florida, OR 27001',
-                  bedrooms: 5,
-                  bathrooms: 4,
-                  area: '300m2',
-                  floor: 8,
-                  parking: '3 spots'
-                },
-                {
-                  id: 6,
-                  title: 'Penthouse',
-                  description: 'Ideal for luxury living.',
-                  imageUrl: 'assets/images/property-03.jpg',
-                  price: '$3,000,000',
-                  address: '54 New Street Florida, OR 27001',
-                  bedrooms: 5,
-                  bathrooms: 4,
-                  area: '300m2',
-                  floor: 8,
-                  parking: '3 spots'
-                },
-                // Add more properties as needed
-              ];
-
-              // Function to render property cards
-              function renderPropertyCards(data) {
-                const cardGrid = document.getElementById('property-cards');
-                cardGrid.innerHTML = ''; // Clear existing cards
-
-                data.forEach(property => {
-                  const card = document.createElement('div');
-                  card.classList.add('col-lg-4', 'col-md-6', 'align-self-center', 'mb-30');
-
-                  card.innerHTML = `
-          <div class="item">
-            <a href="property-details.html?id=${property.id}"><img src="${property.imageUrl}" alt="${property.title}"></a>
-            <span class="category">${property.title}</span>
-            <h6>${property.price}</h6>
-            <h4><a href="property-details.html?id=${property.id}">${property.address}</a></h4>
-            <ul>
-              <li>Bedrooms: <span>${property.bedrooms}</span></li>
-              <li>Bathrooms: <span>${property.bathrooms}</span></li>
-              <li>Area: <span>${property.area}</span></li>
-              <li>Floor: <span>${property.floor}</span></li>
-              <li>Parking: <span>${property.parking}</span></li>
-            </ul>
-            <div class="main-button">
-              <a href="property-details.html?id=${property.id}">Schedule a visit</a>
-            </div>
-          </div>
-        `;
-
-                  cardGrid.appendChild(card);
-                });
-              }
-
-              // Call the function to initially render all property cards
-              renderPropertyCards(properties);
-            </script>
-
-
-            </script>
-            <!-- <div class="col-lg-4 col-md-6">
-              <div class="item">
-                <a href="{{ route('property-details') }}"><img src="assets/images/property-02.jpg" alt=""></a>
-                <span class="category">Luxury Villa</span>
-                <h6>$1.180.000</h6>
-                <h4><a href="{{ route('property-details') }}">54 Mid Street Florida, OR 27001</a></h4>
-                <ul>
-                  <li>Bedrooms: <span>6</span></li>
-                  <li>Bathrooms: <span>5</span></li>
-                  <li>Area: <span>450m2</span></li>
-                  <li>Floor: <span>3</span></li>
-                  <li>Parking: <span>8 spots</span></li>
-                </ul>
-                <div class="main-button">
-                  <a href="{{ route('property-details') }}">Schedule a visit</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-              <div class="item">
-                <a href="{{ route('property-details') }}"><img src="assets/images/property-03.jpg" alt=""></a>
-                <span class="category">Luxury Villa</span>
-                <h6>$1.460.000</h6>
-                <h4><a href="{{ route('property-details') }}">26 Old Street Miami, OR 38540</a></h4>
-                <ul>
-                  <li>Bedrooms: <span>5</span></li>
-                  <li>Bathrooms: <span>4</span></li>
-                  <li>Area: <span>225m2</span></li>
-                  <li>Floor: <span>3</span></li>
-                  <li>Parking: <span>10 spots</span></li>
-                </ul>
-                <div class="main-button">
-                  <a href="property-details.blade.php">Schedule a visit</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-              <div class="item">
-                <a href="property-details.blade.php"><img src="assets/images/property-04.jpg" alt=""></a>
-                <span class="category">Apartment</span>
-                <h6>$584.500</h6>
-                <h4><a href="property-details.blade.php">12 New Street Miami, OR 12650</a></h4>
-                <ul>
-                  <li>Bedrooms: <span>4</span></li>
-                  <li>Bathrooms: <span>3</span></li>
-                  <li>Area: <span>125m2</span></li>
-                  <li>Floor: <span>25th</span></li>
-                  <li>Parking: <span>2 cars</span></li>
-                </ul>
-                <div class="main-button">
-                  <a href="property-details.blade.php">Schedule a visit</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-              <div class="item">
-                <a href="property-details.blade.php"><img src="assets/images/property-05.jpg" alt=""></a>
-                <span class="category">Penthouse</span>
-                <h6>$925.600</h6>
-                <h4><a href="property-details.blade.php">34 Beach Street Miami, OR 42680</a></h4>
-                <ul>
-                  <li>Bedrooms: <span>4</span></li>
-                  <li>Bathrooms: <span>4</span></li>
-                  <li>Area: <span>180m2</span></li>
-                  <li>Floor: <span>38th</span></li>
-                  <li>Parking: <span>2 cars</span></li>
-                </ul>
-                <div class="main-button">
-                  <a href="property-details.blade.php">Schedule a visit</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-              <div class="item">
-                <a href="property-details.blade.php"><img src="assets/images/property-06.jpg" alt=""></a>
-                <span class="category">Modern Condo</span>
-                <h6>$450.000</h6>
-                <h4><a href="property-details.blade.php">22 New Street Portland, OR 16540</a></h4>
-                <ul>
-                  <li>Bedrooms: <span>3</span></li>
-                  <li>Bathrooms: <span>2</span></li>
-                  <li>Area: <span>165m2</span></li>
-                  <li>Floor: <span>26th</span></li>
-                  <li>Parking: <span>3 cars</span></li>
-                </ul>
-                <div class="main-button">
-                  <a href="property-details.blade.php">Schedule a visit</a>
-                </div>
-              </div>
-            </div>
-          </div>
+      <!-- !-- Properties Section -->
+      <div class="container mt-5">
+        <h3>Properties</h3>
+        <div class="row" id="property-cards">
+          <!-- Dynamic property cards will be injected here -->
         </div>
-      </div> -->
+      </div>
+
+      <!-- property cards -->
+      <!-- Properties Section -->
+      <!-- resources/views/welcome.blade.php -->
+      <!-- resources/views/welcome.blade.php -->
+      <!-- resources/views/welcome.blade.php -->
+
+      @extends('layouts.app')
+
+      @section('content')
+      <div class="container mt-5">
+        <h3>Properties</h3>
+        <div class="row" id="property-cards">
+          @foreach($properties as $property)
+          <div class="col-lg-4 col-md-6 align-self-center mb-30">
+            <div class="item">
+              <a href="{{ route('property-details', ['id' => $property->id]) }}">
+                <img src="{{ asset($property->image_url) }}" alt="{{ $property->title }}">
+              </a>
+              <span class="category">{{ $property->title }}</span>
+              <h6>${{ number_format($property->price, 2) }}</h6>
+              <h4><a href="{{ route('property-details', ['id' => $property->id]) }}">{{ $property->address }}</a></h4>
+              <ul>
+                <li>Bedrooms: <span>{{ $property->bedrooms }}</span></li>
+                <li>Bathrooms: <span>{{ $property->bathrooms }}</span></li>
+                <li>Area: <span>{{ $property->area }}</span></li>
+                <li>Floor: <span>{{ $property->floor }}</span></li>
+                <li>Parking: <span>{{ $property->parking }}</span></li>
+              </ul>
+              <div class="main-button">
+                <a href="{{ route('property-details', ['id' => $property->id]) }}">Schedule a visit</a>
+              </div>
+            </div>
+          </div>
+          @endforeach
+        </div>
+      </div>
+      @endsection
+
+
+
+
+      <script>
+        //       // Sample data for properties
+        //       const properties = [{
+        //           id: 1,
+        //           title: 'Modern Apartment hamid',
+        //           description: 'Located in the heart of the city.',
+        //           imageUrl: 'assets/images/property-01.jpg',
+        //           price: '$1,200,000',
+        //           address: '18 Old Street Miami, OR 97219',
+        //           bedrooms: 1,
+        //           bathrooms: 1,
+        //           area: '120m2',
+        //           floor: 5,
+        //           parking: '1 spot'
+        //         },
+        //         {
+        //           id: 2,
+        //           title: 'Luxury Villa',
+        //           description: 'Spacious and beautiful with a large garden.',
+        //           imageUrl: 'assets/images/property-02.jpg',
+        //           price: '$2,500,000',
+        //           address: '26 Old Street Miami, OR 12870',
+        //           bedrooms: 4,
+        //           bathrooms: 3,
+        //           area: '450m2',
+        //           floor: 3,
+        //           parking: '2 spots'
+        //         },
+        //         {
+        //           id: 3,
+        //           title: 'Penthouse',
+        //           description: 'Ideal for luxury living.',
+        //           imageUrl: 'assets/images/property-03.jpg',
+        //           price: '$3,000,000',
+        //           address: '54 New Street Florida, OR 27001',
+        //           bedrooms: 5,
+        //           bathrooms: 4,
+        //           area: '300m2',
+        //           floor: 8,
+        //           parking: '3 spots'
+        //         },                {
+        //           id: 4,
+        //           title: 'Penthouse',
+        //           description: 'Ideal for luxury living.',
+        //           imageUrl: 'assets/images/property-03.jpg',
+        //           price: '$3,000,000',
+        //           address: '54 New Street Florida, OR 27001',
+        //           bedrooms: 5,
+        //           bathrooms: 4,
+        //           area: '300m2',
+        //           floor: 8,
+        //           parking: '3 spots'
+        //         },
+        //         {
+        //           id: 5,
+        //           title: 'Penthouse',
+        //           description: 'Ideal for luxury living.',
+        //           imageUrl: 'assets/images/property-03.jpg',
+        //           price: '$3,000,000',
+        //           address: '54 New Street Florida, OR 27001',
+        //           bedrooms: 5,
+        //           bathrooms: 4,
+        //           area: '300m2',
+        //           floor: 8,
+        //           parking: '3 spots'
+        //         },
+        //         {
+        //           id: 6,
+        //           title: 'Penthouse',
+        //           description: 'Ideal for luxury living.',
+        //           imageUrl: 'assets/images/property-03.jpg',
+        //           price: '$3,000,000',
+        //           address: '54 New Street Florida, OR 27001',
+        //           bedrooms: 5,
+        //           bathrooms: 4,
+        //           area: '300m2',
+        //           floor: 8,
+        //           parking: '3 spots'
+        //         },
+        //         // Add more properties as needed
+        //       ];
+
+        //       // Function to render property cards
+        //       function renderPropertyCards(data) {
+        //         const cardGrid = document.getElementById('property-cards');
+        //         cardGrid.innerHTML = ''; // Clear existing cards
+
+        //         data.forEach(property => {
+        //           const card = document.createElement('div');
+        //           card.classList.add('col-lg-4', 'col-md-6', 'align-self-center', 'mb-30');
+
+        //           card.innerHTML = `
+        //   <div class="item">
+        //     <a href="property-details.html?id=${property.id}"><img src="${property.imageUrl}" alt="${property.title}"></a>
+        //     <span class="category">${property.title}</span>
+        //     <h6>${property.price}</h6>
+        //     <h4><a href="property-details.html?id=${property.id}">${property.address}</a></h4>
+        //     <ul>
+        //       <li>Bedrooms: <span>${property.bedrooms}</span></li>
+        //       <li>Bathrooms: <span>${property.bathrooms}</span></li>
+        //       <li>Area: <span>${property.area}</span></li>
+        //       <li>Floor: <span>${property.floor}</span></li>
+        //       <li>Parking: <span>${property.parking}</span></li>
+        //     </ul>
+        //     <div class="main-button">
+        //       <a href="property-details.html?id=${property.id}">Schedule a visit</a>
+        //     </div>
+        //   </div>
+        // `;
+
+        //           cardGrid.appendChild(card);
+        //         });
+        //       }
+
+        // Call the function to initially render all property cards
+        renderPropertyCards(properties);
+      </script>
+
+
+      </script>
 
       <div class="contact section">
         <div class="container">

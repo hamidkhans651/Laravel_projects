@@ -6,29 +6,13 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Models\Property;
 
-
-class PropertyController extends Controller
+class WelcomePropertiesController extends Controller
 {
-    // Method to show all properties
-    // public function index()
-    // {
-    //     $properties = Property::all(); // Fetch all properties
-    //     return view('properties', compact('properties'));
-    // }
-
-    // // Method to show a single property by ID
-    // public function show($id)
-    // {
-    //     $property = Property::findOrFail($id); // Fetch property by ID
-    //     return view('property-details', compact('property'));
-    // }
 
     function Property()
     {
         return DB::select('select * from Properties');
     }
-
-
 
     function search(Request $request)
     {
@@ -45,11 +29,18 @@ class PropertyController extends Controller
         return view('search-results', compact('properties'));
     }
 
+
+
     public function index()
     {
-        $properties = Property::all(); // Fetch all properties
-        return view('properties', compact('properties')); // Use 'properties' instead of 'properties.index'
+        // Fetch properties for the welcome page
+        $welproperties = Property::all(); // Limit to 3 properties if desired
+
+        // Debugging line to confirm if properties are fetched
+        // dd($properties); // This will dump the properties and stop execution
+
+        return view('welcome', compact('properties'));
+        // Pass properties to the 'welcome' view
+        return view('welcome', compact('properties'));
     }
-
-
-};
+}

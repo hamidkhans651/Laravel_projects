@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\PropertyController;
+use App\Http\Controllers\WelcomePropertiesController;
+
 
 
 Route::get('/', function () {
@@ -104,3 +106,10 @@ Route::get('/search-results', function () {
 
 
 Route::get('/properties', [PropertyController::class, 'index'])->name('properties');
+
+
+// use form for adding properties 
+
+
+
+Route::get('/', [WelcomePropertiesController::class, 'index'])->name('welcome');

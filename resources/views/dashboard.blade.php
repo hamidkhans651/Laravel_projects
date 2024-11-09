@@ -120,7 +120,7 @@
     .app-header {
       display: grid;
       grid-template-columns: minmax(-webkit-min-content, 175px) minmax(-webkit-max-content, 1fr) minmax(-webkit-max-content, 400px);
-      grid-template-columns: minmax(min-content, 175px) minmax(max-content, 1fr) minmax(max-content, 400px);
+      grid-template-columns: minmax(min-content, 175px) minmax(max-content, 1fr) minmax(max-content, 0px);
       -moz-column-gap: 4rem;
       column-gap: 4rem;
       align-items: flex-end;
@@ -1067,13 +1067,6 @@
           </a>
 
         </nav>
-        <footer class="footer">
-          <h1>Real estate<small>©</small></h1>
-          <div>
-            Real estate ©<br />
-            All Rights Reserved 2024
-          </div>
-        </footer>
       </div>
       <div class="app-body-main-content">
         <section class="service-section">
