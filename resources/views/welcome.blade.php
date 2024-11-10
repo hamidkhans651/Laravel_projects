@@ -462,7 +462,7 @@ https://templatemo.com/tm-591-villa-agency
               </div>
               <div class="row">
                 <div class="col-lg-6">
-                  <div class="item phone"  style="width: 20vw; height: 27vh; padding: 30px;">
+                  <!-- <div class="item phone"  style="width: 20vw; height: 27vh; padding: 30px;">
                     <img src="assets/images/phone-icon.png" alt="" style="max-width: 52px;">
                     <h6>0324-8061046<br><span>Phone Number</span></h6>
                   </div>
@@ -471,7 +471,7 @@ https://templatemo.com/tm-591-villa-agency
                   <div class="item email"  style="width: 20vw; height: 27vh; padding: 30px;" >
                     <img src="assets/images/email-icon.png" alt="" style="max-width: 52px;">
                     <h6>muhammadhamid.jj.7 <br>@gmail.com<br><span>Business Email</span></h6>
-                  </div>
+                  </div> -->
                 </div>
               </div>
             </div>
