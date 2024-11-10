@@ -4,7 +4,10 @@
     "outputDirectory": "public",
     "functions": {
       "api/index.php": {
-        "runtime": "vercel-php@0.7.0"  
+        "runtime": "vercel-php@0.7.0"
+      },
+      "api/index": {
+        "runtime": "nodejs16.x"  // Adjust to a supported runtime
       }
     },
     "routes": [
