@@ -207,6 +207,22 @@
       .app-body-navigation {
         display: none;
       }
+
+      .show-sidebar .app-body-navigation {
+        display: flex;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        z-index: 1000;
+        width: 250px;
+        /* Adjust width as needed */
+        background-color: var(--c-gray-800);
+        /* Matches the theme */
+        padding: 20px;
+        /* Optional for spacing */
+        transition: transform 0.3s ease-in-out;
+      }
     }
 
     .footer {
@@ -974,11 +990,11 @@
       <div class="app-header-logo">
         <div class="logo">
           <span class="logo-icon">
-            <img src="https://assets.codepen.io/285131/almeria-logo.svg" />
+            <img src="" />
           </span>
           <h1 class="logo-title">
-            <span>Almeria</span>
-            <span>NeoBank</span>
+            <span>Real estate </span>
+            <span>Dashboard</span>
           </h1>
         </div>
       </div>
@@ -1035,6 +1051,8 @@
 
         </div>
       </div>
+
+
       <div class="app-header-mobile">
         <button class="icon-button large">
           <i class="ph-list"></i>
@@ -1168,35 +1186,35 @@
 
 
           <div id="properties2-list">
-    <div class="transfers" id="property-list">
-        @foreach($properties as $property)
-        <div class="transfer">
-            <div class="transfer-logo">
-                <img src="{{ asset($property->image_url) }}" alt="{{ $property->title }}" />
-            </div>
-            <dl class="transfer-details">
-                <div>
+            <div class="transfers" id="property-list">
+              @foreach($properties as $property)
+              <div class="transfer">
+                <div class="transfer-logo">
+                  <img src="{{ asset($property->image_url) }}" alt="{{ $property->title }}" />
+                </div>
+                <dl class="transfer-details">
+                  <div>
                     <dt>{{ $property->title }}</dt>
                     <dd>{{ $property->address }}</dd>
-                </div>
-                <div>
+                  </div>
+                  <div>
                     <dt>{{ $property->area }}</dt>
                     <dd>Area</dd>
-                </div>
-                <div>
+                  </div>
+                  <div>
                     <dt>{{ $property->floor }}</dt>
                     <dd>Floor</dd>
+                  </div>
+                </dl>
+                <div class="transfer-number">
+                  ${{ number_format($property->price, 2) }}
                 </div>
-            </dl>
-            <div class="transfer-number">
-                ${{ number_format($property->price, 2) }}
+              </div>
+              @endforeach
             </div>
-        </div>
-        @endforeach
-    </div>
-</div>
+          </div>
 
-          
+
 
 
 
@@ -1207,6 +1225,24 @@
   <script src='https://unpkg.com/phosphor-icons'></script>
   <script src="./script.js"></script>
   <script>
+    // Select the mobile menu button and the main app container
+    const mobileMenuButton = document.querySelector('.app-header-mobile .icon-button');
+    const appContainer = document.querySelector('.app');
+
+    // Add an event listener to toggle the sidebar visibility
+    mobileMenuButton.addEventListener('click', () => {
+      appContainer.classList.toggle('show-sidebar');
+    });
+
+    document.addEventListener('click', (event) => {
+    if (!appContainer.contains(event.target) && appContainer.classList.contains('show-sidebar')) {
+        appContainer.classList.remove('show-sidebar');
+    }
+});
+
+
+
+
     const darkModeToggle = document.getElementById('darkModeToggle');
     const body = document.body;
     const lightModeIcon = document.getElementById('lightModeIcon');
