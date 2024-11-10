@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\PropertyController;
 use App\Http\Controllers\WelcomePropertiesController;
+use App\Http\Controllers\dashboardcontroller;
 
 
 
@@ -112,3 +113,6 @@ Route::get('/properties', [PropertyController::class, 'index'])->name('propertie
 
 
 Route::get('/', [WelcomePropertiesController::class, 'index'])->name('welcome');
+
+
+Route::get('/dashboard', [dashboardcontroller::class, 'index'])->name('dashboard');

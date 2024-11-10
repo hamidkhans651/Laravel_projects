@@ -47,6 +47,7 @@ https://templatemo.com/tm-591-villa-agency
     font-weight: bold;
     /* Optional for emphasis */
   }
+
 </style>
 
 <body>
@@ -416,10 +417,10 @@ https://templatemo.com/tm-591-villa-agency
           @foreach($properties as $property)
           <div class="col-lg-4 col-md-6 align-self-center mb-30">
             <div class="item">
-              <a href="{{ route('property-details', ['id' => $property->id]) }}">
+              <a href="{{ route('property-details', ['id' => $property->id]) }}" >
                 <img src="{{ asset($property->image_url) }}" alt="{{ $property->title }}">
               </a>
-              <span class="category">{{ $property->title }}</span>
+              <a href="{{ route('property-details', ['id' => $property->id]) }}" >
               <h6>${{ number_format($property->price, 2) }}</h6>
               <h4><a href="{{ route('property-details', ['id' => $property->id]) }}">{{ $property->address }}</a></h4>
               <ul>

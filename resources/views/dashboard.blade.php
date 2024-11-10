@@ -13,6 +13,10 @@
 <body>
 
   <style>
+    #properties2-list {
+      cursor: pointer;
+    }
+
     @import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 
@@ -1163,103 +1167,41 @@
           </div>
 
 
-          <!-- Properties list start from here -->
-          <div class="transfers" id="property-list">
-            <div class="transfer-logo"></div>
+          <div id="properties2-list">
+    <div class="transfers" id="property-list">
+        @foreach($properties as $property)
+        <div class="transfer">
+            <div class="transfer-logo">
+                <img src="{{ asset($property->image_url) }}" alt="{{ $property->title }}" />
+            </div>
             <dl class="transfer-details">
-
-
-              <!-- Dynamic property cards will be injected here -->
-          </div>
-      </div>
-
-      <script>
-        // Sample data for properties
-        const properties = [{
-            id: 1,
-            title: 'Modern Apartment',
-            description: 'Located in the heart of the city.',
-            imageUrl: 'assets/images/property-01.jpg',
-            price: '$1,200,000',
-            address: '18 Old Street Miami, OR 97219',
-            bedrooms: 1,
-            bathrooms: 1,
-            area: '120m2',
-            floor: 5,
-            parking: '1 spot'
-          },
-          {
-            id: 2,
-            title: 'Luxury Villa',
-            description: 'Spacious and beautiful with a large garden.',
-            imageUrl: 'assets/images/property-02.jpg',
-            price: '$2,500,000',
-            address: '26 Old Street Miami, OR 12870',
-            bedrooms: 4,
-            bathrooms: 3,
-            area: '450m2',
-            floor: 3,
-            parking: '2 spots'
-          },
-          {
-            id: 3,
-            title: 'Penthouse',
-            description: 'Ideal for luxury living.',
-            imageUrl: 'assets/images/property-03.jpg',
-            price: '$3,000,000',
-            address: '54 New Street Florida, OR 27001',
-            bedrooms: 5,
-            bathrooms: 4,
-            area: '300m2',
-            floor: 8,
-            parking: '3 spots'
-          },
-          // Add more properties as needed
-        ];
-
-        // Function to render property cards
-        function renderPropertyList(data) {
-          const cardGrid = document.getElementById('property-list');
-          cardGrid.innerHTML = ''; // Clear existing cards
-
-          data.forEach(property => {
-            const card = document.createElement('div');
-            card.classList.add('transfer');
-
-            card.innerHTML = `
-        <div class="transfer-logo">
-          <img src="${property.imageUrl}" alt="${property.title}" />
+                <div>
+                    <dt>{{ $property->title }}</dt>
+                    <dd>{{ $property->address }}</dd>
+                </div>
+                <div>
+                    <dt>{{ $property->area }}</dt>
+                    <dd>Area</dd>
+                </div>
+                <div>
+                    <dt>{{ $property->floor }}</dt>
+                    <dd>Floor</dd>
+                </div>
+            </dl>
+            <div class="transfer-number">
+                ${{ number_format($property->price, 2) }}
+            </div>
         </div>
-        <dl class="transfer-details">
-          <div>
-            <dt>${property.title}</dt>
-            <dd>${property.address}</dd>
-          </div>
-          <div>
-            <dt>${property.area}</dt>
-            <dd>Area</dd>
-          </div>
-          <div>
-            <dt>${property.floor}</dt>
-            <dd>Floor</dd>
-          </div>
-        </dl>
-        <div class="transfer-number">
-          ${property.price}
-        </div>
-      `;
-
-            cardGrid.appendChild(card);
-          });
-        }
-
-        // Call the function to render all property cards
-        renderPropertyList(properties);
-      </script>
-
-
+        @endforeach
     </div>
-  </div>
+</div>
+
+          
+
+
+
+      </div>
+    </div>
   </div>
   <!-- partial -->
   <script src='https://unpkg.com/phosphor-icons'></script>
