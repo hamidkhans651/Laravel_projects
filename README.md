@@ -229,3 +229,16 @@ This process should allow Composer to access any required GitHub repositories, r
 Specify a Stable Version for pusher/pusher-php-server: Specifying a specific version of pusher/pusher-php-server can help Composer resolve dependencies without encountering conflicts. Replace "pusher/pusher-php-server": "*" with a stable version like "^7.2.6":
 
 ```"pusher/pusher-php-server": "^7.2.6"```
+
+## Add PSR Dependencies if Missing: 
+Since you encountered errors with psr/ dependencies, you can explicitly add commonly required PSR packages to require to ensure compatibility. Try adding the following:
+
+json
+Copy code
+
+`` 
+"psr/log": "^3.0",
+"psr/http-message": "^1.0",
+"psr/http-client": "^1.0"
+``
+
