@@ -228,8 +228,8 @@ This process should allow Composer to access any required GitHub repositories, r
 ## Modifications to Try
 Specify a Stable Version for pusher/pusher-php-server: Specifying a specific version of pusher/pusher-php-server can help Composer resolve dependencies without encountering conflicts. Replace "pusher/pusher-php-server": "*" with a stable version like "^7.2.6":
 
-```markdown
-```json
+
+```
 
 
 {
@@ -241,8 +241,7 @@ Specify a Stable Version for pusher/pusher-php-server: Specifying a specific ver
 ## Add PSR Dependencies if Missing: 
 Since you encountered errors with psr/ dependencies, you can explicitly add commonly required PSR packages to require to ensure compatibility. Try adding the following:
 
-``` json
-Copy code
+``` 
 
 
 
@@ -255,3 +254,36 @@ Copy code
 
 }
 ```
+
+
+
+## This will look like:
+
+```
+
+"require": {
+    "php": "^8.2",
+    "inertiajs/inertia-laravel": "^1.3",
+    "laravel/framework": "^11.9",
+    "laravel/tinker": "^2.9",
+    "pusher/pusher-php-server": "^7.2.6",
+    "psr/log": "^3.0",
+    "psr/http-message": "^1.0",
+    "psr/http-client": "^1.0"
+},
+```
+
+
+## Clear Composer Cache and Update Dependencies: 
+After making these changes, clear Composer’s cache and update dependencies to fetch the latest compatible packages.
+
+```
+composer clear-cache
+composer update
+```
+
+## Summary of Changes:
+Specify a stable version for pusher/pusher-php-server.
+Explicitly add psr/log, psr/http-message, and psr/http-client dependencies.
+Clear the Composer cache and update dependencies.
+These adjustments should help resolve the issues you’re encountering with dependency fetching and compatibility. Let me know if you encounter specific errors during composer update, and we can troubleshoot further.
