@@ -116,3 +116,16 @@ Route::get('/', [WelcomePropertiesController::class, 'index'])->name('welcome');
 
 
 Route::get('/dashboard', [dashboardcontroller::class, 'index'])->name('dashboard');
+
+
+// chat routes 
+
+Route::get('/index', 'App\Http\Controllers\PusherController@index');
+Route::post('/broadcast', 'App\Http\Controllers\PusherController@broadcast');
+Route::post('/receive', 'App\Http\Controllers\PusherController@receive');
+
+
+
+Route::get('/index', function () {
+    return view('index');  // Maps to contact.blade.php
+})->name('index');
