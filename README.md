@@ -236,16 +236,15 @@ Specify a Stable Version for pusher/pusher-php-server: Specifying a specific ver
 "pusher/pusher-php-server": "^7.2.6"
 
 }
+```
 
 ## Add PSR Dependencies if Missing: 
 Since you encountered errors with psr/ dependencies, you can explicitly add commonly required PSR packages to require to ensure compatibility. Try adding the following:
 
-json
+``` json
 Copy code
 
 
-```markdown
-```json
 
 {
 
@@ -255,5 +254,4 @@ Copy code
 
 
 }
-
-
+```
