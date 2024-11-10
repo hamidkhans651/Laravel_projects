@@ -1037,7 +1037,7 @@
                         <i class="ph-browsers"></i>
                         <span>home</span>
                     </a>
-                    <a href="#">
+                    <a href="/index">
                         <i class="ph-check-square"></i>
                         <span>chats</span>
                     </a>

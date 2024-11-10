@@ -129,3 +129,11 @@ Route::post('/receive', 'App\Http\Controllers\PusherController@receive');
 Route::get('/index', function () {
     return view('index');  // Maps to contact.blade.php
 })->name('index');
+
+
+
+// Route::get('/', function () {
+
+//     \Illuminate\Support\Facades\Mail::send(new \App\Mail\EmailSent());
+//     return view('welcome');  // Maps to contact.blade.php
+// });
