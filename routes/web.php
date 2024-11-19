@@ -132,8 +132,16 @@ Route::get('/index', function () {
 
 
 
+
+// search routes
+//   Route::get('/search', [PropertyController::class, 'search'])->name('properties');
+
+
+
 // Route::get('/', function () {
 
 //     \Illuminate\Support\Facades\Mail::send(new \App\Mail\EmailSent());
 //     return view('welcome');  // Maps to contact.blade.php
 // });
+
+Route::get('/search', [PropertyController::class, 'search']);

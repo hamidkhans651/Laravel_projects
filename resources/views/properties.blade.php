@@ -175,7 +175,7 @@
         <div class="search-bar">
           <form action="{{ route('search') }}" method="GET">
             <input type="text" id="search" placeholder="Address, Neighborhood, City, Zip code "
-              oninput="searchProperties()" />
+              oninput="searchProperties()" name="search" />
             <button>search</button>
 
           </form>
