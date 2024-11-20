@@ -12,4 +12,12 @@ class WelcomePropertiesController extends Controller
         $properties = Property::all(); // Fetch all properties
         return view('welcome', compact('properties')); // Pass $properties to the view
     }
+
+    function search(Request $request ){
+        $propertiesdata= Property::where('name','like',"%$request->search%")->get();
+        return $propertiesdata;
+
+    }
+
+
 }

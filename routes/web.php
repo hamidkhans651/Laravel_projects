@@ -126,6 +126,10 @@ Route::post('/receive', 'App\Http\Controllers\PusherController@receive');
 
 
 
+Route::get('/properties', [PropertyController::class, 'index'])->name('properties');
+Route::get('/properties/search', [PropertyController::class, 'search'])->name('search');
+Route::get('/api/properties', [PropertyController::class, 'getAllProperties']);
+
 Route::get('/index', function () {
     return view('index');  // Maps to contact.blade.php
 })->name('index');
