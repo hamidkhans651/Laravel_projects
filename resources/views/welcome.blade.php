@@ -5,8 +5,8 @@
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-  @vite(['resources/css/app.css', 'resources/js/app.js'])
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
   <title>Your Laravel App</title>
   <title>Villa Agency - Real Estate HTML5 Template</title>
 
@@ -159,36 +159,48 @@ https://templatemo.com/tm-591-villa-agency
           <div class="accordion" id="accordionExample">
             <div class="accordion-item">
               <h2 class="accordion-header" id="headingOne">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                  aria-expanded="true" aria-controls="collapseOne">
                   Best useful links ?
                 </button>
               </h2>
-              <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+              <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                data-bs-parent="#accordionExample">
                 <div class="accordion-body">
-                  Get <strong>the best villa</strong> website template in HTML CSS and Bootstrap for your business. TemplateMo provides you the <a href="https://www.google.com/search?q=best+free+css+templates" target="_blank">best free CSS templates</a> in the world. Please tell your friends about it.</div>
+                  Get <strong>the best villa</strong> website template in HTML CSS and Bootstrap for your business.
+                  TemplateMo provides you the <a href="https://www.google.com/search?q=best+free+css+templates"
+                    target="_blank">best free CSS templates</a> in the world. Please tell your friends about it.</div>
               </div>
             </div>
             <div class="accordion-item">
               <h2 class="accordion-header" id="headingTwo">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                   How does this work ?
                 </button>
               </h2>
-              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                data-bs-parent="#accordionExample">
                 <div class="accordion-body">
-                  Dolor <strong>almesit amet</strong>, consectetur adipiscing elit, sed doesn't eiusmod tempor incididunt ut labore consectetur <code>adipiscing</code> elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Dolor <strong>almesit amet</strong>, consectetur adipiscing elit, sed doesn't eiusmod tempor
+                  incididunt ut labore consectetur <code>adipiscing</code> elit, sed do eiusmod tempor incididunt ut
+                  labore et dolore magna aliqua.
                 </div>
               </div>
             </div>
             <div class="accordion-item">
               <h2 class="accordion-header" id="headingThree">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                   Why is Villa Agency the best ?
                 </button>
               </h2>
-              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                data-bs-parent="#accordionExample">
                 <div class="accordion-body">
-                  Dolor <strong>almesit amet</strong>, consectetur adipiscing elit, sed doesn't eiusmod tempor incididunt ut labore consectetur <code>adipiscing</code> elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Dolor <strong>almesit amet</strong>, consectetur adipiscing elit, sed doesn't eiusmod tempor
+                  incididunt ut labore consectetur <code>adipiscing</code> elit, sed do eiusmod tempor incididunt ut
+                  labore et dolore magna aliqua.
                 </div>
               </div>
             </div>
@@ -292,13 +304,17 @@ https://templatemo.com/tm-591-villa-agency
               <div class="nav-wrapper ">
                 <ul class="nav nav-tabs" role="tablist">
                   <li class="nav-item" role="presentation">
-                    <button class="nav-link active" id="appartment-tab" data-bs-toggle="tab" data-bs-target="#appartment" type="button" role="tab" aria-controls="appartment" aria-selected="true">Appartment</button>
+                    <button class="nav-link active" id="appartment-tab" data-bs-toggle="tab"
+                      data-bs-target="#appartment" type="button" role="tab" aria-controls="appartment"
+                      aria-selected="true">Appartment</button>
                   </li>
                   <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="villa-tab" data-bs-toggle="tab" data-bs-target="#villa" type="button" role="tab" aria-controls="villa" aria-selected="false">Villa House</button>
+                    <button class="nav-link" id="villa-tab" data-bs-toggle="tab" data-bs-target="#villa" type="button"
+                      role="tab" aria-controls="villa" aria-selected="false">Villa House</button>
                   </li>
                   <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="penthouse-tab" data-bs-toggle="tab" data-bs-target="#penthouse" type="button" role="tab" aria-controls="penthouse" aria-selected="false">Penthouse</button>
+                    <button class="nav-link" id="penthouse-tab" data-bs-toggle="tab" data-bs-target="#penthouse"
+                      type="button" role="tab" aria-controls="penthouse" aria-selected="false">Penthouse</button>
                   </li>
                 </ul>
               </div>
@@ -321,8 +337,10 @@ https://templatemo.com/tm-591-villa-agency
                     </div>
                     <div class="col-lg-3">
                       <h4>Extra Info About Property</h4>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, do eiusmod tempor pack incididunt ut labore et dolore magna aliqua quised ipsum suspendisse.
-                        <br><br>When you need free CSS templates, you can simply type TemplateMo in any search engine website. In addition, you can type TemplateMo Portfolio, TemplateMo One Page Layouts, etc.
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, do eiusmod tempor pack incididunt ut
+                        labore et dolore magna aliqua quised ipsum suspendisse.
+                        <br><br>When you need free CSS templates, you can simply type TemplateMo in any search engine
+                        website. In addition, you can type TemplateMo Portfolio, TemplateMo One Page Layouts, etc.
                       </p>
                       <div class="icon-button">
                         <a href="{{route('property-details') }}"><i class="fa fa-calendar"></i> Schedule a visit</a>
@@ -348,7 +366,10 @@ https://templatemo.com/tm-591-villa-agency
                     </div>
                     <div class="col-lg-3">
                       <h4>Detail Info About Villa</h4>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, do eiusmod tempor pack incididunt ut labore et dolore magna aliqua quised ipsum suspendisse. <br><br>Swag fanny pack lyft blog twee. JOMO ethical copper mug, succulents typewriter shaman DIY kitsch twee taiyaki fixie hella venmo after messenger poutine next level humblebrag swag franzen.</p>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, do eiusmod tempor pack incididunt ut
+                        labore et dolore magna aliqua quised ipsum suspendisse. <br><br>Swag fanny pack lyft blog twee.
+                        JOMO ethical copper mug, succulents typewriter shaman DIY kitsch twee taiyaki fixie hella venmo
+                        after messenger poutine next level humblebrag swag franzen.</p>
                       <div class="icon-button">
                         <a href="{{ route('property-details') }}"><i class="fa fa-calendar"></i> Schedule a visit</a>
                       </div>
@@ -373,7 +394,10 @@ https://templatemo.com/tm-591-villa-agency
                     </div>
                     <div class="col-lg-3">
                       <h4>Extra Info About Penthouse</h4>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, do eiusmod tempor pack incididunt ut labore et dolore magna aliqua quised ipsum suspendisse. <br><br>Swag fanny pack lyft blog twee. JOMO ethical copper mug, succulents typewriter shaman DIY kitsch twee taiyaki fixie hella venmo after messenger poutine next level humblebrag swag franzen.</p>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, do eiusmod tempor pack incididunt ut
+                        labore et dolore magna aliqua quised ipsum suspendisse. <br><br>Swag fanny pack lyft blog twee.
+                        JOMO ethical copper mug, succulents typewriter shaman DIY kitsch twee taiyaki fixie hella venmo
+                        after messenger poutine next level humblebrag swag franzen.</p>
                       <div class="icon-button">
                         <a href="{{ route('property-details') }}"><i class=" fa fa-calendar"></i> Schedule a visit</a>
                       </div>
@@ -409,10 +433,14 @@ https://templatemo.com/tm-591-villa-agency
             </div>
           </div>
         </div>
-      </div>
+      </div> 
 
+<<<<<<< HEAD
+<div class="container mt-5">
+=======
 
       <div class="container mt-5">
+>>>>>>> c0cdd7d3a9b711cfa2e5af67748325925ae7f109
         <h3>Properties</h3>
         <form action="search" method="get" >
           <input type="text" placeholder="search your properties" name="search">
@@ -445,6 +473,15 @@ https://templatemo.com/tm-591-villa-agency
       </div>
       @endsection
 
+<<<<<<< HEAD
+  <div class="contact section" style="margin-top: -150px;">
+    <div class="container ">
+      <div class="row">
+        <div class="col-lg-4 offset-lg-4">
+          <div class="section-heading text-center">
+            <h6>| Contact Us</h6>
+            <h2>Get In Touch With Our Agents</h2>
+=======
       <div class="contact section" style="margin-top: -150px;">
         <div class="container ">
           <div class="row">
@@ -454,20 +491,26 @@ https://templatemo.com/tm-591-villa-agency
                 <h2>Get In Touch With Our Agents</h2>
               </div>
             </div>
+>>>>>>> c0cdd7d3a9b711cfa2e5af67748325925ae7f109
           </div>
         </div>
       </div>
+    </div>
+  </div>
 
-      <div class="contact-content">
-        <div class="container">
+  <div class="contact-content">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-7">
+          <div id="map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7229.6857462226835!2d67.11624023825112!3d25.039405881796633!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb3469ee0c58f8d%3A0x8c8be8f888363c89!2sSalfia%20Town%20Taiser%20Town%2C%20Karachi%2C%20Karachi%20City%2C%20Sindh%2C%20Pakistan!5e0!3m2!1sen!2s!4v1730653763394!5m2!1sen!2s"
+              width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
           <div class="row">
-            <div class="col-lg-7">
-              <div id="map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7229.6857462226835!2d67.11624023825112!3d25.039405881796633!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb3469ee0c58f8d%3A0x8c8be8f888363c89!2sSalfia%20Town%20Taiser%20Town%2C%20Karachi%2C%20Karachi%20City%2C%20Sindh%2C%20Pakistan!5e0!3m2!1sen!2s!4v1730653763394!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-              </div>
-              <div class="row">
-                <div class="col-lg-6">
-                  <!-- <div class="item phone"  style="width: 20vw; height: 27vh; padding: 30px;">
+            <div class="col-lg-6">
+              <!-- <div class="item phone"  style="width: 20vw; height: 27vh; padding: 30px;">
                     <img src="assets/images/phone-icon.png" alt="" style="max-width: 52px;">
                     <h6>0324-8061046<br><span>Phone Number</span></h6>
                   </div>
@@ -477,58 +520,59 @@ https://templatemo.com/tm-591-villa-agency
                     <img src="assets/images/email-icon.png" alt="" style="max-width: 52px;">
                     <h6>muhammadhamid.jj.7 <br>@gmail.com<br><span>Business Email</span></h6>
                   </div> -->
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-5">
-              <form id="contact-form" action="" method="post">
-                <div class="row">
-                  <div class="col-lg-12">
-                    <fieldset>
-                      <label for="name">Full Name</label>
-                      <input type="name" name="name" id="name" placeholder="Your Name..." autocomplete="on" required>
-                    </fieldset>
-                  </div>
-                  <div class="col-lg-12">
-                    <fieldset>
-                      <label for="email">Email Address</label>
-                      <input type="text" name="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="Your E-mail..." required="">
-                    </fieldset>
-                  </div>
-                  <div class="col-lg-12">
-                    <fieldset>
-                      <label for="subject">Subject</label>
-                      <input type="subject" name="subject" id="subject" placeholder="Subject..." autocomplete="on">
-                    </fieldset>
-                  </div>
-                  <div class="col-lg-12">
-                    <fieldset>
-                      <label for="message">Message</label>
-                      <textarea name="message" id="message" placeholder="Your Message"></textarea>
-                    </fieldset>
-                  </div>
-                  <div class="col-lg-12">
-                    <fieldset>
-                      <button type="submit" id="form-submit" class="orange-button">Send Message</button>
-                    </fieldset>
-                  </div>
-                </div>
-              </form>
             </div>
           </div>
         </div>
+        <div class="col-lg-5">
+          <form id="contact-form" action="" method="post">
+            <div class="row">
+              <div class="col-lg-12">
+                <fieldset>
+                  <label for="name">Full Name</label>
+                  <input type="name" name="name" id="name" placeholder="Your Name..." autocomplete="on" required>
+                </fieldset>
+              </div>
+              <div class="col-lg-12">
+                <fieldset>
+                  <label for="email">Email Address</label>
+                  <input type="text" name="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="Your E-mail..."
+                    required="">
+                </fieldset>
+              </div>
+              <div class="col-lg-12">
+                <fieldset>
+                  <label for="subject">Subject</label>
+                  <input type="subject" name="subject" id="subject" placeholder="Subject..." autocomplete="on">
+                </fieldset>
+              </div>
+              <div class="col-lg-12">
+                <fieldset>
+                  <label for="message">Message</label>
+                  <textarea name="message" id="message" placeholder="Your Message"></textarea>
+                </fieldset>
+              </div>
+              <div class="col-lg-12">
+                <fieldset>
+                  <button type="submit" id="form-submit" class="orange-button">Send Message</button>
+                </fieldset>
+              </div>
+            </div>
+          </form>
+        </div>
       </div>
+    </div>
+  </div>
 
 
 
-      <!-- Scripts -->
-      <!-- Bootstrap core JavaScript -->
-      <script src="vendor/jquery/jquery.min.js"></script>
-      <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-      <script src="assets/js/isotope.min.js"></script>
-      <script src="assets/js/owl-carousel.js"></script>
-      <script src="assets/js/counter.js"></script>
-      <script src="assets/js/custom.js"></script>
+  <!-- Scripts -->
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+  <script src="assets/js/isotope.min.js"></script>
+  <script src="assets/js/owl-carousel.js"></script>
+  <script src="assets/js/counter.js"></script>
+  <script src="assets/js/custom.js"></script>
 
 </body>
 
