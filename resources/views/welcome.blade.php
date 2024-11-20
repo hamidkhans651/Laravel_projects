@@ -435,28 +435,37 @@ https://templatemo.com/tm-591-villa-agency
         </div>
       </div> 
 
+<<<<<<< HEAD
 <div class="container mt-5">
+=======
+
+      <div class="container mt-5">
+>>>>>>> c0cdd7d3a9b711cfa2e5af67748325925ae7f109
         <h3>Properties</h3>
+        <form action="search" method="get" >
+          <input type="text" placeholder="search your properties" name="search">
+       <button>search</button>
+        </form>
         <div class="row" id="property-cards">
           @foreach($properties as $property)
           <div class="col-lg-4 col-md-6 align-self-center mb-30">
             <div class="item">
-              <a href="{{ route('property-details', ['id' => $property->id]) }}" >
+              <a href="{{ route('property-details', ['id' => $property->id]) }}">
                 <img src="{{ asset($property->image_url) }}" alt="{{ $property->title }}">
               </a>
-              <a href="{{ route('property-details', ['id' => $property->id]) }}" >
-              <h6>${{ number_format($property->price, 2) }}</h6>
-              <h4><a href="{{ route('property-details', ['id' => $property->id]) }}">{{ $property->address }}</a></h4>
-              <ul>
-                <li>Bedrooms: <span>{{ $property->bedrooms }}</span></li>
-                <li>Bathrooms: <span>{{ $property->bathrooms }}</span></li>
-                <li>Area: <span>{{ $property->area }}</span></li>
-                <li>Floor: <span>{{ $property->floor }}</span></li>
-                <li>Parking: <span>{{ $property->parking }}</span></li>
-              </ul>
-              <div class="main-button">
-                <a href="{{ route('property-details', ['id' => $property->id]) }}">Schedule a visit</a>
-              </div>
+              <a href="{{ route('property-details', ['id' => $property->id]) }}">
+                <h6>${{ number_format($property->price, 2) }}</h6>
+                <h4><a href="{{ route('property-details', ['id' => $property->id]) }}">{{ $property->address }}</a></h4>
+                <ul>
+                  <li>Bedrooms: <span>{{ $property->bedrooms }}</span></li>
+                  <li>Bathrooms: <span>{{ $property->bathrooms }}</span></li>
+                  <li>Area: <span>{{ $property->area }}</span></li>
+                  <li>Floor: <span>{{ $property->floor }}</span></li>
+                  <li>Parking: <span>{{ $property->parking }}</span></li>
+                </ul>
+                <div class="main-button">
+                  <a href="{{ route('property-details', ['id' => $property->id]) }}">Schedule a visit</a>
+                </div>
             </div>
           </div>
           @endforeach
@@ -464,6 +473,7 @@ https://templatemo.com/tm-591-villa-agency
       </div>
       @endsection
 
+<<<<<<< HEAD
   <div class="contact section" style="margin-top: -150px;">
     <div class="container ">
       <div class="row">
@@ -471,6 +481,17 @@ https://templatemo.com/tm-591-villa-agency
           <div class="section-heading text-center">
             <h6>| Contact Us</h6>
             <h2>Get In Touch With Our Agents</h2>
+=======
+      <div class="contact section" style="margin-top: -150px;">
+        <div class="container ">
+          <div class="row">
+            <div class="col-lg-4 offset-lg-4">
+              <div class="section-heading text-center">
+                <h6>| Contact Us</h6>
+                <h2>Get In Touch With Our Agents</h2>
+              </div>
+            </div>
+>>>>>>> c0cdd7d3a9b711cfa2e5af67748325925ae7f109
           </div>
         </div>
       </div>
