@@ -134,6 +134,6 @@ Route::get('/index', function () {
 
 // Route::get('/', function () {
 
-//     \Illuminate\Support\Facades\Mail::send(new \App\Mail\EmailSent());
+//     Mail::send(new \App\Mail\EmailSent());
 //     return view('welcome');  // Maps to contact.blade.php
 // });
