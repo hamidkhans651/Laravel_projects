@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PropertyController;
 use App\Http\Controllers\WelcomePropertiesController;
 use App\Http\Controllers\dashboardcontroller;
+use App\Http\Controllers\AddpropertiesController;
 
 
 
@@ -62,6 +63,9 @@ Route::get('/properties', [PropertyController::class, 'index'])->name('propertie
 // Display a single property by ID
 Route::get('/property-details/{id}', [PropertyController::class, 'show'])->name('property-details');
 
+// Display a single property by ID
+Route::get('/property-details/{id}', [AddpropertiesController::class, 'show'])->name('Addproperties');
+
 
 
 Route::get('/contact', function () {
@@ -89,6 +93,10 @@ Route::get('/dashboard', function () {
 Route::get('/Addproperties', function () {
     return view('Addproperties');
 })->name('Addproperties');
+
+Route::get('/forms', function () {
+    return view('forms');
+})->name('forms');
 
 Route::get('Property',[PropertyController::class,'Property']);
 
