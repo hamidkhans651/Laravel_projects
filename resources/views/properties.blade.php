@@ -170,14 +170,11 @@
           maxPriceSlider.addEventListener('input', updateLabels);
         </script>
 
-
-
-
         <div class="search-bar">
-          <form action="{{ route('search') }}" method="GET">
+          <!-- <form action="{{ route('search') }}" method="GET">
             <input type="text" id="search" placeholder="Address, Neighborhood, City, Zip code "
               oninput="searchProperties()" name="search" />
-            <button>search</button>
+            <button>search</button> -->
 
           </form>
 
@@ -208,37 +205,37 @@
 
 
           <script>
-            function applyFilters() {
-              const selectedBedrooms = Array.from(document.querySelectorAll('.bedroom-filter:checked')).map(el => parseInt(el.value));
-              const selectedBathrooms = Array.from(document.querySelectorAll('.bathroom-filter:checked')).map(el => parseInt(el.value));
-              const minPrice = document.getElementById('min-price').value;
-              const maxPrice = document.getElementById('max-price').value;
+            // function applyFilters() {
+            //   const selectedBedrooms = Array.from(document.querySelectorAll('.bedroom-filter:checked')).map(el => parseInt(el.value));
+            //   const selectedBathrooms = Array.from(document.querySelectorAll('.bathroom-filter:checked')).map(el => parseInt(el.value));
+            //   const minPrice = document.getElementById('min-price').value;
+            //   const maxPrice = document.getElementById('max-price').value;
 
-              // Filter properties based on selected bedrooms, bathrooms, and price range
-              const filteredProperties = properties.filter(property => {
-                const matchesBedrooms = selectedBedrooms.length === 0 || selectedBedrooms.includes(property.bedrooms) || (property.bedrooms >= 4 && selectedBedrooms.includes(4));
-                const matchesBathrooms = selectedBathrooms.length === 0 || selectedBathrooms.includes(property.bathrooms) || (property.bathrooms >= 3 && selectedBathrooms.includes(3));
-                const matchesPrice = (!minPrice || property.price >= minPrice) && (!maxPrice || property.price <= maxPrice);
-                return matchesBedrooms && matchesBathrooms && matchesPrice;
-              });
+            //   // Filter properties based on selected bedrooms, bathrooms, and price range
+            //   const filteredProperties = properties.filter(property => {
+            //     const matchesBedrooms = selectedBedrooms.length === 0 || selectedBedrooms.includes(property.bedrooms) || (property.bedrooms >= 4 && selectedBedrooms.includes(4));
+            //     const matchesBathrooms = selectedBathrooms.length === 0 || selectedBathrooms.includes(property.bathrooms) || (property.bathrooms >= 3 && selectedBathrooms.includes(3));
+            //     const matchesPrice = (!minPrice || property.price >= minPrice) && (!maxPrice || property.price <= maxPrice);
+            //     return matchesBedrooms && matchesBathrooms && matchesPrice;
+            //   });
 
-              renderPropertyCards(filteredProperties);
-            }
-
-
-            document.getElementById('applyFilters').onclick = "applyFilters()"
-            document.getElementById('toogleonclick').onclick = "togglePropertyType()"
+            //   renderPropertyCards(filteredProperties);
+            // }
 
 
-            // Search properties based on the title or description
-            function searchProperties() {
-              const query = document.getElementById('search').value.toLowerCase();
-              const filteredProperties = properties.filter(property =>
-                property.address.toLowerCase().includes(query) ||
-                property.description.toLowerCase().includes(query)
-              );
-              renderPropertyCards(filteredProperties);
-            }
+            // document.getElementById('applyFilters').onclick = "applyFilters()"
+            // document.getElementById('toogleonclick').onclick = "togglePropertyType()"
+
+
+            // // Search properties based on the title or description
+            // function searchProperties() {
+            //   const query = document.getElementById('search').value.toLowerCase();
+            //   const filteredProperties = properties.filter(property =>
+            //     property.address.toLowerCase().includes(query) ||
+            //     property.description.toLowerCase().includes(query)
+            //   );
+            //   renderPropertyCards(filteredProperties);
+            // }
 
             // Function to toggle between Sale and Rent lists
             function togglePropertyType() {

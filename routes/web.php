@@ -94,11 +94,15 @@ Route::get('/Addproperties', function () {
     return view('Addproperties');
 })->name('Addproperties');
 
+<<<<<<< HEAD
 Route::get('/forms', function () {
     return view('forms');
 })->name('forms');
 
 Route::get('Property',[PropertyController::class,'Property']);
+=======
+Route::get('Property', [PropertyController::class, 'Property']);
+>>>>>>> 5625e116693d80b979d4216623ace22d6db9d70b
 
 // Route::get('search',[PropertyController::class,'search' ]);
 
