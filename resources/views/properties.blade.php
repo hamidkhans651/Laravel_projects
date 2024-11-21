@@ -169,9 +169,6 @@
           maxPriceSlider.addEventListener('input', updateLabels);
         </script>
 
-
-
-
         <div class="search-bar">
           <!-- <form action="{{ route('search') }}" method="GET">
             <input type="text" id="search" placeholder="Address, Neighborhood, City, Zip code "

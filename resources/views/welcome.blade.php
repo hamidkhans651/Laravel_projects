@@ -433,55 +433,42 @@ https://templatemo.com/tm-591-villa-agency
             </div>
           </div>
         </div>
-      </div> 
-
-<<<<<<< HEAD
-<div class="container mt-5">
-=======
+      </div>
 
       <div class="container mt-5">
->>>>>>> c0cdd7d3a9b711cfa2e5af67748325925ae7f109
         <h3>Properties</h3>
-        <form action="search" method="get" >
+        <form action="search" method="get">
           <input type="text" placeholder="search your properties" name="search">
-       <button>search</button>
+          <button>search</button>
         </form>
         <div class="row" id="property-cards">
           @foreach($properties as $property)
-          <div class="col-lg-4 col-md-6 align-self-center mb-30">
-            <div class="item">
-              <a href="{{ route('property-details', ['id' => $property->id]) }}">
-                <img src="{{ asset($property->image_url) }}" alt="{{ $property->title }}">
-              </a>
-              <a href="{{ route('property-details', ['id' => $property->id]) }}">
-                <h6>${{ number_format($property->price, 2) }}</h6>
-                <h4><a href="{{ route('property-details', ['id' => $property->id]) }}">{{ $property->address }}</a></h4>
-                <ul>
-                  <li>Bedrooms: <span>{{ $property->bedrooms }}</span></li>
-                  <li>Bathrooms: <span>{{ $property->bathrooms }}</span></li>
-                  <li>Area: <span>{{ $property->area }}</span></li>
-                  <li>Floor: <span>{{ $property->floor }}</span></li>
-                  <li>Parking: <span>{{ $property->parking }}</span></li>
-                </ul>
-                <div class="main-button">
-                  <a href="{{ route('property-details', ['id' => $property->id]) }}">Schedule a visit</a>
-                </div>
-            </div>
+        <div class="col-lg-4 col-md-6 align-self-center mb-30">
+        <div class="item">
+          <a href="{{ route('property-details', ['id' => $property->id]) }}">
+          <img src="{{ asset($property->image_url) }}" alt="{{ $property->title }}">
+          </a>
+          <a href="{{ route('property-details', ['id' => $property->id]) }}">
+          <h6>${{ number_format($property->price, 2) }}</h6>
+          <h4><a href="{{ route('property-details', ['id' => $property->id]) }}">{{ $property->address }}</a></h4>
+          <ul>
+            <li>Bedrooms: <span>{{ $property->bedrooms }}</span></li>
+            <li>Bathrooms: <span>{{ $property->bathrooms }}</span></li>
+            <li>Area: <span>{{ $property->area }}</span></li>
+            <li>Floor: <span>{{ $property->floor }}</span></li>
+            <li>Parking: <span>{{ $property->parking }}</span></li>
+            <!-- <input type="text" value="{{ $property->bathrooms }}"> -->
+          </ul>
+          <div class="main-button">
+            <a href="{{ route('property-details', ['id' => $property->id]) }}">Schedule a visit</a>
           </div>
-          @endforeach
+        </div>
+        </div>
+      @endforeach
         </div>
       </div>
       @endsection
 
-<<<<<<< HEAD
-  <div class="contact section" style="margin-top: -150px;">
-    <div class="container ">
-      <div class="row">
-        <div class="col-lg-4 offset-lg-4">
-          <div class="section-heading text-center">
-            <h6>| Contact Us</h6>
-            <h2>Get In Touch With Our Agents</h2>
-=======
       <div class="contact section" style="margin-top: -150px;">
         <div class="container ">
           <div class="row">
@@ -491,26 +478,23 @@ https://templatemo.com/tm-591-villa-agency
                 <h2>Get In Touch With Our Agents</h2>
               </div>
             </div>
->>>>>>> c0cdd7d3a9b711cfa2e5af67748325925ae7f109
           </div>
         </div>
       </div>
-    </div>
-  </div>
 
-  <div class="contact-content">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-7">
-          <div id="map">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7229.6857462226835!2d67.11624023825112!3d25.039405881796633!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb3469ee0c58f8d%3A0x8c8be8f888363c89!2sSalfia%20Town%20Taiser%20Town%2C%20Karachi%2C%20Karachi%20City%2C%20Sindh%2C%20Pakistan!5e0!3m2!1sen!2s!4v1730653763394!5m2!1sen!2s"
-              width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"></iframe>
-          </div>
+      <div class="contact-content">
+        <div class="container">
           <div class="row">
-            <div class="col-lg-6">
-              <!-- <div class="item phone"  style="width: 20vw; height: 27vh; padding: 30px;">
+            <div class="col-lg-7">
+              <div id="map">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7229.6857462226835!2d67.11624023825112!3d25.039405881796633!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb3469ee0c58f8d%3A0x8c8be8f888363c89!2sSalfia%20Town%20Taiser%20Town%2C%20Karachi%2C%20Karachi%20City%2C%20Sindh%2C%20Pakistan!5e0!3m2!1sen!2s!4v1730653763394!5m2!1sen!2s"
+                  width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+              <div class="row">
+                <div class="col-lg-6">
+                  <!-- <div class="item phone"  style="width: 20vw; height: 27vh; padding: 30px;">
                     <img src="assets/images/phone-icon.png" alt="" style="max-width: 52px;">
                     <h6>0324-8061046<br><span>Phone Number</span></h6>
                   </div>
@@ -520,59 +504,59 @@ https://templatemo.com/tm-591-villa-agency
                     <img src="assets/images/email-icon.png" alt="" style="max-width: 52px;">
                     <h6>muhammadhamid.jj.7 <br>@gmail.com<br><span>Business Email</span></h6>
                   </div> -->
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-5">
+              <form id="contact-form" action="" method="post">
+                <div class="row">
+                  <div class="col-lg-12">
+                    <fieldset>
+                      <label for="name">Full Name</label>
+                      <input type="name" name="name" id="name" placeholder="Your Name..." autocomplete="on" required>
+                    </fieldset>
+                  </div>
+                  <div class="col-lg-12">
+                    <fieldset>
+                      <label for="email">Email Address</label>
+                      <input type="text" name="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="Your E-mail..."
+                        required="">
+                    </fieldset>
+                  </div>
+                  <div class="col-lg-12">
+                    <fieldset>
+                      <label for="subject">Subject</label>
+                      <input type="subject" name="subject" id="subject" placeholder="Subject..." autocomplete="on">
+                    </fieldset>
+                  </div>
+                  <div class="col-lg-12">
+                    <fieldset>
+                      <label for="message">Message</label>
+                      <textarea name="message" id="message" placeholder="Your Message"></textarea>
+                    </fieldset>
+                  </div>
+                  <div class="col-lg-12">
+                    <fieldset>
+                      <button type="submit" id="form-submit" class="orange-button">Send Message</button>
+                    </fieldset>
+                  </div>
+                </div>
+              </form>
             </div>
           </div>
         </div>
-        <div class="col-lg-5">
-          <form id="contact-form" action="" method="post">
-            <div class="row">
-              <div class="col-lg-12">
-                <fieldset>
-                  <label for="name">Full Name</label>
-                  <input type="name" name="name" id="name" placeholder="Your Name..." autocomplete="on" required>
-                </fieldset>
-              </div>
-              <div class="col-lg-12">
-                <fieldset>
-                  <label for="email">Email Address</label>
-                  <input type="text" name="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="Your E-mail..."
-                    required="">
-                </fieldset>
-              </div>
-              <div class="col-lg-12">
-                <fieldset>
-                  <label for="subject">Subject</label>
-                  <input type="subject" name="subject" id="subject" placeholder="Subject..." autocomplete="on">
-                </fieldset>
-              </div>
-              <div class="col-lg-12">
-                <fieldset>
-                  <label for="message">Message</label>
-                  <textarea name="message" id="message" placeholder="Your Message"></textarea>
-                </fieldset>
-              </div>
-              <div class="col-lg-12">
-                <fieldset>
-                  <button type="submit" id="form-submit" class="orange-button">Send Message</button>
-                </fieldset>
-              </div>
-            </div>
-          </form>
-        </div>
       </div>
-    </div>
-  </div>
 
 
 
-  <!-- Scripts -->
-  <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-  <script src="assets/js/isotope.min.js"></script>
-  <script src="assets/js/owl-carousel.js"></script>
-  <script src="assets/js/counter.js"></script>
-  <script src="assets/js/custom.js"></script>
+      <!-- Scripts -->
+      <!-- Bootstrap core JavaScript -->
+      <script src="vendor/jquery/jquery.min.js"></script>
+      <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+      <script src="assets/js/isotope.min.js"></script>
+      <script src="assets/js/owl-carousel.js"></script>
+      <script src="assets/js/counter.js"></script>
+      <script src="assets/js/custom.js"></script>
 
 </body>
 

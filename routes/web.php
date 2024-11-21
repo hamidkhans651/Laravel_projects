@@ -90,7 +90,7 @@ Route::get('/Addproperties', function () {
     return view('Addproperties');
 })->name('Addproperties');
 
-Route::get('Property',[PropertyController::class,'Property']);
+Route::get('Property', [PropertyController::class, 'Property']);
 
 // Route::get('search',[PropertyController::class,'search' ]);
 
