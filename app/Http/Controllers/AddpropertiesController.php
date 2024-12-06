@@ -7,7 +7,8 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log; // Import the Log facade
 use App\Models\Property;
 
-class PropertyController extends Controller
+
+class AddpropertiesController extends Controller
 {
     // Fetch all properties
     public function getAllProperties()
@@ -54,3 +55,4 @@ class PropertyController extends Controller
         }
     }
 }
+

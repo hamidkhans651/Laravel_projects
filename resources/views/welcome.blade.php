@@ -465,6 +465,20 @@ https://templatemo.com/tm-591-villa-agency
       </div>
       @endsection
 
+<<<<<<< HEAD
+
+
+<<<<<<< HEAD
+  <div class="contact section" style="margin-top: -150px;">
+    <div class="container ">
+      <div class="row">
+        <div class="col-lg-4 offset-lg-4">
+          <div class="section-heading text-center">
+            <h6>| Contact Us</h6>
+            <h2>Get In Touch With Our Agents</h2>
+=======
+=======
+>>>>>>> 5625e116693d80b979d4216623ace22d6db9d70b
       <div class="contact section" style="margin-top: -150px;">
         <div class="container ">
           <div class="row">

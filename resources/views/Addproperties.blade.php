@@ -1082,6 +1082,9 @@
                         <button class="flat-button">
                             Search
                         </button>
+                        <button class="flat-button ">
+                            <a href="{{ route('forms') }}">Add Properties </a>
+                        </button>
                     </div>
                     <div class="mobile-only">
                         <button class="flat-button">
@@ -1102,6 +1105,8 @@
                                 </button>
                             </div>
                         </div>
+                    
+
                         <!-- form starts here -->
 
                         <!-- partial -->
