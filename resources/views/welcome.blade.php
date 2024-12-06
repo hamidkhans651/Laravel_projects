@@ -436,11 +436,7 @@ https://templatemo.com/tm-591-villa-agency
       </div>
 
       <div class="container mt-5">
-        <h3>Properties</h3>
-        <form action="search" method="get">
-          <input type="text" placeholder="search your properties" name="search">
-          <button>search</button>
-        </form>
+
         <div class="row" id="property-cards">
           @foreach($properties as $property)
         <div class="col-lg-4 col-md-6 align-self-center mb-30">
