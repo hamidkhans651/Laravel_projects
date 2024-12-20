@@ -1,0 +1,370 @@
+/* Basic styling for container, sidebar, and main content */
+
+
+.mainProperties {
+    display: flex;
+
+}
+
+
+.containerproperties {
+    display: flex;
+    width: 100%;
+    padding: 10px;
+    gap: 15px;
+    flex-wrap: wrap;
+    /* border: 2px solid black; */
+    margin-top: -100px;
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.nav {
+    display: flex;
+
+    justify-content: space-around;
+    align-items: center;
+    /* Ensures vertical alignment */
+}
+
+
+
+.nav-link {
+    display: inline-block;
+    padding: 10px 15px;
+    height: 100%;
+    /* Consistent padding */
+    text-decoration: none;
+    color: #333;
+    /* Adjust as needed */
+    font-size: 16px;
+}
+
+.nav-item .dropdown-menu {
+    display: none;
+    position: absolute;
+    width: 20vh;
+    top: 100%;
+    /* Ensures it drops below the parent */
+    left: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    min-width: 200px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+    padding: 0;
+    /* Remove padding to align items */
+}
+
+.nav-item:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-item {
+    padding: 10px 15px;
+    /* Align padding with the nav-link */
+    white-space: nowrap;
+    /* Prevent text wrapping */
+    cursor: pointer;
+}
+
+.dropdown-item:hover {
+    background-color: #f1f1f1;
+}
+
+
+
+
+/* over backround properties  */
+body {
+
+
+    background: #f0f2f5;
+    padding: 8px;
+
+}
+
+
+/* property price fixin slider starts form here  */
+
+.slider-container {
+    width: 300px;
+    margin: 20px auto;
+}
+
+.range-slider {
+    position: relative;
+    width: 100%;
+}
+
+.slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 5px;
+    background: #ddd;
+    outline: none;
+    opacity: 0.8;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    background: #4CAF50;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.value-display {
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* price slider end */
+
+.price-fixing {
+    display: flex;
+}
+
+/* Search bar styling */
+.search-bar {
+    margin-bottom: 20px;
+}
+
+.search-bar input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+
+
+/* sidebar properties categories styling */
+.property-list {
+    list-style-type: none;
+    padding: 0;
+
+}
+
+/* Property List Styling */
+.property-list li {
+    color: #727272;
+    padding: 4px 0;
+    width: 100%;
+    /* Ensures full width alignment */
+}
+
+/* Sidebar Title Styling all categories */
+.sidebarcategoriestitle {
+    display: block;
+    color: #727272;
+    padding: 0;
+    text-align: left;
+    /* Ensure text aligns to the start */
+    /* margin-bottom: 5px; */
+    /* Add spacing below title if needed */
+}
+
+.property-list li:hover {
+    color: #141414;
+}
+
+
+/* dropdown  */
+.container {
+    max-width: 300px;
+    margin: 10px auto;
+    font-family: Arial, sans-serif;
+}
+
+h2 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+#city-dropdown {
+    width: 21vw;
+    height: fit-content;
+    padding: 10px;
+    margin: 1vw;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+}
+
+
+#property-types-dropdown {
+    width: 21vw;
+    height: fit-content;
+    padding: 10px;
+    margin: 1vw;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+}
+
+
+
+.bedroom-options {
+    display: flex;
+    gap: 10px;
+
+}
+
+
+.bathroom-options {
+    display: flex;
+    gap: 10px;
+}
+
+
+.bedroom-options label {
+    font-size: 14px;
+    color: #555;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.bathroom-options label {
+    font-size: 14px;
+    color: #555;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+
+button {
+    padding: 10px 15px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    background-color: #4CAF50;
+    color: #fff;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Default: Show container */
+/* Sidebar positioning */
+.mastersidebar {
+    width: 250px;
+    /* Fixed width for desktop */
+}
+
+/* Hide on screens smaller than 768px (adjust as needed) */
+@media (max-width: 991px) {
+    .mastersidebar {
+        display: none;
+        /* Hide the container on mobile devices */
+    }
+}
+
+/* Adjustments for smaller devices */
+@media (max-width: 768px) {
+    .mastersidebar {
+        display: none;
+        /* Hide sidebar on smaller devices */
+    }
+}
+
+/* Main content  styling  where property cards shows*/
+
+
+.property-card {
+    flex: 0 0 300px;
+    border: 1px solid #960655;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+.property-card img {
+    width: 100%;
+    height: 200px;
+    color: #960655;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.property-card h3 {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.main-content {
+    flex: 3;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Search bar styling */
+.search-bar {
+    margin-bottom: 20px;
+}
+
+.search-bar input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+/* Property Cards Grid */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+/* Property card styling */
+.property-card {
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.property-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+
+/* title of cards */
+.property-card h3 {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #555;
+}
+
+.property-card p {
+    font-size: 14px;
+    color: #555;
+    padding: 0 10px 10px;
+}

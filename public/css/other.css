@@ -1,0 +1,27 @@
+
+/* Responsive adjustments for mobile */
+
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: row; /* Horizontal on medium screens */
+    }
+
+    /* Sidebar should stack above content only on small screens */
+    @media (max-width: 600px) {
+        .container {
+            flex-direction: column;
+        }
+        .sidebar {
+            width: 100%;
+            order: -1; /* Move sidebar to the top */
+            border-right: none;
+            border-bottom: 1px solid #cc0a0a;
+            padding-bottom: 20px;
+        }
+
+        .main-content {
+            width: 100%;
+        }
+    }
+}
