@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PropertyController;
 use App\Http\Controllers\WelcomePropertiesController;
 use App\Http\Controllers\dashboardcontroller;
+use App\Http\Controllers\ProfileController;
 
 
 
@@ -14,47 +15,17 @@ Route::get('/', function () {
 
 
 
-// // Dashboard route
-// Route::get('/dashboard', function () {
-//     return view('layouts.dashboard');
-// })->name('dashboard');
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
 
-// // about page
-// Route::get('/about', function () {
-//     return view('layouts.about');
-// })->name('about');
+Route::middleware('auth')->group(function () {
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+});
 
-
-// // about page
-// Route::get('/about', function () {
-//     return view('layouts.about');
-// })->name('about');
-
-// // contact page
-// Route::get('/contact', function () {
-//     return view('layouts.contact');
-// })->name('contact');
-
-
-// // Properties page
-// Route::get('/Properties', function () {
-//     return view('layouts.Properties');
-// })->name('Properties');
-
-
-// Route::get('/menu', function () {
-//     return view('layouts.menu');
-// })->name('menu');
-
-// Route::get('/sell', function () {
-//     return view('layouts.sell');
-// })->name('sell');
-
-// Route::get('/navbar', function () {
-//     return view('navbar');
-// })->name('navbar');
-
-
+require __DIR__.'/auth.php';
 
 // Display all properties
 Route::get('/properties', [PropertyController::class, 'index'])->name('properties');
@@ -140,17 +111,5 @@ Route::get('/index', function () {
 })->name('index');
 
 
-
-
-// search routes
-//   Route::get('/search', [PropertyController::class, 'search'])->name('properties');
-
-
-
-// Route::get('/', function () {
-
-//     Mail::send(new \App\Mail\EmailSent());
-//     return view('welcome');  // Maps to contact.blade.php
-// });
 
 Route::get('/search', [PropertyController::class, 'search']);
