@@ -6,10 +6,7 @@
   <title>CodePen - Dark UI - Bank dashboard concept</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
   <link rel="stylesheet" href="/public/css/Dashboard.css">
-
-
 </head>
-
 <body>
 
   <style>
@@ -1213,11 +1210,6 @@
               @endforeach
             </div>
           </div>
-
-
-
-
-
       </div>
     </div>
   </div>
@@ -1235,13 +1227,10 @@
     });
 
     document.addEventListener('click', (event) => {
-    if (!appContainer.contains(event.target) && appContainer.classList.contains('show-sidebar')) {
+      if (!appContainer.contains(event.target) && appContainer.classList.contains('show-sidebar')) {
         appContainer.classList.remove('show-sidebar');
-    }
-});
-
-
-
+      }
+    });
 
     const darkModeToggle = document.getElementById('darkModeToggle');
     const body = document.body;
@@ -1266,4 +1255,3 @@
   </script>
 
 </body>
-

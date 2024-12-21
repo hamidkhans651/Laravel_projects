@@ -107,7 +107,6 @@
     </div>
   </div>
   </head>
-
   <body>
     <div class="section properties">
       <div class="container">
@@ -197,7 +196,6 @@
             </li>
             <li>
 
-            
 
               <a id="applyFilters" href="#!" data-filter=".rac">Apply Filters</a>
             </li>
@@ -283,13 +281,10 @@
               </div>
               @endforeach
             </div>
-
           </div>
           @endsection
 
-          <!-- {{$properties->links()}} -->
-
-<script>
+          <script>
             // Sample data for Buy and Rent properties
 
             const propertiesForSale = [, "House", "Apartment", "Land Plot", "Commercial Space", "Townhouse"];

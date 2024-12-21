@@ -26,6 +26,10 @@ class CreatePropertiesTable extends Migration
             $table->boolean('garage')->default(false);
             $table->boolean('garden')->default(false);
             $table->boolean('swimming_pool')->default(false);
+            
+            // New column for storing image URL
+            $table->string('image_url')->nullable();
+
             $table->timestamps();
         });
     }

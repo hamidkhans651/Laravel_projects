@@ -1,126 +1,52 @@
-<!DOCTYPE html>
-<html lang="en">
+<x-guest-layout>
+    <form method="POST" action="{{ route('register') }}">
+        @csrf
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Authentication</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/auth.css">
-    <link rel="stylesheet" href="assets/css/fontawesome.css">
-    <link rel="stylesheet" href="assets/css/templatemo-villa-agency.css">
-    <link rel="stylesheet" href="assets/css/owl.css">
-    <link rel="stylesheet" href="assets/css/animate.css">
-    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
-
-</head>
-
-<body>
-    <header class="header-area header-sticky">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <nav class="main-nav">
-                        <!-- ***** Logo Start ***** -->
-                        <a href="/" class="logo">
-                            <h1>Villa</h1>
-                        </a>
-                        <!-- ***** Logo End ***** -->
-                        <!-- ***** Menu Start ***** -->
-                        <ul class="nav">
-                            <li><a href="/" class="active">Home</a></li>
-                            <li><a href="{{ route('properties') }}">Properties</a></li>
-                            <li><a href="{{ route('property-details') }}">Property Details</a></li>
-                            <li><a href="{{ route('contact') }}">Contact Us</a></li>
-                            <li><a href="#"><i class="fa fa-calendar"></i> Schedule a visit</a></li>
-                        </ul>
-                        <a class='menu-trigger'>
-                            <span>Menu</span>
-                        </a>
-                        <!-- ***** Menu End ***** -->
-                    </nav>
-                </div>
-            </div>
-        </div>
-    </header>
-    <!-- ***** Header Area End ***** -->
-
-    <main>
-
-
-        <div class="auth-container">
-            <h2 id="form-title">Login</h2>
-
-            <!-- Login Form (default visible) -->
-            <form id="login-form" class="auth-form" onsubmit="handleLogin(event)">
-                <input type="email" placeholder="Email" required>
-                <input type="password" placeholder="Password" required>
-                <button type="submit">Login</button>
-                <p class="message">Don't have an account? <span class="toggle-link" onclick="toggleForm()">Register</span></p>
-            </form>
-
-            <!-- Social Login Options -->
-            <div class="social-login">
-                <a href="/" class="social-button">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" alt="Google Logo">
-                    Continue with Google
-                </a>
-                <a href="/" class="social-button">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png" alt="Facebook Logo">
-                    Continue with Facebook
-                </a>
-                <a href="/" class="social-button">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png" alt="Facebook Logo">
-                    Continue with Twitter
-                </a>
-            </div>
-
-
-            <!-- Register Form (initially hidden) -->
-            <form id="register-form" class="auth-form" style="display: none;" onsubmit="handleRegister(event)">
-                <input type="text" placeholder="Username" required>
-                <input type="email" placeholder="Email" required>
-                <input type="password" placeholder="Password" required>
-                <input type="password" placeholder="Confirm Password" required>
-                <button type="submit">Register</button>
-                <p class="message">Already have an account? <span class="toggle-link" onclick="toggleForm()">Login</span></p>
-            </form>
+        <!-- Name -->
+        <div>
+            <x-input-label for="name" :value="__('Name')" />
+            <x-text-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
+            <x-input-error :messages="$errors->get('name')" class="mt-2" />
         </div>
 
-        <script>
-            function toggleForm() {
-                const loginForm = document.getElementById("login-form");
-                const registerForm = document.getElementById("register-form");
-                const formTitle = document.getElementById("form-title");
+        <!-- Email Address -->
+        <div class="mt-4">
+            <x-input-label for="email" :value="__('Email')" />
+            <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autocomplete="username" />
+            <x-input-error :messages="$errors->get('email')" class="mt-2" />
+        </div>
 
-                if (loginForm.style.display === "none") {
-                    loginForm.style.display = "flex";
-                    registerForm.style.display = "none";
-                    formTitle.textContent = "Login";
-                } else {
-                    loginForm.style.display = "none";
-                    registerForm.style.display = "flex";
-                    formTitle.textContent = "Register";
-                }
-            }
+        <!-- Password -->
+        <div class="mt-4">
+            <x-input-label for="password" :value="__('Password')" />
 
-            function handleLogin(event) {
-                event.preventDefault();
-                alert("Login submitted");
-                // Implement your login logic here
-            }
+            <x-text-input id="password" class="block mt-1 w-full"
+                            type="password"
+                            name="password"
+                            required autocomplete="new-password" />
 
-            function handleRegister(event) {
-                event.preventDefault();
-                alert("Registration submitted");
-                // Implement your registration logic here
-            }
-        </script>
-    </main>
-</body>
+            <x-input-error :messages="$errors->get('password')" class="mt-2" />
+        </div>
 
+        <!-- Confirm Password -->
+        <div class="mt-4">
+            <x-input-label for="password_confirmation" :value="__('Confirm Password')" />
 
+            <x-text-input id="password_confirmation" class="block mt-1 w-full"
+                            type="password"
+                            name="password_confirmation" required autocomplete="new-password" />
 
-</html>
+            <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
+        </div>
+
+        <div class="flex items-center justify-end mt-4">
+            <a class="underline text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800" href="{{ route('login') }}">
+                {{ __('Already registered?') }}
+            </a>
+
+            <x-primary-button class="ms-4">
+                {{ __('Register') }}
+            </x-primary-button>
+        </div>
+    </form>
+</x-guest-layout>

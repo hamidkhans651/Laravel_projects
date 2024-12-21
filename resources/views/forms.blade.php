@@ -11,12 +11,12 @@
         font-family: Arial, sans-serif;
         background-color: #f4f4f9;
         margin: 0;
-        padding: 30px;
+        padding: 2px;
     }
 
     .form-container {
         background: #fff;
-        padding: 15px;
+        padding: 30px;
         margin: auto;
         width: 100%;
         border-radius: 10px;

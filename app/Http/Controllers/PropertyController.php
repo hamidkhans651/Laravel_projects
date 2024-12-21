@@ -46,7 +46,7 @@ class PropertyController extends Controller
     public function index()
     {
         try {
-            $properties = Property::paginate(10); // Fetch all properties
+            $properties = Property::all(); // Fetch all properties
             return view('properties', compact('properties'));
         } catch (\Exception $e) {
             Log::error('Error loading properties page: ' . $e->getMessage());
