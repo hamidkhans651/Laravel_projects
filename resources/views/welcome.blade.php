@@ -109,32 +109,7 @@ https://templatemo.com/tm-591-villa-agency
 
             </ul>
 
-            <!-- @if (Route::has('login'))
-        <nav class="-mx-3 flex flex-1 justify-end">
-          @auth
-        <a href="{{ url('/dashboard') }}"
-        class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white">
-        Dashboard
-        </a>
-      @else
-      <a href="{{ route('login') }}"
-      class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white">
-      Log in
-      </a>
-
-      @if (Route::has('register'))
-      <a href="{{ route('register') }}"
-      class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white">
-      Register
-      </a>
-    @endif
-    @endauth
-        </nav>
-      @endif
-            <a class='menu-trigger'>
-              <span>Menu</span>
-            </a>
-             ***** Menu End ***** -->
+            <!-- **** Menu End ***** --> 
           </nav> 
         </div>
       </div>
@@ -458,23 +433,15 @@ https://templatemo.com/tm-591-villa-agency
         </div>
       </div>
 
-<<<<<<< HEAD
-      <!-- <div class="container mt-5">
-        <h3>Properties</h3>
+      <div class="container mt-5">
+        <!-- <h3>Properties</h3>
         <form action="search" method="get">
           <input type="text" placeholder="search your properties" name="search">
-          <button>search</button>
-        </form> -->
+          <button>search</button> -->
+        </form>
       <div class="row" id="property-cards">
         @foreach($properties as $property)
       <div class="col-lg-4 col-md-6 align-self-center mb-30">
-=======
-      <div class="container mt-5">
-
-        <div class="row" id="property-cards">
-          @foreach($properties as $property)
-        <div class="col-lg-4 col-md-6 align-self-center mb-30">
->>>>>>> 569d979a8a459a35eeb6af4f1d8a761d693139d5
         <div class="item">
         <a href="{{ route('property-details', ['id' => $property->id]) }}">
           <img src="{{ asset($property->image_url) }}" alt="{{ $property->title }}">
