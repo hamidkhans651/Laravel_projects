@@ -917,9 +917,6 @@
 </head>
 
 <body>
-
- 
-
   <div class="sub-header">
     <div class="container">
       <div class="row">
