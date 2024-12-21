@@ -458,6 +458,7 @@ https://templatemo.com/tm-591-villa-agency
         </div>
       </div>
 
+<<<<<<< HEAD
       <!-- <div class="container mt-5">
         <h3>Properties</h3>
         <form action="search" method="get">
@@ -467,6 +468,13 @@ https://templatemo.com/tm-591-villa-agency
       <div class="row" id="property-cards">
         @foreach($properties as $property)
       <div class="col-lg-4 col-md-6 align-self-center mb-30">
+=======
+      <div class="container mt-5">
+
+        <div class="row" id="property-cards">
+          @foreach($properties as $property)
+        <div class="col-lg-4 col-md-6 align-self-center mb-30">
+>>>>>>> 569d979a8a459a35eeb6af4f1d8a761d693139d5
         <div class="item">
         <a href="{{ route('property-details', ['id' => $property->id]) }}">
           <img src="{{ asset($property->image_url) }}" alt="{{ $property->title }}">
