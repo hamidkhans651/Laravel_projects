@@ -463,17 +463,14 @@ Header Style
   -o-transition: all 0.4s ease 0s;
   transition: all 0.4s ease 0s;
   border: transparent;
-  letter-spacing: .25px;
+  /* letter-spacing: .25px; */
 }
 
 .header-area .main-nav .nav li:last-child a {
-  background-color: #1e1e1e;
-  color: #fff;
+  /* background-color: #1e1e1e; */
+  color: #1E1E1E;
   font-size: 14px;
-  font-weight: 400;
-  text-transform: none;
-  border-radius: 20px;
-  padding-left: 0px;
+
 }
 
 .header-area .main-nav .nav li:last-child a i {
@@ -489,7 +486,7 @@ Header Style
 }
 
 .header-area .main-nav .nav li:last-child:hover a {
-  background-color: #1e1e1e;
+  /* background-color: #1e1e1e; */
 }
 
 .header-area .main-nav .nav li:last-child:hover a i {

@@ -1,4 +1,3 @@
-/* Add any global styles here or leave empty */
-body {
-    font-family: Arial, sans-serif;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
