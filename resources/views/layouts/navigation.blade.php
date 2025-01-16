@@ -22,6 +22,11 @@
 
                     </x-nav-link>
 
+                    <x-nav-link :href="route('property-details')" :active="request()->routeIs('property-details')">
+                        {{ __('property-details') }}
+
+                    </x-nav-link>
+
                 </div>
             </div>
 
